@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavours</title>
+    <!--My stylesheet for Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--My stylesheet-->
+    <link rel="stylesheet" href="flavors.css">
+    <!--Font CDN link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--nav bar-->
+    <div class="navbar">
+        <div class="navbar__title">
+            <h1>Scoop</h1>
+            <p>Scoop your happiness</p>
+        </div>
+
+        <div class="navbar__content">
+            <a href="home.html">Home</a>
+            <a href="flavors.html">Flavours</a>
+            <a href="#customize">Customize</a>
+            <a href="#cart">Cart</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass" style="color: rgb(5, 1, 1);"></i>
+            <button>Login</button>
+        </div>
+
+    </div>
+
+    <!--Animation-->
+    <div class="animation">
+        <div class="animation__s1">
+            <video autoplay muted loop playsinline>
+                <source src="./videos/animation.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="animation__s2">
+            <p>Home < Flavours</p>
+                    <h3>EXPLORE OUR WORLD OF FLAVOURS</h3>
+                    <h1>Flavours for <br>Every Mood</h1>
+                    <p>From Timeless classics to exciting new creations,<br>there's always a sccop waiting for you</p>
+        </div>
+        <div class="animation__s3">
+            <div class="leaf"> ☘️ <p>100% Natural <br> Ingredients</p>
+            </div>
+            <div class="heart"> 🩷 <p> Made with <br>Love</p>
+            </div>
+            <div class="truck">🚚 <p>Freshly<br>Prepared</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Categories-->
+    <div class="categories">
+        <div class="icecone">
+            <span>🍦</span>
+            <p>All Flavours</p>
+        </div>
+
+        <div class="flower">
+            <span>🌼</span>
+            <p>Classic</p>
+        </div>
+
+        <div class="chocolate">
+            <span>🍫</span>
+            <p>Chocolate</p>
+        </div>
+
+        <div class="strawberry">
+            <span>🍓</span>
+            <p>Fruity</p>
+        </div>
+
+        <div class="nuts">
+            <span>🥜</span>
+            <p>Nutty</p>
+        </div>
+
+        <div class="special">
+            <span>⭐</span>
+            <p>Special</p>
+        </div>
+
+    </div>
+
+    <!--Search-->
+    <section class="catalog">
+        <div class="tools">
+            <div class="search">
+                <input id="search" placeholder=" ⌕ Search for your favorite flavor...">
+            </div>
+            <select class="sort">
+                <option value="popular">Sort by: Popular</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+            <select class="price">
+                <option value="all">Price Range: All Prices</option>
+                <option value="low">Under ₹130</option>
+                <option value="mid">₹130 - ₹149</option>
+            </select><button class="filter">☷ Filter</button>
+        </div>
+    </section>
+
+    <div class="heading">
+        <div>
+            <p>OUR ICE CREAMS</p>
+            <h2>Delicious Flavors,Happier Days</h2>
+        </div>
+    </div>
+
+    <section class="icecream-section">
+
+        <div class="icecream-container">
+
+            <!-- 1 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/strawberry.jpg" alt="Strawberry Cheesecake">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Strawberry Cheesecake</h2>
+                <p>Creamy & refreshing</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹129</h3>
+                        <span>⭐ 4.8 (120)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 2 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/chocolate.jpg" alt="Belgian Chocolate">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Belgian Chocolate</h2>
+                <p>Rich & indulgent</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹149</h3>
+                        <span>⭐ 4.9 (98)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 3 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/mango.jpg" alt="Alphonso Mango">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Alphonso Mango</h2>
+                <p>Naturally sweet</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹139</h3>
+                        <span>⭐ 4.7 (76)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/cookies.jpg" alt="Cookies & Cream">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Cookies & Cream</h2>
+                <p>A crunchy delight</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹129</h3>
+                        <span>⭐ 4.6 (84)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 5 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/mint.jpg" alt="Mint Choco Chip">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Mint Choco Chip</h2>
+                <p>Cool & refreshing</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹139</h3>
+                        <span>⭐ 4.5 (62)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 6 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/vanilla.jpg" alt="Classic Vanilla">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Classic Vanilla</h2>
+                <p>Timeless favorite</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹119</h3>
+                        <span>⭐ 4.7 (91)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 7 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/butterscotch.jpg" alt="Butterscotch Bliss">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Butterscotch Bliss</h2>
+                <p>Sweet & crunchy</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹139</h3>
+                        <span>⭐ 4.6 (58)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+
+            <!-- 8 -->
+            <div class="icecream-card">
+                <div class="image-box">
+                    <img src="images/blueberry.jpg" alt="Blueberry Delight">
+                    <button class="favorite">♡</button>
+                </div>
+
+                <h2>Blueberry Delight</h2>
+                <p>Burst of real berries</p>
+
+                <div class="card-bottom">
+                    <div>
+                        <h3>₹149</h3>
+                        <span>⭐ 4.8 (67)</span>
+                    </div>
+                    <button class="cart">🛒</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="seasonal">
+        <div class="season-scoops">
+            <i class="ball pink"></i>
+            <i class="ball brown"></i>
+            <i class="ball mango"></i>
+        </div>
+        <div>
+            <p class="eyebrow">LIMITED TIME</p>
+            <h2>Try Our Seasonal Flavors!</h2>
+            <p>Exciting new flavors, only for this season.</p>
+            <button>EXPLORE FLAVORS →</button>
+        </div>
+        <div class="badge">
+            Scoop<br>the Season<br>♡
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="mail">
+            ✉
+
+        </div>
+        <div>
+            <h3>Stay in the Scoop Loop!</h3>
+            <p>Get notified about new flavors, special offers and more.</p>
+        </div>
+        <form>
+            <input type="email" placeholder="Enter your email address" required>
+            <button>Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div><strong>SCOOP<span>.</span></strong>
+            <p>Scoop Your Happiness</p>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#flavors">Flavors</a>
+            <a href="#customize">Customize</a>
+            <a href="#about">About</a><a href="#contact">Contact</a>
+        </div>
+        <div class="social">
+            ◎　●　▶　♥
+        </div>
+        <small>© 2026 SCOOP. All Rights Reserved.</small>
+    </footer>
+
+
+
+</body>
+
+</html>
