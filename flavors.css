@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: solid rgb(231, 102, 124) 1px;
+}
+
+.navbar__title{
+    padding: auto;
+}
+
+.navbar__title h1{color: rgb(100, 4, 4);}
+.navbar p {
+    color: grey;
+    top: 0px;
+}
+
+.navbar__content{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.navbar__content a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar__content  :hover{
+    color: rgb(222, 42, 72);
+    text-decoration: underline rgb(222, 42, 72);
+}
+
+.search{
+    gap: 70px;
+}
+.search button{
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(231, 102, 124) ;
+    border: none;
+    border: solid 1px rgb(231, 102, 124);
+    border-radius: 40px;
+}
+
+.animation{
+    position: relative;
+}
+.animation__s1 video{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.animation__s2{
+    position: absolute;
+    padding: auto;
+    top: 5%;
+    right: 5%;
+}
+.animation__s2 p, .animation__s2 h3{
+    font-size: xx-large;
+    padding-top: 10px;
+}
+.animation__s2 p{color: rgb(54, 54, 54);} .animation__s2 h3{color: rgb(222, 42, 72);} .animation__s2 h1{font-size: 100px; color: rgb(100, 4, 4);}
+
+.animation__s3{display: flex; position: absolute; bottom: 2%; right: 17%; font-size: x-large; gap: 20px;}
+.leaf, .heart, .truck{display: flex;     padding: 10px;}
+.animation__s3 p{margin-left: 15px; color: rgb(54, 54, 54);}
+
+.categories{display: flex; justify-content: space-evenly; gap: 10px; margin-top: 50px;}
+.categories span{justify-content: center; margin-left: 30px;}
+.categories p{margin-left: 20px;}
+
+.categories span:hover{ cursor: pointer;}
+.icecone:hover, .flower:hover, .chocolate:hover, .strawberry:hover, .nuts:hover, .special:hover{
+    color: rgb(222, 42, 72);
+    cursor: pointer;
+}
+
+.tools{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.search input{
+    padding: 10px;
+    width: 600px;
+    border-radius: 20px;
+    border: none; border: solid black 1px;
+}
+.price,.sort{border:solid black 1px; width: 200px; border-radius: 20px;}
+.filter{ color: white; background-color: rgb(222, 42, 72); font-weight: bolder; padding: 10px; border:solid rgb(222, 42, 72) 1px; width: 100px; border-radius: 20px;}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.heading p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin: 0
+}
+
+.heading h2 {
+    margin: 3px 0;
+    color: rgb(222, 42, 72);
+}
+
+.icecream-section {
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.icecream-section h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+.icecream-container {
+    display: grid;
+
+    /* 4 boxes in one row */
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.icecream-card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.icecream-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-box {
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+}
+
+.favorite {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.icecream-card h2 {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.icecream-card p {
+    color: #777;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-bottom h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-bottom span {
+    color: #888;
+    font-size: 14px;
+}
+
+.cart {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #d93687;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.seasonal {
+    margin: 28px 7%;
+    background: #ffe7e4;
+    border-radius: 14px;
+    min-height: 135px;
+    display: grid;
+    grid-template-columns: 34% 48% 18%;
+    align-items: center;
+    overflow: hidden
+}
+
+.season-scoops {
+    height: 135px;
+    position: relative
+}
+
+.season-scoops .ball {
+    width: 75px;
+    height: 75px;
+    top: 32px
+}
+
+.season-scoops .pink {
+    left: 25%
+}
+
+.season-scoops .brown {
+    left: 43%;
+    top: 48px
+}
+
+.season-scoops .mango {
+    left: 36%;
+    top: 70px;
+    background: #efa52d
+}
+
+.seasonal h2 {
+    margin: 3px 0
+}
+
+.seasonal p:not(.eyebrow) {
+    font-size: 12px
+}
+
+.seasonal button {
+    margin-top: 5px;
+    width: 150px;
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(222, 42, 72);
+    border: solid 1px rgb(222, 42, 72);
+    border-radius: 20px;
+    font-size: 10px
+}
+
+.badge {
+    border: 1px dashed;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font: 14px cursive;
+    transform: rotate(5deg)
+}
+
+.newsletter {
+    margin: 0 3%;
+    padding: 18px 7%;
+    background: #ffe9e7;
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.mail {
+    font-size: 28px
+}
+
+.newsletter h3 {
+    margin: 0
+}
+
+.newsletter p {
+    font-size: 10px;
+    margin: 3px 0
+}
+
+.newsletter form {
+    margin-left: auto;
+    display: flex;
+    width: 45%
+}
+
+.newsletter input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px 17px;
+    border-radius: 24px 0 0 24px;
+    outline: 0
+}
+
+.newsletter button {
+    width: 150px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(222, 42, 72);
+    border: solid 1px rgb(222, 42, 72);
+    border-radius: 0 24px 24px 0
+}
+
+footer {
+    background: #2b1d18;
+    color: #fff;
+    padding: 30px 7% 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center
+}
+
+footer strong span {
+    color: #df3472
+}
+
+footer p {
+    font-size: 11px;
+    margin: 0
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px
+}
+
+.social {
+    text-align: right
+}
