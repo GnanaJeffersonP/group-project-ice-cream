@@ -10,447 +10,456 @@
 <link href="./src/output.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 <body class="font-['Poppins']">
-  <nav class="p-5 flex justify-between bg-amber-50">
+    <nav class="p-5 flex justify-between bg-amber-50">
 
-    <!--navbar-->
-    <div>
-        <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
-        <p>Scoop your Happiness</p>
+        <!--navbar-->
+          <div class="flex items-center">
+        <a href="index.html">
+            <img src="./images/logo.png" 
+                 alt="SCOOP Ice Cream" 
+                 class="w-28 h-auto md:w-36 object-contain">
+        </a>
     </div>
 
-    <div class="flex gap-25 items-center ">
+        <div>
+            <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
+            <p>Scoop your Happiness</p>
+        </div>
 
-        <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Home</a>
-        <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Flavours</a>
-        <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Customize</a>
+        <div class="flex gap-25 items-center ">
 
-        <!-- Cart Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 hidden md:flex">
+            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Home</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="flavors.html">Flavours</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Customize</a>
 
-            <path stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
+            <!-- Cart Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 hidden md:flex">
 
-        </svg>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
 
-        <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">About Us</a>
-        <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">Contact Us</a>
+            </svg>
 
-        <!-- Menu Icon -->
-        <svg id="menu" xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 flex md:hidden cursor-pointer">
+            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">About Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">Contact Us</a>
 
-            <path stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <!-- Menu Icon -->
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 flex md:hidden cursor-pointer">
 
-        </svg>
-        
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 
+            </svg>
+            <a class=" loginbtn text-white hidden md:flex bg-pink-600 font -bold px-2 rounded-2xl" href="#">Login</a>
+            <svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="size-6 hidden">
+                <path fill-rule="evenodd"
+                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+
+
+
+        </div>
+
+    </nav>
+    <!--sidenav-->
+    <div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 md:hidden transform duration-1000  "
+        style="right:-60%">
+        <nav class="flex flex-col gap-10 p-3">
+            <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
+
+            <a class="hover:text-pink-400 hover:underline font-bold  " href="#">Home</a>
+            <a class="hover:text-pink-400 hover:underline font-bold " href="flavors.html">Flavours</a>
+            <a class="hover:text-pink-400 hover:underline font-bold x " href="#">Customize</a>
+
+
+            <a class="hover:text-pink-400 hover:underline font-bold " href="#">About Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold " href="#">Contact Us</a>
+            <a class="text-white bg-pink-600 font -bold px-2 w-15 rounded-2xl loginbtn" href="#">Login</a>
+        </nav>
     </div>
+    <!--hero section-->
 
-</nav>
-<!--sidenav-->
-<div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 md:hidden transform duration-1000  " style="right:-60%">
-<nav class="flex flex-col gap-10 p-3">
-    <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
-    
-        <a class="hover:text-pink-400 hover:underline font-bold  " href="#">Home</a>
-        <a class="hover:text-pink-400 hover:underline font-bold " href="#">Flavours</a>
-        <a class="hover:text-pink-400 hover:underline font-bold x " href="#">Customize</a>
+    <section class="relative w-full h-[500px] md:h-[650px] overflow-hidden">
 
-  
-        <a class="hover:text-pink-400 hover:underline font-bold " href="#">About Us</a>
-        <a class="hover:text-pink-400 hover:underline font-bold " href="#">Contact Us</a>
-</nav>
-</div>
-<!--hero section-->
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
 
-<section class="relative w-full h-[500px] md:h-[650px] overflow-hidden">
+            <source src="./videos/hero.mp4" type="video/mp4">
 
-    <!-- Background Video -->
-    <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover">
+        </video>
 
-        <source src="./videos/hero.mp4" type="video/mp4">
-
-    </video>
-
-    <!-- Optional video overlay -->
-    <div class="absolute inset-0 bg-white/10"></div>
+        <!-- Optional video overlay -->
 
 
-    <!-- Hero Content -->
-    <div class="relative z-10 px-6 pt-16 md:p-20">
 
-        <!-- Small Heading -->
-        <p class="text-xl md:text-2xl font-bold text-pink-600 tracking-widest">
-            WELCOME TO SCOOP
-        </p>
+        <!-- Hero Content -->
+        <div class="relative z-10 px-6 pt-16 md:p-20 hero">
+
+            <!-- Small Heading -->
+            <p class="text-xl md:text-2xl font-bold text-pink-600 tracking-widest">
+                WELCOME TO SCOOP
+            </p>
 
 
-        <!-- Main Heading -->
-        <h1 class="text-[#3B2118] text-5xl md:text-8xl font-bold 
+            <!-- Main Heading -->
+            <h1 class="text-[#3B2118] text-5xl md:text-8xl font-bold 
                    drop-shadow-[2px_3px_2px_rgba(0,0,0,0.2)]">
 
-            Scoop Into
-            <br>
+                Scoop Into
+                <br>
 
-            <span class="text-pink-500 drop-shadow-[2px_2px_2px_rgba(236,64,122,0.3)]">
-                Happiness.
-            </span>
+                <span class="text-pink-500 drop-shadow-[2px_2px_2px_rgba(236,64,122,0.3)]">
+                    Happiness.
+                </span>
 
-        </h1>
-
-
-        <!-- Description -->
-        <p class="text-lg md:text-2xl font-bold text-[#766A64] pt-5 max-w-3xl">
-            Delicious moments, creamy treats, and happiness in every scoop.
-        </p>
+            </h1>
 
 
-        <!-- Buttons -->
-        <div class="pt-5 flex gap-4">
+            <!-- Description -->
+            <p class="text-lg md:text-2xl font-bold text-[#766A64] pt-5 max-w-3xl">
+                Delicious moments, creamy treats, and happiness in every scoop.
+            </p>
 
-            <button class="text-lg md:text-xl bg-pink-500 text-white 
+
+            <!-- Buttons -->
+            <div class="pt-5 flex gap-4">
+
+                <button class="text-lg md:text-xl bg-pink-500 text-white 
                            px-5 py-2 rounded-2xl">
-                Explore Now
-            </button>
+                    Explore Now
+                </button>
 
-            <button class="border border-[#3B2118] text-[#3B2118] 
+                <button class="border border-[#3B2118] text-[#3B2118] 
                            px-5 py-2 rounded-2xl font-bold">
-                Our Flavours
-            </button>
+                    Our Flavours
+                </button>
+
+            </div>
+
+
+            <!-- Benefits -->
+            <div class="grid grid-cols-3 gap-2 md:flex md:gap-8 pt-8">
+
+                <!-- Natural -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        🌿
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            100% Natural
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Quality Ingredients
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Made With Love -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        ❤️
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            Made With Love
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Made Fresh Daily
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Freshly Delivered -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        🚚
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            Freshly Delivered
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Straight To You
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
+    </section>
+    <!-- CATEGORY SECTION -->
+    <div class="p-5 grid grid-cols-3 gap-y-6 gap-x-2 md:flex md:justify-around md:items-start md:gap-5 text-center">
 
-        <!-- Benefits -->
-        <div class="grid grid-cols-3 gap-2 md:flex md:gap-8 pt-8">
+        <!-- Ice Creams -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home1.png">
+            <p class="pt-2 text-sm md:text-base">Ice Creams</p>
+        </div>
 
-            <!-- Natural -->
-            <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+        <!-- Milkshakes -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home2.png">
+            <p class="pt-2 text-sm md:text-base">Milkshakes</p>
+        </div>
 
-                <span class="text-xl md:text-2xl">
-                    🌿
-                </span>
+        <!-- Sundaes -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home3.png">
+            <p class="pt-2 text-sm md:text-base">Sundaes</p>
+        </div>
 
-                <div>
-                    <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
-                        100% Natural
-                    </p>
+        <!-- Popsicles -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home4.png">
+            <p class="pt-2 text-sm md:text-base">Popsicles</p>
+        </div>
 
-                    <p class="text-xs md:text-sm text-[#766A64]">
-                        Quality Ingredients
-                    </p>
-                </div>
+        <!-- Ice Cream Cakes -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home5.png">
+            <p class="pt-2 text-sm md:text-base">Ice Cream Cakes</p>
+        </div>
 
-            </div>
-
-
-            <!-- Made With Love -->
-            <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
-
-                <span class="text-xl md:text-2xl">
-                    ❤️
-                </span>
-
-                <div>
-                    <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
-                        Made With Love
-                    </p>
-
-                    <p class="text-xs md:text-sm text-[#766A64]">
-                        Made Fresh Daily
-                    </p>
-                </div>
-
-            </div>
-
-
-            <!-- Freshly Delivered -->
-            <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
-
-                <span class="text-xl md:text-2xl">
-                    🚚
-                </span>
-
-                <div>
-                    <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
-                        Freshly Delivered
-                    </p>
-
-                    <p class="text-xs md:text-sm text-[#766A64]">
-                        Straight To You
-                    </p>
-                </div>
-
-            </div>
-
+        <!-- Desserts -->
+        <div class="w-full md:w-32 flex flex-col items-center">
+            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home6.png">
+            <p class="pt-2 text-sm md:text-base">Desserts</p>
         </div>
 
     </div>
 
-</section>
-<!-- CATEGORY SECTION -->
-<div class="p-5 grid grid-cols-3 gap-y-6 gap-x-2 md:flex md:justify-around md:items-start md:gap-5 text-center">
-
-    <!-- Ice Creams -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home1.png">
-        <p class="pt-2 text-sm md:text-base">Ice Creams</p>
-    </div>
-
-    <!-- Milkshakes -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home2.png">
-        <p class="pt-2 text-sm md:text-base">Milkshakes</p>
-    </div>
-
-    <!-- Sundaes -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home3.png">
-        <p class="pt-2 text-sm md:text-base">Sundaes</p>
-    </div>
-
-    <!-- Popsicles -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home4.png">
-        <p class="pt-2 text-sm md:text-base">Popsicles</p>
-    </div>
-
-    <!-- Ice Cream Cakes -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home5.png">
-        <p class="pt-2 text-sm md:text-base">Ice Cream Cakes</p>
-    </div>
-
-    <!-- Desserts -->
-    <div class="w-full md:w-32 flex flex-col items-center">
-        <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home6.png">
-        <p class="pt-2 text-sm md:text-base">Desserts</p>
-    </div>
-
-</div>
 
 
+    <!--car section-->
+    <div class="grid grid-cols-1  md:grid-cols-2 gap-5 px-5 pt-3 md:px-10">
 
-<!--car section-->
-<div class="grid grid-cols-1  md:grid-cols-2 gap-5 px-5 pt-3 md:px-10">
+        <div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
 
-   <div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
+            <img src="./images/homecard1.png" class="w-full h-full object-cover">
 
-    <img 
-        src="./images/homecard1.png"
-        class="w-full h-full object-cover">
+            <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-white">
+                Classic <br>
+                <span class="text-pink-400">Never Melts.</span>
 
-    <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-white">
-        Classic <br>
-        <span class="text-pink-400">Never Melts.</span>
-        
-    </p>
-    <p class="absolute top-30 left-8 text-xs md:text-xl  text-white">Timeless flavour that <br><span>Always make you smile</span></p>
-    <button class="absolute top-40 md:top-50 p-1 text-xs md:p-2 rounded-xl left-8  bg-white md:text-black">Explore Classics</button>
+            </p>
+            <p class="absolute top-30 left-8 text-xs md:text-xl  text-white">Timeless flavour that <br><span>Always make
+                    you smile</span></p>
+            <button
+                class="absolute top-40 md:top-50 p-1 text-xs md:p-2 rounded-xl left-8  bg-white md:text-black">Explore
+                Classics</button>
 
-</div>
-<div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
+        </div>
+        <div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
 
-    <img
-        src="./images/homecard2.png"
-        class="w-full h-full object-cover">
+            <img src="./images/homecard2.png" class="w-full h-full object-cover">
 
-    <!-- Heading -->
-    <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-black">
-        Create your<br>
-        <span class="text-pink-600">Own scoop!</span>
-    </p>
+            <!-- Heading -->
+            <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-black">
+                Create your<br>
+                <span class="text-pink-600">Own scoop!</span>
+            </p>
 
-    <!-- Description -->
-    <p class="absolute top-[100px] md:top-[145px] left-8 text-xs md:text-xl text-black">
-        Mix Match Make it yours<br>
-    </p>
+            <!-- Description -->
+            <p class="absolute top-[100px] md:top-[145px] left-8 text-xs md:text-xl text-black">
+                Mix Match Make it yours<br>
+            </p>
 
-    <!-- Button -->
-    <button class="absolute top-[165px] md:top-[215px] left-8 
+            <!-- Button -->
+            <button class="absolute top-[165px] md:top-[215px] left-8 
                    p-1 md:p-2 px-3 md:px-5 
                    rounded-xl border border-black  text-xs md:text-base font-semibold text-[#3B2118]">
-        Start Customizing →
-    </button>
+                Start Customizing →
+            </button>
 
-</div>
+        </div>
 
-</div>
-
-<!--why choose scoop-->
-<div class=" pt-6 text-center">
-    <div>
-    <p class="tracking-widest text-pink-600">WHY CHOOSE SCOOP</p>
-    <p class="text-4xl text-amber-950 font-bold">More Than Just <span class="text-4xl text-pink-600 font-bold">Ice Cream</span> </p>
-    <p class="font-light">We bring joy to your day with every scoop.</p>
-</div>
-</div>
-<!--promises-->
-<div class="flex justify-center p-10 gap-2 md:gap-35 flex-wrap">
-     <div class="flex flex-col items-center">
-        <svg class="size-10 text-pink-600 bg-pink-200  rounded-2xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DB2777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-<p class="text-black font-bold">Premium Incredients</p>
-<P class="font-extralight">Only the best always.</P>
     </div>
 
-    <div class="flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-</svg>
-<p class="text-black font-bold">Made With Love</p>
-<P class="font-extralight">Because you deserve it.</P>
+    <!--why choose scoop-->
+    <div class=" pt-6 text-center">
+        <div>
+            <p class="tracking-widest text-pink-600">WHY CHOOSE SCOOP</p>
+            <p class="text-4xl text-amber-950 font-bold">More Than Just <span
+                    class="text-4xl text-pink-600 font-bold">Ice Cream</span> </p>
+            <p class="font-light">We bring joy to your day with every scoop.</p>
+        </div>
     </div>
-    <div class="flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
-</svg>
-<p class="text-black font-bold">For Every Mood</p>
-<p class="font-extralight">Flavors for every moment</p>
+    <!--promises-->
+    <div class="flex justify-center p-10 gap-2 md:gap-35 flex-wrap">
+        <div class="flex flex-col items-center">
+            <svg class="size-10 text-pink-600 bg-pink-200  rounded-2xl" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="#DB2777" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+            <p class="text-black font-bold">Premium Incredients</p>
+            <P class="font-extralight">Only the best always.</P>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+            <p class="text-black font-bold">Made With Love</p>
+            <P class="font-extralight">Because you deserve it.</P>
+        </div>
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+            </svg>
+            <p class="text-black font-bold">For Every Mood</p>
+            <p class="font-extralight">Flavors for every moment</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-700 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            <p class="text-black font-bold">Happiness Together</p>
+            <p class="font-extralight">Good food brings people closer</p>
+        </div>
     </div>
-    <div class="flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-pink-700 bg-pink-200  rounded-2xl">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-</svg>
-<p class="text-black font-bold">Happiness Together</p>
-<p class="font-extralight">Good food brings people closer</p>
-    </div>
-</div>
 
-<!--memories-->
+    <!--memories-->
 
 
-<section class="mx-5 md:mx-10 my-8">
+    <section class="mx-5 md:mx-10 my-8">
 
-    <div class="relative bg-[#FFF0F3] rounded-2xl 
+        <div class="relative bg-[#FFF0F3] rounded-2xl 
                 min-h-[220px] md:h-[250px] 
                 overflow-hidden">
 
-        <!-- Left Text -->
-        <div class="absolute left-5 md:left-10 top-1/2 
+            <!-- Left Text -->
+            <div class="absolute left-5 md:left-10 top-1/2 
                     -translate-y-1/2 z-10">
 
-            <p class="text-xl md:text-2xl font-semibold 
+                <p class="text-xl md:text-2xl font-semibold 
                       text-[#3B2118] leading-tight hidden md:flex">
-                Moments<br>
-                Taste Better<br>
-                Together
-            </p>
+                    Moments<br>
+                    Taste Better<br>
+                    Together
+                </p>
 
-            <p class="text-pink-600 text-3xl mt-2 hidden md:flex">
-                ♡
-            </p>
+                <p class="text-pink-600 text-3xl mt-2 hidden md:flex">
+                    ♡
+                </p>
 
-        </div>
+            </div>
 
 
-        <!-- Photos -->
-        <div class="absolute left-[0%] md:left-[18%] 
+            <!-- Photos -->
+            <div class="absolute left-[0%] md:left-[18%] 
                     top-1/2 -translate-y-1/2 
                     flex items-center gap-3 md:gap-5">
 
-            <div class="bg-white p-2 shadow-lg 
+                <div class="bg-white p-2 shadow-lg 
                         -rotate-6">
-                <img 
-                    src="./images/memories1.png"
-                    class="w-24 h-28 md:w-32 md:h-40 object-cover">
-            </div>
+                    <img src="./images/memories1.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
 
-            
-            <div class="bg-white p-2 shadow-lg 
+
+                <div class="bg-white p-2 shadow-lg 
                         rotate-3">
-                <img 
-                    src="./images/memories2.png"
-                    class="w-24 h-28 md:w-32 md:h-40 object-cover">
-            </div>
+                    <img src="./images/memories2.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
 
-          
-            <div class="bg-white p-2 shadow-lg 
+
+                <div class="bg-white p-2 shadow-lg 
                         -rotate-3 hidden md:flex">
-                <img 
-                    src="./images/memories3.png"
-                    class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                    <img src="./images/memories3.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
+                <div>
+                    <img class="w-20 h-30 hidden md:block" class=" md:flex" src="./images/homecard3.png">
+                </div>
+
             </div>
-            <div>
-                <img class="w-20 h-30 hidden md:block" class=" md:flex" src="./images/homecard3.png">
-            </div>
-
-        </div>
 
 
-        <!-- Right Content -->
-        <div class="absolute right-0 md:right-10
+            <!-- Right Content -->
+            <div class="absolute right-0 md:right-10
                     top-1/2 -translate-y-1/2 
                     text-center z-10">
 
-            <p class="text-xs md:text-2xl font-semibold 
+                <p class="text-xs md:text-2xl font-semibold 
                       text-[#3B2118]">
-                Share Your<br>
-                #ScoopMoment!
-            </p>
+                    Share Your<br>
+                    #ScoopMoment!
+                </p>
 
-            <button class="mt-4 bg-pink-500 text-xs md:text-white 
+                <button class="mt-4 bg-pink-500 text-xs md:text-white 
                            px-5 py-2 rounded-full 
                            font-semibold">
-                ◎ &nbsp; Follow Us
-            </button>
+                    ◎ &nbsp; Follow Us
+                </button>
+
+            </div>
+
+        </div>
+        <!--subscribe-->
+
+        <div class="p-5 flex justify-between mt-6 bg-[#FFF0F3] flex-wrap gap-4">
+            <div class="flex items-center gap-5">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-10 text-pink-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold">Stay in the Scoop Loop!</p>
+                    <p>Subscribe to get updates on new flavors, special offers & more.</p>
+                </div>
+            </div>
+            <div>
+                <input class="border border-black pr-20 md:pr-80 p-2 rounded" type="email"
+                    placeholder="Enter your email">
+                <button class="p-2 bg-pink-600 text-white rounded">Subscribe</button>
+            </div>
 
         </div>
 
-    </div>
-<!--subscribe-->
+        <!-- FOOTER -->
+        <div class="relative mt-16">
 
-<div class="p-5 flex justify-between mt-6 bg-[#FFF0F3] flex-wrap gap-4">
-    <div class="flex items-center gap-5">
-    <div>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-pink-600">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-</svg>
-</div>
-<div>
-    <p class="font-bold">Stay in the Scoop Loop!</p>
-    <p>Subscribe to get updates on new flavors, special offers & more.</p>
-</div>
-</div>
-<div>
-    <input class="border border-black pr-20 md:pr-80 p-2 rounded" type="email" placeholder="Enter your email">
-    <button class="p-2 bg-pink-600 text-white rounded">Subscribe</button>
-</div>
+            <!-- Chocolate Wave -->
+            <div class="absolute -top-12 left-0 w-full overflow-hidden leading-[0]">
 
-</div>
+                <svg class="w-full h-16" viewBox="0 0 1200 100" preserveAspectRatio="none">
 
-<!-- FOOTER -->
-<footer class="relative mt-16">
-
-    <!-- Chocolate Wave -->
-    <div class="absolute -top-12 left-0 w-full overflow-hidden leading-[0]">
-
-        <svg
-            class="w-full h-16"
-            viewBox="0 0 1200 100"
-            preserveAspectRatio="none">
-
-            <path
-                d="M0 45
+                    <path d="M0 45
                    C80 75 120 15 200 45
                    C280 75 320 15 400 45
                    C480 75 520 15 600 45
@@ -458,167 +467,187 @@
                    C880 75 920 15 1000 45
                    C1080 75 1120 15 1200 45
                    L1200 100
-                   L0 100 Z"
-                fill="#3B2118">
-            </path>
+                   L0 100 Z" fill="#3B2118">
+                    </path>
 
-        </svg>
+                </svg>
 
-    </div>
+            </div>
 
 
-    <!-- Brown Footer -->
-    <div class="bg-[#3B2118] text-white pt-16 pb-8">
+            <!-- Brown Footer -->
+            <div class="bg-[#3B2118] text-white pt-16 pb-8">
 
-        <div class="px-6 md:px-10">
+                <div class="px-6 md:px-10">
 
-            <div class="flex flex-col md:flex-row
+                    <div class="flex flex-col md:flex-row
                         justify-between items-center
                         gap-8">
 
-                <!-- Logo -->
-                <div class="text-center md:text-left">
+                        <!-- Logo -->
+                        <div class="text-center md:text-left">
 
-                    <h2 class="text-3xl md:text-4xl font-bold">
-                        SCOOP<span class="text-pink-500">.</span>
-                    </h2>
+                            <h2 class="text-3xl md:text-4xl font-bold">
+                                SCOOP<span class="text-pink-500">.</span>
+                            </h2>
 
-                    <p class="text-sm">
-                        Scoop Your Happiness
-                    </p>
+                            <p class="text-sm">
+                                Scoop Your Happiness
+                            </p>
 
-                </div>
-
-
-                <!-- Navigation -->
-                <div class="flex flex-wrap justify-center gap-6">
-
-                    <a href="#" class="hover:text-pink-400 transition">
-                        Home
-                    </a>
-
-                    <a href="#" class="hover:text-pink-400 transition">
-                        Flavours
-                    </a>
-
-                    <a href="#" class="hover:text-pink-400 transition">
-                        Customize
-                    </a>
-
-                    <a href="#" class="hover:text-pink-400 transition">
-                        About
-                    </a>
-
-                    <a href="#" class="hover:text-pink-400 transition">
-                        Contact
-                    </a>
-
-                </div>
+                        </div>
 
 
-                <!-- Social Icons -->
-                <div class="flex items-center gap-5">
+                        <!-- Navigation -->
+                        <div class="flex flex-wrap justify-center gap-6">
 
-                    <!-- Instagram -->
-                    <a href="#"
-                       class="text-white hover:text-pink-500 transition"
-                       aria-label="Instagram">
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Home
+                            </a>
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            class="w-6 h-6">
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Flavours
+                            </a>
 
-                            <rect
-                                x="2.5"
-                                y="2.5"
-                                width="19"
-                                height="19"
-                                rx="5"/>
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Customize
+                            </a>
 
-                            <circle
-                                cx="12"
-                                cy="12"
-                                r="4"/>
+                            <a href="#" class="hover:text-pink-400 transition">
+                                About
+                            </a>
 
-                            <circle
-                                cx="17.5"
-                                cy="6.5"
-                                r="1"
-                                fill="currentColor"
-                                stroke="none"/>
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Contact
+                            </a>
 
-                        </svg>
-
-                    </a>
+                        </div>
 
 
-                    <!-- Facebook -->
-                    <a href="#"
-                       class="text-white hover:text-pink-500 transition"
-                       aria-label="Facebook">
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-5">
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-6 h-6">
+                            <!-- Instagram -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="Instagram">
 
-                            <path
-                                d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.67.33-1 1-1z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
 
-                        </svg>
+                                    <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
 
-                    </a>
+                                    <circle cx="12" cy="12" r="4" />
+
+                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+
+                                </svg>
+
+                            </a>
 
 
-                    <!-- X / Twitter -->
-                    <a href="#"
-                       class="text-white hover:text-pink-500 transition"
-                       aria-label="X">
+                            <!-- Facebook -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="Facebook">
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-6 h-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
 
-                            <path
-                                d="M18.244 2.25h3.308l-7.227 8.26
+                                    <path
+                                        d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.67.33-1 1-1z" />
+
+                                </svg>
+
+                            </a>
+
+
+                            <!-- X / Twitter -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="X">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
+
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26
                                    8.502 11.24h-6.657l-5.214-6.817
                                    -5.963 6.817H1.684l7.73-8.835
                                    L1.254 2.25H8.08l4.713 6.231
                                    5.45-6.231Zm-1.161 17.52h1.833
-                                   L7.084 4.126H5.117L17.083 19.77Z"/>
+                                   L7.084 4.126H5.117L17.083 19.77Z" />
 
-                        </svg>
+                                </svg>
 
-                    </a>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Copyright -->
+                    <div class="border-t border-white/20 mt-8 pt-5 text-center">
+
+                        <p class="text-sm text-white/80">
+                            © 2026 SCOOP. All Rights Reserved.
+                        </p>
+
+                    </div>
 
                 </div>
 
             </div>
 
+        </div>
+        <!-- Login Popup -->
+        <div id="loginModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40">
 
-            <!-- Copyright -->
-            <div class="border-t border-white/20 mt-8 pt-5 text-center">
+            <div class="relative w-[90%] max-w-md rounded-3xl bg-[#FFF5F2] p-8 shadow-2xl">
 
-                <p class="text-sm text-white/80">
-                    © 2026 SCOOP. All Rights Reserved.
+                <!-- Close Button -->
+                <button id="closelogin" class="absolute right-5 top-4 text-2xl font-bold text-[#3B2118]">
+                    ×
+                </button>
+
+                <!-- Logo -->
+                <h2 class="text-center text-4xl font-bold text-[#3B2118]">
+                    SCOOP<span class="text-pink-500">.</span>
+                </h2>
+
+                <p class="mt-2 text-center text-[#766A64]">
+                    Welcome back! 🍦
+                </p>
+
+                <!-- Login Form -->
+                <form class="mt-6">
+
+                    <label class="font-semibold text-[#3B2118]">
+                        Email
+                    </label>
+
+                    <input id="email" type="email" placeholder="Enter your email"
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+
+                    <label class="mt-4 block font-semibold text-[#3B2118]">
+                        Password
+                    </label>
+
+                    <input id="password" type="password" placeholder="Enter your password"
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+
+                    <button id="submit" type="submit"
+                        class="mt-6 w-full rounded-xl bg-pink-500 py-3 font-semibold text-white hover:bg-pink-600">
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="mt-5 text-center text-sm text-[#766A64]">
+                    Don't have an account?
+                    <a href="#" class="font-semibold text-pink-600">
+                        Sign Up
+                    </a>
                 </p>
 
             </div>
-
         </div>
 
-    </div>
-
-</footer>
-
-</section>
+    </section>
     <script src="script.js"></script>
 </body>
 
