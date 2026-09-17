@@ -1,450 +1,161 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: pink;
-    overflow-x: hidden;
+    font-weight: 100px;
 }
-
-button,
-input,
-select {
-    font-family: "Poppins", sans-serif;
-}
-
-
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
 
 .navbar {
-    width: 100%;
-    min-height: 80px;
-    padding: 15px 4%;
-
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-
-    gap: 25px;
-
-    background-color: pink;
-    border-bottom: 1px solid rgb(231, 102, 124);
-
-    position: relative;
-    z-index: 10;
+    border-bottom: solid rgb(231, 102, 124) 1px;
 }
 
-.navbar__title {
-    flex-shrink: 0;
+.navbar__title{
+    padding: auto;
 }
 
-.navbar__title h1 {
-    color: rgb(100, 4, 4);
-    font-size: 30px;
-}
-
-.navbar__title p {
+.navbar__title h1{color: rgb(100, 4, 4);}
+.navbar p {
     color: grey;
-    font-size: 13px;
+    top: 0px;
 }
 
-.navbar__content {
+.navbar__content{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    gap: clamp(85px, 2.5vw, 40px);
+    gap: 40px;
+    justify-content: space-between;
 }
 
-.navbar__content svg {
-    display: none;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.navbar__content a {
+.navbar__content a{
     color: black;
     text-decoration: none;
-    white-space: nowrap;
-    font-size: 15px;
-    transition: 0.2s;
-
 }
 
-.navbar__content a:hover {
+.navbar__content  :hover{
     color: rgb(222, 42, 72);
     text-decoration: underline rgb(222, 42, 72);
 }
 
-.navbar__content b {
-    color: rgb(222, 42, 72);
+.search{
+    gap: 70px;
+}
+.search button{
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(231, 102, 124) ;
+    border: none;
+    border: solid 1px rgb(231, 102, 124);
+    border-radius: 40px;
 }
 
-
-/* ============================= */
-/* SIDE NAVBAR */
-/* ============================= */
-
-.sidenav {
-    width: 280px;
-    max-width: 80%;
-
-    height: 100vh;
-
-    position: fixed;
-    top: 0;
-    right: -100%;
-
-    z-index: 100;
-
-    background-color: #fff;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 25px;
-
-    padding-bottom: 30px;
-
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
-
-    transition: right 0.4s ease;
-}
-
-.sidenav a {
-    color: black;
-    text-decoration: none;
-
-    margin-left: 30px;
-
-    font-weight: 600;
-
-    transition: 0.2s;
-}
-
-.sidenav a:hover {
-    color: rgb(222, 42, 72);
-}
-
-.xmark {
-    width: 100%;
-    padding: 20px 25px;
-    text-align: right;
-}
-
-.xmark p {
-    display: inline-block;
-    color: black;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-/* ============================= */
-/* HERO / VIDEO */
-/* ============================= */
-
-.animation {
+.animation{
     position: relative;
-    width: 100%;
 }
-
-.animation__s1 video {
-    display: block;
-
+.animation__s1 video{
     width: 100%;
-    height: clamp(450px, 45vw, 700px);
-
+    height: 700px;
     object-fit: cover;
-
-    opacity: 0.8;
+    opacity: 0.5;
 }
-
-.animation__s2 {
+.animation__s2{
     position: absolute;
-
-    top: 8%;
+    padding: auto;
+    top: 5%;
     right: 5%;
-
-    max-width: 750px;
-
-    text-align: right;
 }
-
-.animation__s2 p,
-.animation__s2 h3 {
-    font-size: clamp(16px, 2vw, 28px);
+.animation__s2 p, .animation__s2 h3{
+    font-size: xx-large;
     padding-top: 10px;
 }
+.animation__s2 p{color: rgb(54, 54, 54);} .animation__s2 h3{color: rgb(222, 42, 72);} .animation__s2 h1{font-size: 100px; color: rgb(100, 4, 4);}
 
-.animation__s2 p {
-    color: rgb(54, 54, 54);
-}
+.animation__s3{display: flex; position: absolute; bottom: 2%; right: 17%; font-size: x-large; gap: 20px;}
+.leaf, .heart, .truck{display: flex;     padding: 10px;}
+.animation__s3 p{margin-left: 15px; color: rgb(54, 54, 54);}
 
-.animation__s2 p span {
+.categories{display: flex; justify-content: space-evenly; gap: 10px; margin-top: 50px;}
+.categories span{justify-content: center; margin-left: 30px;}
+.categories p{margin-left: 20px;}
+
+.categories span:hover{ cursor: pointer;}
+.icecone:hover, .flower:hover, .chocolate:hover, .strawberry:hover, .nuts:hover, .special:hover{
     color: rgb(222, 42, 72);
+    cursor: pointer;
 }
 
-.animation__s2 h3 {
-    color: rgb(222, 42, 72);
-}
-
-.animation__s2 h1 {
-    font-size: clamp(50px, 7vw, 100px);
-    line-height: 1.05;
-    color: rgb(100, 4, 4);
-}
-
-
-/* HERO FEATURES */
-
-.animation__s3 {
-    display: flex;
-
-    position: absolute;
-
-    bottom: 3%;
-    right: 8%;
-
-    gap: clamp(10px, 2vw, 25px);
-
-    font-size: clamp(14px, 1.5vw, 22px);
-
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.leaf,
-.heart,
-.truck {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.leaf span,
-.heart span,
-.truck span {
-    font-size: 25px;
-}
-
-.animation__s3 p {
-    margin-left: 10px;
-    color: rgb(54, 54, 54);
-}
-
-
-/* ============================= */
-/* CATEGORIES */
-/* ============================= */
-
-.categories {
-    width: min(1200px, 94%);
-
-    margin: 50px auto 0;
-
+.tools{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-
-    gap: 25px;
-
-    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.category {
-    text-align: center;
-
-    min-width: 100px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
+.search input{
+    padding: 10px;
+    width: 600px;
+    border-radius: 20px;
+    border: none; border: solid black 1px;
 }
-
-.category span {
-    display: block;
-    font-size: 30px;
-}
-
-.category p {
-    margin-top: 5px;
-    color: black;
-    font-size: 14px;
-}
-
-.category:hover,
-.category.active {
-    color: rgb(222, 42, 72);
-    transform: translateY(-4px);
-}
-
-.category:hover p,
-.category.active p {
-    color: rgb(222, 42, 72);
-}
-
-
-/* ============================= */
-/* SEARCH TOOLS */
-/* ============================= */
-
-.catalog {
-    width: 100%;
-}
-
-.tools {
-    width: min(1400px, 92%);
-
-    margin: 30px auto 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.tools .search {
-    flex: 1 1 400px;
-}
-
-.search input {
-    width: 100%;
-    min-width: 0;
-
-    padding: 12px 18px;
-
-    border-radius: 25px;
-    border: 1px solid black;
-
-    outline: none;
-
-    background-color: white;
-}
-
-.search input:focus {
-    border-color: rgb(222, 42, 72);
-}
-
-.price,
-.sort {
-    width: 200px;
-    min-height: 44px;
-
-    padding: 0 12px;
-
-    border: 1px solid black;
-    border-radius: 25px;
-
-    background-color: white;
-
-    outline: none;
-}
-
-.filter {
-    color: white;
-
-    background-color: rgb(222, 42, 72);
-
-    font-weight: bold;
-
-    padding: 11px 20px;
-
-    border: 1px solid rgb(222, 42, 72);
-
-    min-width: 100px;
-
-    border-radius: 25px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.filter:hover {
-    background-color: rgb(180, 25, 55);
-}
-
-
-/* ============================= */
-/* HEADING */
-/* ============================= */
+.price,.sort{border:solid black 1px; width: 200px; border-radius: 20px;}
+.filter{ color: white; background-color: rgb(222, 42, 72); font-weight: bolder; padding: 10px; border:solid rgb(222, 42, 72) 1px; width: 100px; border-radius: 20px;}
 
 .heading {
-    width: min(1300px, 90%);
-
-    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: 80px;
 }
 
 .heading p {
-    font-size: 11px;
-
+    font-size: 10px;
     letter-spacing: 2px;
-
     font-weight: 700;
+    margin: 0
 }
 
 .heading h2 {
-    margin: 5px 0;
-
+    margin: 3px 0;
     color: rgb(222, 42, 72);
-
-    font-size: clamp(22px, 3vw, 34px);
 }
 
-
-/* ============================= */
-/* ICE CREAM SECTION */
-/* ============================= */
-
 .icecream-section {
-    width: min(1400px, 94%);
-
+    max-width: 1300px;
     margin: auto;
+    padding: 50px 30px;
+}
 
-    padding: 50px 15px;
+.icecream-section h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
 }
 
 .icecream-container {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+    /* 4 boxes in one row */
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 25px;
 }
 
 .icecream-card {
-    min-width: 0;
-
     background: white;
-
     padding: 15px;
-
     border-radius: 18px;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
     transition: 0.3s;
 }
 
 .icecream-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
 .image-box {
@@ -452,8 +163,6 @@ select {
 }
 
 .image-box img {
-    display: block;
-
     width: 100%;
     height: 180px;
 
@@ -479,16 +188,6 @@ select {
     font-size: 25px;
 
     cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.favorite:hover {
-    transform: scale(1.1);
-}
-
-.favorite.active {
-    color: rgb(222, 42, 72);
 }
 
 .icecream-card h2 {
@@ -496,22 +195,16 @@ select {
     margin-top: 15px;
 }
 
-.icecream-card>p {
+.icecream-card p {
     color: #777;
-
     margin-top: 6px;
     margin-bottom: 15px;
-
-    font-size: 14px;
 }
 
 .card-bottom {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
-    gap: 10px;
 }
 
 .card-bottom h3 {
@@ -521,958 +214,168 @@ select {
 
 .card-bottom span {
     color: #888;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .cart {
     width: 45px;
     height: 45px;
 
-    flex-shrink: 0;
-
     border: none;
     border-radius: 10px;
 
     background: #d93687;
-
     color: white;
 
     font-size: 20px;
 
     cursor: pointer;
-
-    transition: 0.2s;
 }
-
-.cart:hover {
-    transform: scale(1.08);
-}
-
-
-/* ============================= */
-/* SEASONAL */
-/* ============================= */
 
 .seasonal {
-    width: min(1200px, 86%);
-
-    margin: 28px auto;
-
+    margin: 28px 7%;
     background: #ffe7e4;
-
     border-radius: 14px;
-
-    min-height: 150px;
-
-    padding: 20px 25px;
-
+    min-height: 135px;
     display: grid;
-
     grid-template-columns: 34% 48% 18%;
-
     align-items: center;
-
-    overflow: hidden;
+    overflow: hidden
 }
 
 .season-scoops {
     height: 135px;
-    position: relative;
+    position: relative
 }
 
 .season-scoops .ball {
-    position: absolute;
-
     width: 75px;
     height: 75px;
-
-    top: 32px;
-
-    border-radius: 50%;
+    top: 32px
 }
 
 .season-scoops .pink {
-    left: 25%;
-    background: pink;
+    left: 25%
 }
 
 .season-scoops .brown {
     left: 43%;
-    top: 48px;
-    background: #8b4513;
+    top: 48px
 }
 
 .season-scoops .mango {
     left: 36%;
     top: 70px;
-    background: #efa52d;
+    background: #efa52d
 }
 
 .seasonal h2 {
-    margin: 5px 0;
+    margin: 3px 0
 }
 
 .seasonal p:not(.eyebrow) {
-    font-size: 12px;
-}
-
-.eyebrow {
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: rgb(222, 42, 72);
+    font-size: 12px
 }
 
 .seasonal button {
-    margin-top: 8px;
-
-    width: 170px;
-
-    padding: 11px;
-
-    font-weight: bold;
-
+    margin-top: 5px;
+    width: 150px;
+    padding: 10px;
+    font-weight: bolder;
     color: white;
-
     background-color: rgb(222, 42, 72);
-
-    border: 1px solid rgb(222, 42, 72);
-
+    border: solid 1px rgb(222, 42, 72);
     border-radius: 20px;
-
-    font-size: 10px;
-
-    cursor: pointer;
-}
-
-.seasonal button:hover {
-    background-color: rgb(180, 25, 55);
+    font-size: 10px
 }
 
 .badge {
     border: 1px dashed;
-
     border-radius: 50%;
-
     width: 105px;
     height: 105px;
-
     display: grid;
     place-items: center;
-
     text-align: center;
-
     font: 14px cursive;
-
-    transform: rotate(5deg);
-
-    margin: auto;
+    transform: rotate(5deg)
 }
 
-
-/* ============================= */
-/* NEWSLETTER */
-/* ============================= */
-
 .newsletter {
-    width: min(1200px, 94%);
-
-    margin: 0 auto;
-
-    padding: 20px 7%;
-
+    margin: 0 3%;
+    padding: 18px 7%;
     background: #ffe9e7;
-
     display: flex;
-
     align-items: center;
-
-    gap: 18px;
+    gap: 18px
 }
 
 .mail {
-    font-size: 30px;
+    font-size: 28px
 }
 
 .newsletter h3 {
-    margin: 0;
+    margin: 0
 }
 
 .newsletter p {
-    font-size: 11px;
-    margin: 3px 0;
+    font-size: 10px;
+    margin: 3px 0
 }
 
 .newsletter form {
     margin-left: auto;
-
     display: flex;
-
-    width: 45%;
+    width: 45%
 }
 
 .newsletter input {
     width: 100%;
-    min-width: 0;
-
     border: 1px solid #ddd;
-
     padding: 12px 17px;
-
     border-radius: 24px 0 0 24px;
-
-    outline: none;
+    outline: 0
 }
 
 .newsletter button {
     width: 150px;
-
-    flex-shrink: 0;
-
-    font-weight: bold;
-
+    font-weight: bolder;
     color: white;
-
     background-color: rgb(222, 42, 72);
-
-    border: 1px solid rgb(222, 42, 72);
-
-    border-radius: 0 24px 24px 0;
-
-    cursor: pointer;
+    border: solid 1px rgb(222, 42, 72);
+    border-radius: 0 24px 24px 0
 }
-
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
 
 footer {
-    width: 100%;
-
     background: #2b1d18;
-
     color: #fff;
-
     padding: 30px 7% 20px;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
-
-    align-items: center;
-
-    gap: 20px;
-}
-
-.footer-brand strong {
-    font-size: 22px;
+    align-items: center
 }
 
 footer strong span {
-    color: #df3472;
+    color: #df3472
 }
 
 footer p {
     font-size: 11px;
+    margin: 0
 }
 
 .links {
     display: flex;
-
     justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
+    gap: 20px
 }
 
 .links a {
     color: #fff;
-
     text-decoration: none;
-
-    font-size: 12px;
-
-    transition: 0.2s;
-}
-
-.links a:hover {
-    color: #df3472;
+    font-size: 12px
 }
 
 .social {
-    text-align: right;
-
-    font-size: 18px;
-}
-
-.social span {
-    margin-left: 8px;
-}
-
-footer small {
-    grid-column: 1 / -1;
-
-    text-align: center;
-
-    font-size: 11px;
-}
-
-
-/* ================================================= */
-/* MOBILE */
-/* 320px - 767px */
-/* ================================================= */
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-
-    /* NAVBAR */
-
-    .navbar {
-        min-height: 75px;
-
-        padding: 12px 18px;
-
-        flex-direction: row;
-
-        justify-content: space-between;
-
-        gap: 10px;
-    }
-
-    .navbar__title h1 {
-        font-size: 25px;
-    }
-
-    .navbar__title p {
-        font-size: 10px;
-    }
-
-    .navbar__content {
-        gap: 0;
-    }
-
-    .navbar__content svg {
-        display: block;
-    }
-
-    .navbar__content a {
-        display: none;
-    }
-
-
-    /* HERO */
-
-    .animation__s1 video {
-        height: 520px;
-    }
-
-    .animation__s2 {
-        top: 7%;
-
-        left: 5%;
-        right: 5%;
-
-        max-width: none;
-
-        text-align: center;
-    }
-
-    .animation__s2 h1 {
-        font-size: clamp(38px, 11vw, 55px);
-    }
-
-    .animation__s2 p,
-    .animation__s2 h3 {
-        font-size: 15px;
-    }
-
-    .animation__s2 h3 {
-        margin-top: 10px;
-    }
-
-    .animation__s3 {
-        left: 3%;
-        right: 3%;
-
-        bottom: 3%;
-
-        font-size: 11px;
-
-        gap: 3px;
-    }
-
-    .leaf,
-    .heart,
-    .truck {
-        padding: 3px;
-    }
-
-    .leaf span,
-    .heart span,
-    .truck span {
-        font-size: 18px;
-    }
-
-    .animation__s3 p {
-        margin-left: 5px;
-    }
-
-
-    /* CATEGORIES */
-
-    .categories {
-        width: 95%;
-
-        margin-top: 30px;
-
-        gap: 20px 10px;
-
-        justify-content: space-around;
-    }
-
-    .category {
-        min-width: 75px;
-    }
-
-    .category span {
-        font-size: 25px;
-    }
-
-    .category p {
-        font-size: 11px;
-    }
-
-
-    /* TOOLS */
-
-    .tools {
-        width: 90%;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 12px;
-    }
-
-    .tools .search {
-        width: 100%;
-    }
-
-    .price,
-    .sort,
-    .filter {
-        width: 100%;
-    }
-
-
-    /* HEADING */
-
-    .heading {
-        width: 90%;
-
-        margin-top: 30px;
-    }
-
-    .heading h2 {
-        font-size: 22px;
-    }
-
-
-    /* CARDS */
-
-    .icecream-section {
-        width: 94%;
-
-        padding: 30px 0;
-    }
-
-    .icecream-container {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .image-box img {
-        height: 220px;
-    }
-
-    .icecream-card h2 {
-        font-size: 18px;
-    }
-
-
-    /* SEASONAL */
-
-    .seasonal {
-        width: 90%;
-
-        margin: 20px auto;
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        padding: 25px 15px;
-
-        gap: 15px;
-    }
-
-    .season-scoops {
-        display: none;
-    }
-
-    .seasonal button {
-        width: 180px;
-    }
-
-
-    /* NEWSLETTER */
-
-    .newsletter {
-        width: 90%;
-
-        padding: 25px 20px;
-
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 10px;
-    }
-
-    .newsletter form {
-        margin-left: 0;
-
-        width: 100%;
-    }
-
-    .newsletter button {
-        width: 110px;
-    }
-
-
-    /* FOOTER */
-
-    footer {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        padding: 30px 20px 20px;
-    }
-
-    .links {
-        gap: 15px;
-    }
-
-    .social {
-        text-align: center;
-    }
-
-    footer small {
-        margin-top: 5px;
-    }
-}
-
-
-/* ================================================= */
-/* TABLET */
-/* 768px - 1024px */
-/* ================================================= */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
-    /* NAVBAR */
-
-    .navbar {
-        padding: 15px 3%;
-        gap: 15px;
-    }
-
-    .navbar__content {
-        gap: 15px;
-    }
-
-    .navbar__content a {
-        font-size: 12px;
-    }
-
-
-    /* HERO */
-
-    .animation__s1 video {
-        height: 600px;
-    }
-
-    .animation__s2 {
-        right: 5%;
-
-        max-width: 600px;
-    }
-
-    .animation__s2 h1 {
-        font-size: 70px;
-    }
-
-    .animation__s2 p,
-    .animation__s2 h3 {
-        font-size: 20px;
-    }
-
-    .animation__s3 {
-        right: 5%;
-
-        font-size: 14px;
-    }
-
-
-    /* CATEGORIES */
-
-    .categories {
-        gap: 25px;
-    }
-
-
-    /* TOOLS */
-
-    .tools {
-        width: 90%;
-    }
-
-    .tools .search {
-        flex-basis: 100%;
-    }
-
-    .price,
-    .sort {
-        flex: 1;
-    }
-
-    .filter {
-        flex: 0 0 120px;
-    }
-
-
-    /* CARDS */
-
-    .icecream-container {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* SEASONAL */
-
-    .seasonal {
-        width: 90%;
-
-        grid-template-columns:
-            30% 50% 20%;
-    }
-
-
-    /* NEWSLETTER */
-
-    .newsletter {
-        width: 90%;
-
-        padding: 20px 5%;
-    }
-}
-
-
-/* ================================================= */
-/* LAPTOP */
-/* 1025px - 1600px */
-/* ================================================= */
-
-@media screen and (min-width: 1025px) and (max-width: 1600px) {
-
-    .navbar {
-        padding: 15px 3%;
-    }
-
-    .animation__s1 video {
-        height: 650px;
-    }
-
-    .icecream-container {
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr));
-    }
-
-    .newsletter {
-        width: 94%;
-    }
-}
-
-
-/* ================================================= */
-/* LARGE DESKTOP / TV */
-/* 1601px AND ABOVE */
-/* ================================================= */
-
-@media screen and (min-width: 1601px) {
-
-    .navbar {
-        min-height: 100px;
-
-        padding: 25px 8%;
-    }
-
-    .navbar__title h1 {
-        font-size: 38px;
-    }
-
-    .navbar__title p {
-        font-size: 15px;
-    }
-
-    .navbar__content {
-        gap: 50px;
-    }
-
-    .navbar__content a {
-        font-size: 18px;
-    }
-
-
-    /* HERO */
-
-    .animation__s1 video {
-        height: 800px;
-    }
-
-    .animation__s2 {
-        top: 10%;
-        right: 10%;
-
-        max-width: 900px;
-    }
-
-    .animation__s2 h1 {
-        font-size: 120px;
-    }
-
-    .animation__s2 p,
-    .animation__s2 h3 {
-        font-size: 32px;
-    }
-
-    .animation__s3 {
-        right: 15%;
-
-        font-size: 25px;
-    }
-
-    .leaf span,
-    .heart span,
-    .truck span {
-        font-size: 35px;
-    }
-
-
-    /* CATEGORIES */
-
-    .categories {
-        max-width: 1500px;
-
-        margin-top: 70px;
-
-        gap: 50px;
-    }
-
-    .category span {
-        font-size: 40px;
-    }
-
-    .category p {
-        font-size: 18px;
-    }
-
-
-    /* TOOLS */
-
-    .tools {
-        max-width: 1600px;
-
-        margin-top: 50px;
-    }
-
-    .search input,
-    .price,
-    .sort,
-    .filter {
-        min-height: 55px;
-
-        font-size: 16px;
-    }
-
-
-    /* HEADING */
-
-    .heading {
-        max-width: 1500px;
-
-        margin-top: 60px;
-    }
-
-    .heading p {
-        font-size: 14px;
-    }
-
-    .heading h2 {
-        font-size: 42px;
-    }
-
-
-    /* CARDS */
-
-    .icecream-section {
-        width: min(1700px, 90%);
-    }
-
-    .icecream-container {
-        gap: 35px;
-    }
-
-    .icecream-card {
-        padding: 20px;
-
-        border-radius: 22px;
-    }
-
-    .image-box img {
-        height: 250px;
-    }
-
-    .icecream-card h2 {
-        font-size: 22px;
-    }
-
-    .icecream-card>p {
-        font-size: 15px;
-    }
-
-
-    /* SEASONAL */
-
-    .seasonal {
-        width: min(1500px, 84%);
-
-        min-height: 180px;
-
-        margin: 45px auto;
-    }
-
-
-    /* NEWSLETTER */
-
-    .newsletter {
-        width: min(1500px, 84%);
-
-        padding: 30px 7%;
-    }
-
-    .newsletter h3 {
-        font-size: 22px;
-    }
-
-    .newsletter p {
-        font-size: 13px;
-    }
-
-
-    /* FOOTER */
-
-    footer {
-        padding: 45px 8% 30px;
-    }
-
-    footer strong {
-        font-size: 28px;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-
-    .links a {
-        font-size: 15px;
-    }
-}
-
-
-/* ================================================= */
-/* VERY SMALL DEVICES */
-/* BELOW 320px */
-/* ================================================= */
-
-@media screen and (max-width: 319px) {
-
-    .navbar {
-        padding: 10px 12px;
-    }
-
-    .navbar__title h1 {
-        font-size: 22px;
-    }
-
-    .navbar__title p {
-        font-size: 9px;
-    }
-
-    .animation__s1 video {
-        height: 450px;
-    }
-
-    .animation__s2 h1 {
-        font-size: 35px;
-    }
-
-    .animation__s2 p,
-    .animation__s2 h3 {
-        font-size: 13px;
-    }
-
-    .animation__s3 {
-        font-size: 9px;
-    }
-
-    .categories {
-        gap: 12px;
-    }
-
-    .category {
-        min-width: 65px;
-    }
-
-    .category span {
-        font-size: 22px;
-    }
-
-    .category p {
-        font-size: 10px;
-    }
-
-    .icecream-card {
-        padding: 10px;
-    }
-
-    .newsletter form {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .newsletter input,
-    .newsletter button {
-        width: 100%;
-
-        border-radius: 20px;
-    }
-
+    text-align: right
 }
