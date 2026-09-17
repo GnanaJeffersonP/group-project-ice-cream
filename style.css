@@ -1,0 +1,39 @@
+.hero {
+    animation: heroEntry 1.2s ease-out forwards;
+}
+
+@keyframes heroEntry {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.celebrate-emoji {
+    position: absolute;
+    bottom: 20%;
+    font-size: 30px;
+    animation: emojiFly 1.5s ease-out forwards;
+}
+
+@keyframes emojiFly {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-300px) scale(1.2) rotate(30deg);
+        opacity: 0;
+    }
+}
