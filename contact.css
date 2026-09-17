@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.note {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pic {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic img{
+    max-width: 380px;
+}
+
+.locate {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.location {
+    width: 40%;
+    height: 150px;
+    text-align: center;
+    background-color: lightcoral;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location Button {
+    width: 100px;
+    border-style: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: 1px solid white;
+}
+
+.location Button:hover {
+    background-color: white;
+}
+
+.officelist {
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.address {
+    width: 30%;
+    height: 52%;
+    padding: 10px;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map iframe {
+    height: 100%;
+}
+
+.container1 {
+    text-align: center;
+}
+
+.container1 h3 {
+    color: lightcoral;
+}
+
+.container1 div {
+    border-top: solid lightcoral 2px;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name,.id,.city {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.form input {
+    margin-top: 30px;
+    width: 45%;
+    height: 20px;
+    padding: 10px;
+}
+.select,.area{
+    width: 100%;
+}
+.form select{
+    margin-top: 30px;
+    width: 98%;
+    height: 50px;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+.form textarea{
+    margin-top: 30px;
+    width: 95.5%;
+    height: 50px;
+    padding: 12px 15px;
+    height: 100px;
+}
+.form button{
+    background-color: lightcoral;
+    width: 100px;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer; 
+    border-style: none;
+    
+}
+.form button:hover{
+    background-color: white;
+    border: solid black 1px;
+}
+.footer{
+    width: 100%;
+    background-color: lightcoral;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerbox{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerbox1{
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.footerbox1 i{
+    font-size: 40px;
+}
+.footerbox2{
+    border-top: white solid 1px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .note{
+        width: 100%;
+    }
+    .pic img{
+        width: 300px;
+    }
+    .locate{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .location{
+        width: 500px;
+    }
+    .officelist{
+        width: 100%;
+        padding: 20px;
+    }
+    .address{
+        padding: 20px;
+        width: 500px;
+        font-size: 12px;
+    }
+    .map iframe{
+        width: 450px;
+    }
+    .form{
+        width: 70%;
+    }
+    .name,.id,.city{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form input{
+        width: 93%;
+    }
+     .form textarea{
+        width: 92.5%;
+    }
+    .footer{
+    
+    }
+    .footerbox{
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .footerbox2{
+
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .note{
+        width: 80%;
+    }
+    .pic img{
+        width: 250px;
+    }
+    .locate{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .location{
+        width: 350px;
+    }
+    .officelist{
+        width: 90%;
+        flex-direction: column;
+    }
+    .address{
+        padding: 20px;
+        width: 350px;
+        height: 180px;
+        font-size: 12px;
+    }
+    .map iframe{
+        width: 390px;
+        height: 250px;
+    }
+    .form{
+        width: 50%;
+    }
+    .name,.id,.city{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form input{
+        width: 93%;
+    }
+    .form select{
+        width: 230px;
+    }
+     .form textarea{
+        width: 91%;
+    }
+    .footerbox{
+        width: 90%;
+
+        gap: 20px;
+    }
+    .footerbox2{
+
+    }
+}
