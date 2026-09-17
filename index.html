@@ -15,16 +15,11 @@
     rel="stylesheet">
 
 <body class="font-['Poppins']">
+    <!--navbar-->
     <nav class="p-5 flex justify-between bg-amber-50">
 
-        <!--navbar-->
-          <div class="flex items-center">
-        <a href="index.html">
-            <img src="./images/logo.png" 
-                 alt="SCOOP Ice Cream" 
-                 class="w-28 h-auto md:w-36 object-contain">
-        </a>
-    </div>
+
+
 
         <div>
             <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
@@ -33,30 +28,31 @@
 
         <div class="flex gap-25 items-center ">
 
-            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Home</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="flavors.html">Flavours</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex " href="#">Customize</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="index.html">Home</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="flavors.html">Flavours</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="customize.html">Customize</a>
 
             <!-- Cart Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6 hidden md:flex">
+                stroke="currentColor" class="size-6 hidden lg:flex">
 
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
 
             </svg>
 
-            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">About Us</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden md:flex" href="#">Contact Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="about.html">About Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="contact.html
+            ">Contact Us</a>
 
             <!-- Menu Icon -->
             <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6 flex md:hidden cursor-pointer">
+                stroke="currentColor" class="size-6 flex lg:hidden cursor-pointer">
 
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 
             </svg>
-            <a class=" loginbtn text-white hidden md:flex bg-pink-600 font -bold px-2 rounded-2xl" href="#">Login</a>
+            <a class=" loginbtn text-white hidden lg:flex bg-pink-600 font -bold px-2 rounded-2xl" href="#">Login</a>
             <svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="size-6 hidden">
                 <path fill-rule="evenodd"
@@ -71,7 +67,7 @@
 
     </nav>
     <!--sidenav-->
-    <div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 md:hidden transform duration-1000  "
+    <div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 lg:hidden transform duration-1000  "
         style="right:-60%">
         <nav class="flex flex-col gap-10 p-3">
             <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
@@ -213,92 +209,260 @@
         </div>
 
     </section>
-    <!-- CATEGORY SECTION -->
-    <div class="p-5 grid grid-cols-3 gap-y-6 gap-x-2 md:flex md:justify-around md:items-start md:gap-5 text-center">
+    <!-- Explore Categories -->
+    <section class="px-5 py-10 text-center">
 
-        <!-- Ice Creams -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home1.png">
-            <p class="pt-2 text-sm md:text-base">Ice Creams</p>
+        <!-- Heading -->
+        <div class="mb-8">
+            <p class="text-pink-500 font-semibold tracking-widest uppercase">
+                ✨ Find Your Scoop ✨
+            </p>
+
+            <h2 class="mt-2 text-3xl md:text-4xl font-bold text-[#3B2118]">
+                Explore Our Categories
+            </h2>
+
+            <p class="mt-2 text-[#766A64]">
+                Discover something delicious for every mood 🍨
+            </p>
         </div>
 
-        <!-- Milkshakes -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home2.png">
-            <p class="pt-2 text-sm md:text-base">Milkshakes</p>
+        <!-- Explore Button -->
+        <button id="explore" class="group mx-auto flex items-center gap-3 rounded-full
+        bg-[#3B2118] px-7 py-4 font-semibold text-white
+        shadow-lg transition duration-300
+        hover:scale-105 hover:bg-pink-500 hover:shadow-xl">
+
+            <span class="text-xl">🍦</span>
+
+            <span id="exploreText">
+                Explore Categories
+            </span>
+
+            <span id="exploreArrow" class="text-xl transition duration-300 group-hover:translate-y-1">
+                ↓
+            </span>
+
+        </button>
+
+
+        <!-- Categories -->
+        <div id="categoryContainer" class="hidden mt-10 p-5 grid grid-cols-3 gap-y-8 gap-x-2
+        md:flex md:justify-around md:items-start md:gap-5 text-center">
+
+            <!-- Ice Creams -->
+            <div id="icecreams" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home1.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Ice Creams
+                </p>
+            </div>
+
+
+            <!-- Milkshakes -->
+            <div id="milkshakes" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home2.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Milkshakes
+                </p>
+            </div>
+
+
+            <!-- Sundaes -->
+            <div id="sundaes" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home3.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Sundaes
+                </p>
+            </div>
+
+
+            <!-- Popsicles -->
+            <div id="popsicles" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home4.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Popsicles
+                </p>
+            </div>
+
+
+            <!-- Ice Cream Cakes -->
+            <div id="cakes" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home5.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Ice Cream Cakes
+                </p>
+            </div>
+
+
+            <!-- Desserts -->
+            <div id="desserts" class="w-full md:w-32 flex flex-col items-center cursor-pointer
+            transition duration-300 hover:-translate-y-2 hover:scale-105">
+
+                <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home6.png">
+
+                <p class="pt-2 text-sm md:text-base font-semibold text-[#3B2118]">
+                    Desserts
+                </p>
+            </div>
+
         </div>
 
-        <!-- Sundaes -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home3.png">
-            <p class="pt-2 text-sm md:text-base">Sundaes</p>
-        </div>
-
-        <!-- Popsicles -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home4.png">
-            <p class="pt-2 text-sm md:text-base">Popsicles</p>
-        </div>
-
-        <!-- Ice Cream Cakes -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home5.png">
-            <p class="pt-2 text-sm md:text-base">Ice Cream Cakes</p>
-        </div>
-
-        <!-- Desserts -->
-        <div class="w-full md:w-32 flex flex-col items-center">
-            <img class="w-20 h-20 md:w-25 md:h-25 object-contain" src="./images/home6.png">
-            <p class="pt-2 text-sm md:text-base">Desserts</p>
-        </div>
-
-    </div>
+    </section>
 
 
 
-    <!--car section-->
-    <div class="grid grid-cols-1  md:grid-cols-2 gap-5 px-5 pt-3 md:px-10">
 
-        <div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
+    <!--card section-->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-3 md:px-5 lg:px-10 items-stretch
+            auto-rows-[360px] md:auto-rows-[340px]">
+
+        <!-- Limited Time Offer -->
+        <div class="relative w-full h-full rounded-2xl overflow-hidden">
 
             <img src="./images/homecard1.png" class="w-full h-full object-cover">
 
-            <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-white">
-                Classic <br>
-                <span class="text-pink-400">Never Melts.</span>
+            <!-- Offer Content -->
+            <div class="absolute top-5 left-5 md:top-8 md:left-8 text-white">
 
-            </p>
-            <p class="absolute top-30 left-8 text-xs md:text-xl  text-white">Timeless flavour that <br><span>Always make
-                    you smile</span></p>
-            <button
-                class="absolute top-40 md:top-50 p-1 text-xs md:p-2 rounded-xl left-8  bg-white md:text-black">Explore
-                Classics</button>
+                <p class="text-xs md:text-sm font-semibold tracking-widest">
+                    LIMITED TIME OFFER
+                </p>
+
+                <p class="mt-2 text-2xl md:text-4xl font-bold">
+                    Classic
+                    <br>
+                    <span class="text-pink-400">
+                        Never Melts.
+                    </span>
+                </p>
+
+                <p class="mt-2 text-xs md:text-base">
+                    Timeless flavour that
+                    <br>
+                    Always make you smile
+                </p>
+
+                <!-- Discount -->
+                <div class="mt-3 inline-block rounded-full bg-white px-3 py-1 md:px-4 md:py-2">
+                    <span class="text-sm md:text-lg font-bold text-pink-500">
+                        UP TO 30% OFF
+                    </span>
+                </div>
+
+                <!-- Timer -->
+                <div class="mt-3 flex gap-1 md:gap-2">
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="days" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            DAYS
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="hours" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            HOURS
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="minutes" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            MIN
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="seconds" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            SEC
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <button
+                    class="mt-3 rounded-xl bg-white px-4 py-2 text-xs font-semibold text-[#3B2118] hover:bg-pink-500 hover:text-white transition">
+                    Explore Classics →
+                </button>
+
+            </div>
 
         </div>
-        <div class="relative w-full h-[220px] md:h-[300px] rounded-2xl overflow-hidden">
+        <div class="relative w-full h-full rounded-2xl overflow-hidden">
 
-            <img src="./images/homecard2.png" class="w-full h-full object-cover">
+            <img src="./images/homecard2.png" class="absolute inset-0 w-full h-full object-cover">
 
-            <!-- Heading -->
-            <p class="absolute top-8 left-8 text-2xl md:text-4xl font-bold text-black">
-                Create your<br>
-                <span class="text-pink-600">Own scoop!</span>
-            </p>
+            <div class="relative z-10 h-full p-5 md:p-7 flex flex-col items-start">
 
-            <!-- Description -->
-            <p class="absolute top-[100px] md:top-[145px] left-8 text-xs md:text-xl text-black">
-                Mix Match Make it yours<br>
-            </p>
+                <!-- Small Badge -->
+                <div
+                    class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[10px] md:text-xs font-bold text-pink-600">
+                    ✨ MAKE IT YOUR WAY
+                </div>
 
-            <!-- Button -->
-            <button class="absolute top-[165px] md:top-[215px] left-8 
-                   p-1 md:p-2 px-3 md:px-5 
-                   rounded-xl border border-black  text-xs md:text-base font-semibold text-[#3B2118]">
-                Start Customizing →
-            </button>
+                <!-- Heading -->
+                <p class="mt-3 text-2xl md:text-4xl font-bold text-black leading-tight">
+                    Create your <br>
+                    <span class="text-pink-600">Own scoop!</span>
+                </p>
 
+                <!-- Description -->
+                <p class="mt-3 text-xs md:text-base text-black">
+                    Mix • Match • Make it yours
+                </p>
+
+                <!-- Little Features -->
+                <div class="mt-3 flex gap-2 text-[9px] md:text-xs font-semibold text-[#3B2118]">
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍓 Flavours
+                    </span>
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍫 Toppings
+                    </span>
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍒 Extras
+                    </span>
+
+                </div>
+
+                <!-- Button -->
+                <a href="customize.html"
+                    class="mt-4 inline-block rounded-xl border border-[#3B2118] px-3 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-semibold text-[#3B2118] hover:bg-[#3B2118] hover:text-white transition duration-300">
+                    Start Customizing →
+                </a>
+
+            </div>
         </div>
-
     </div>
 
     <!--why choose scoop-->
@@ -362,17 +526,17 @@
                 overflow-hidden">
 
             <!-- Left Text -->
-            <div class="absolute left-5 md:left-10 top-1/2 
+            <div class="absolute left-5 lg:left-10 top-1/2 
                     -translate-y-1/2 z-10">
 
-                <p class="text-xl md:text-2xl font-semibold 
+                <p class="text-xl lg:text-2xl font-semibold 
                       text-[#3B2118] leading-tight hidden md:flex">
                     Moments<br>
                     Taste Better<br>
                     Together
                 </p>
 
-                <p class="text-pink-600 text-3xl mt-2 hidden md:flex">
+                <p class="text-pink-600 text-3xl mt-2 hidden lg:flex">
                     ♡
                 </p>
 
@@ -380,7 +544,7 @@
 
 
             <!-- Photos -->
-            <div class="absolute left-[0%] md:left-[18%] 
+            <div class="absolute left-[0%] lg:left-[18%] 
                     top-1/2 -translate-y-1/2 
                     flex items-center gap-3 md:gap-5">
 
@@ -397,11 +561,11 @@
 
 
                 <div class="bg-white p-2 shadow-lg 
-                        -rotate-3 hidden md:flex">
+                        -rotate-3 hidden lg:flex">
                     <img src="./images/memories3.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
                 </div>
                 <div>
-                    <img class="w-20 h-30 hidden md:block" class=" md:flex" src="./images/homecard3.png">
+                    <img class="w-20 h-30 hidden lg:block" class=" md:flex" src="./images/homecard3.png">
                 </div>
 
             </div>
@@ -443,12 +607,19 @@
                     <p>Subscribe to get updates on new flavors, special offers & more.</p>
                 </div>
             </div>
-            <div>
-                <input class="border border-black pr-20 md:pr-80 p-2 rounded" type="email"
-                    placeholder="Enter your email">
-                <button class="p-2 bg-pink-600 text-white rounded">Subscribe</button>
-            </div>
+            <div class="w-full flex flex-col gap-2 sm:flex-row sm:items-center">
 
+                <input id="subscribeEmail" type="email" placeholder="Enter your email" class="box-border w-full sm:flex-1 rounded-lg border border-gray-300
+               px-3 py-3 text-sm md:px-4 md:py-3 md:text-base
+               outline-none focus:border-pink-500">
+
+                <button id="subscribebtn" class="w-full sm:w-auto rounded-lg bg-pink-600
+               px-5 py-3 text-sm font-semibold text-white
+               transition duration-300 hover:bg-pink-700">
+                    SUBSCRIBE
+                </button>
+
+            </div>
         </div>
 
         <!-- FOOTER -->
@@ -597,7 +768,7 @@
         <!-- Login Popup -->
         <div id="loginModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40">
 
-            <div class="relative w-[90%] max-w-md rounded-3xl bg-[#FFF5F2] p-8 shadow-2xl">
+            <div class="relative w-[95%] max-w-md rounded-3xl bg-[#FFF5F2] p-6 md:p-8 shadow-2xl">
 
                 <!-- Close Button -->
                 <button id="closelogin" class="absolute right-5 top-4 text-2xl font-bold text-[#3B2118]">
@@ -621,14 +792,14 @@
                     </label>
 
                     <input id="email" type="email" placeholder="Enter your email"
-                        class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+                        class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
 
                     <label class="mt-4 block font-semibold text-[#3B2118]">
                         Password
                     </label>
 
                     <input id="password" type="password" placeholder="Enter your password"
-                        class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+                        class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
 
                     <button id="submit" type="submit"
                         class="mt-6 w-full rounded-xl bg-pink-500 py-3 font-semibold text-white hover:bg-pink-600">
@@ -648,6 +819,39 @@
         </div>
 
     </section>
+    <!-- Subscription Success Popup -->
+    <div id="successPopup" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/40 px-5">
+
+        <div class="w-full max-w-sm rounded-3xl bg-[#FFF5F2] p-7 text-center shadow-2xl">
+
+            <!-- Icon -->
+            <div class="text-5xl">
+                ✨🍦✨
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mt-4 text-2xl font-bold text-[#3B2118]">
+                You're in the Scoop Loop!
+            </h2>
+
+            <!-- Message -->
+            <p class="mt-2 text-[#766A64]">
+                Thanks for subscribing ❤️
+            </p>
+
+            <!-- Button -->
+            <button id="successClose" class="mt-5 rounded-full bg-pink-500 px-8 py-2.5 font-semibold text-white
+                   transition duration-300 hover:scale-105 hover:bg-pink-600">
+                Sweet! 🍨
+            </button>
+
+        </div>
+
+    </div>
+    <!-- Emoji Celebration -->
+<div id="emojiContainer"
+    class="fixed inset-0 z-[60] pointer-events-none overflow-hidden">
+</div>
     <script src="script.js"></script>
 </body>
 
