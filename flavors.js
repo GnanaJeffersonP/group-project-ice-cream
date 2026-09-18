@@ -64,7 +64,6 @@ priceSelect.addEventListener("change", function () {
 
 });
 
-
 // =============================
 // CATEGORY FILTER
 // =============================
@@ -101,7 +100,6 @@ categories.forEach(function (category) {
 
 });
 
-
 // =============================
 // FILTER BUTTON
 // =============================
@@ -121,7 +119,6 @@ filterButton.addEventListener("click", function () {
     }, 1200);
 
 });
-
 
 // =============================
 // FILTER FUNCTION
@@ -227,7 +224,6 @@ function filterCards() {
 
 }
 
-
 // =============================
 // SORT
 // =============================
@@ -296,7 +292,6 @@ sortSelect.addEventListener("change", function () {
 
 });
 
-
 // =============================
 // FAVORITE BUTTON
 // =============================
@@ -325,7 +320,6 @@ favoriteButtons.forEach(function (button) {
     });
 
 });
-
 
 // =============================
 // CART
@@ -357,7 +351,6 @@ cartButtons.forEach(function (button) {
     });
 
 });
-
 
 // =============================
 // NEWSLETTER
@@ -397,7 +390,6 @@ newsletterForm.addEventListener(
 
     }
 );
-
 
 // =============================
 // SEASONAL BUTTON
@@ -451,7 +443,6 @@ seasonalBtn.addEventListener(
     }
 );
 
-
 // =============================
 // MOBILE SIDE NAV
 // =============================
@@ -474,7 +465,6 @@ closenav.addEventListener(
 
     }
 );
-
 
 // =============================
 // CLOSE SIDE NAV AFTER LINK CLICK
