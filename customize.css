@@ -1,6 +1,7 @@
+/* ==========================================
+   Scoop & Smile - Customize Page CSS (Final Pro Version)
+   ========================================== */
 
-/*Scoop & Smile - Customize Page CSS */
-   
 :root {
     --pastel-pink: #ffd1dc;
     --pastel-cream: #fffdd0;
@@ -23,7 +24,24 @@ body {
     position: relative;
 }
 
+/* Floating Background Elements Animation */
+.floating-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1; 
+}
 
+.float-item {
+    position: absolute;
+    font-size: 1.8rem;
+    opacity: 0.3;
+    animation: floatUp 8s linear infinite;
+}
 
 @keyframes floatUp {
     0% {
@@ -38,7 +56,7 @@ body {
     }
 }
 
-
+/* Ensure content sits above background */
 header, main, .modal-overlay {
     position: relative;
     z-index: 10;
@@ -55,7 +73,7 @@ header, main, .modal-overlay {
     animation: pulseTotal 0.3s ease-in-out;
 }
 
-/* Navbar  */
+/* Navbar - Sticky & Modern */
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -70,20 +88,33 @@ header {
 .nav-container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Brand Logo Styling (SCOOP + Tagline) */
 .logo {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
     cursor: pointer;
-    font-size: 1.4rem;
+    line-height: 1.1;
+}
+
+.brand-title {
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--brand-brown);
+    color: #4a3525;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #4a3525;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
