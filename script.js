@@ -49,19 +49,35 @@ submit.addEventListener("click", function(event) {
 });
 
 //category
-
 var explore = document.getElementById("explore");
 var categories = document.getElementById("categoryContainer");
 
+explore.addEventListener("click", function () {
 
+    if (categories.classList.contains("max-h-0")) {
 
-categories.style.display = "none"
-explore.addEventListener("click", function() {
+        // SHOW
+        categories.classList.remove("max-h-0");
+        categories.classList.remove("opacity-0");
+        categories.classList.remove("pointer-events-none");
 
-    categories.style.display = "flex"
+        categories.classList.add("max-h-[500px]");
+        categories.classList.add("opacity-100");
 
+    } else {
 
-})
+        // HIDE
+        categories.classList.remove("max-h-[500px]");
+        categories.classList.remove("opacity-100");
+
+        categories.classList.add("max-h-0");
+        categories.classList.add("opacity-0");
+        categories.classList.add("pointer-events-none");
+
+    }
+
+});
+
 
 //timer
 

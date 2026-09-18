@@ -1,600 +1,892 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us — Gelatoo | Good Mood, Great Ice Cream</title>
-  <!-- Google Fonts: Playfair Display for headings, Plus Jakarta Sans for body, Caveat for playful doodles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOOP</title>
 </head>
-<body>
+<link href="./style.css" rel="stylesheet">
+<link href="./src/output.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="#" class="brand-logo" aria-label="Gelatoo Home">
-        <div class="logo-icon-wrap">
-          <svg class="ice-cream-svg-logo" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Cone -->
-            <path d="M12 25L20 45L28 25H12Z" fill="#D9822B" stroke="#B86214" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M15 28L25 39M25 28L15 39" stroke="#B86214" stroke-width="1.2" stroke-linecap="round"/>
-            <!-- Ice Cream Scoops -->
-            <circle cx="15" cy="18" r="8" fill="#F472B6"/>
-            <circle cx="25" cy="18" r="8" fill="#FDE047"/>
-            <circle cx="20" cy="12" r="9" fill="#E11D48"/>
-            <path d="M10 24C10 25.5 12 26 14 26C16 26 18 24.5 20 24.5C22 24.5 24 26 26 26C28 26 30 25.5 30 24" stroke="#B86214" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="logo-text-group">
-          <span class="logo-title">Gelatoo</span>
-          <span class="logo-tagline">GOOD MOOD. GREAT ICE CREAM.</span>
-        </div>
-      </a>
+<body class="font-['Poppins']">
+    <!--navbar-->
+    <nav class="p-5 flex justify-between bg-amber-50">
 
-      <!-- Mobile Menu Toggle -->
-      <button class="mobile-toggle" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
-      <nav class="nav-menu" id="primary-nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#flavors" class="nav-link">Flavors</a></li>
-          <li class="nav-item"><a href="#customize" class="nav-link">Customize</a></li>
-          <li class="nav-item">
-            <a href="#cart" class="nav-link cart-link">
-              Cart
-              <span class="cart-icon-wrapper">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-                <span class="cart-badge">3</span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item"><a href="#about" class="nav-link active">About</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
 
-      <div class="header-actions">
-        <button class="search-btn" aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-        <a href="#login" class="btn btn-primary btn-login">Login</a>
-      </div>
-    </div>
-  </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <span class="section-badge">ABOUT US</span>
-        <h1 class="hero-heading">
-          More Than <br>
-          Ice Cream. <br>
-          <span class="text-highlight">A Happier World.</span>
-        </h1>
-        <p class="hero-description">
-          At Gelatoo, we believe ice cream is more than a dessert — it's a little moment of joy that makes life sweeter.
-        </p>
-        <a href="#our-story" class="btn btn-primary btn-pill">
-          Our Story <span class="btn-arrow">↓</span>
-        </a>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-bowl-wrapper">
-          <!-- Main Bowl Image with multiple artisan scoops & chocolate chunks -->
-          <div class="bowl-composition">
-            <img 
-              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80" 
-              alt="Artisanal Gelatoo bowl loaded with strawberry, vanilla fudge, and dark chocolate ice cream scoops"
-              class="hero-bowl-img"
-              loading="lazy"
-            />
-            <!-- Branded Bowl Label overlay -->
-            <div class="bowl-branding-stamp">
-              <span class="bowl-brand-text">Gelatoo</span>
-              <span class="doodle-heart">♡</span>
-            </div>
-            <!-- Decorative chocolate crumbs -->
-            <div class="chocolate-crumb choco-1"></div>
-            <div class="chocolate-crumb choco-2"></div>
-          </div>
+        <div>
+            <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
+            <p>Scoop your Happiness</p>
         </div>
 
-        <!-- Handwritten Playful Doodle Note -->
-        <div class="hero-doodle-note">
-          <span class="doodle-text">Good<br>Food<br>Brighter<br>Days</span>
-          <span class="doodle-heart-lg">♡</span>
-          <svg class="curved-doodle-arrow" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 10 C 25 5, 40 20, 35 35" stroke="#4A3B32" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-            <path d="M28 32 L 35 36 L 38 27" stroke="#4A3B32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="flex gap-25 items-center ">
 
-  <!-- ================= OUR STORY SECTION ================= -->
-  <section class="story-section" id="our-story">
-    <div class="container story-grid">
-      
-      <!-- Left: Polaroid Photo Cards with Washi Tape -->
-      <div class="story-polaroids-col">
-        <div class="polaroids-wrapper">
-          <!-- Backing Board Sheet -->
-          <div class="backing-board">
-            <div class="washi-tape tape-corner-left"></div>
-            <div class="washi-tape tape-corner-right"></div>
-            <div class="backing-note">
-              <p class="caption-handwritten">It all<br>started with<br>a scoop <span class="doodle-heart-sm">♡</span></p>
-            </div>
-          </div>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="index.html">Home</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="flavors.html">Flavours</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="customize.html">Customize</a>
 
-          <!-- Polaroid 1: Shopfront -->
-          <div class="polaroid-card card-storefront">
-            <div class="washi-tape tape-top"></div>
-            <div class="polaroid-inner">
-              <div class="polaroid-img-box">
-                <img 
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" 
-                  alt="Gelatoo flagship artisan parlor at night with warm glowing lights" 
-                  class="polaroid-photo"
-                  loading="lazy"
-                />
-                <div class="store-sign-overlay">
-                  <span class="store-neon-title">Gelatoo</span>
-                  <span class="store-neon-sub">SCOOPS OF HAPPINESS</span>
-                </div>
-              </div>
-            </div>
-          </div>
+            <!-- Cart Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 hidden lg:flex">
 
-          <!-- Polaroid 2: Hand holding Strawberry Cone -->
-          <div class="polaroid-card card-cone">
-            <div class="washi-tape tape-bottom-left"></div>
-            <div class="polaroid-inner">
-              <div class="polaroid-img-box">
-                <img 
-                  src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?auto=format&fit=crop&w=600&q=80" 
-                  alt="Holding strawberry ice cream cone outdoors" 
-                  class="polaroid-photo"
-                  loading="lazy"
-                />
-              </div>
-              <div class="polaroid-caption-area">
-                <p class="caption-handwritten">Same Happiness<br>Bigger Dreams <span class="doodle-heart-sm">♡</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
 
-      <!-- Right: Story Narrative -->
-      <div class="story-content-col">
-        <span class="section-badge">OUR STORY</span>
-        <h2 class="section-title">
-          From a Small Scoop <br>to a <span class="text-highlight">Big Dream</span>
-        </h2>
-        <div class="story-body-text">
-          <p>
-            Gelatoo started with a simple idea — to bring happiness one scoop at a time. What began as a small passion project has grown into a brand loved by ice cream enthusiasts who believe in the power of good food and great moments.
-          </p>
-          <p>
-            We are inspired by people, places and flavors from around the world, and we craft every scoop with love, creativity and the finest ingredients.
-          </p>
-        </div>
-        <a href="#journey" class="btn btn-primary btn-pill">
-          Our Journey <span class="btn-arrow">→</span>
-        </a>
-
-        <!-- Hand drawn cone doodle & note on the right -->
-        <div class="story-doodle-badge">
-          <div class="cone-doodle-container">
-            <!-- Sparkles -->
-            <svg class="cone-sparkle-top" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2V6M12 18V22M2 12H6M18 12H22M5 5L8 8M16 16L19 19M5 19L8 16M16 8L19 5" stroke="#E17B3C" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
-            <svg class="hand-drawn-cone" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Swirls -->
-              <path d="M30 10C24 10 18 15 20 22C14 23 12 30 16 35C20 40 38 41 43 36C47 31 46 24 40 21C42 15 36 10 30 10Z" stroke="#E17B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 22C26 25 34 25 38 21" stroke="#E17B3C" stroke-width="1.8"/>
-              <path d="M18 34C24 37 36 37 42 34" stroke="#E17B3C" stroke-width="1.8"/>
-              <!-- Waffle Cone -->
-              <path d="M17 38L30 85L43 38" stroke="#E17B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 48L37 70M24 60L33 73" stroke="#E17B3C" stroke-width="1.5"/>
-              <path d="M40 48L23 70M36 60L27 73" stroke="#E17B3C" stroke-width="1.5"/>
+
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="about.html">About Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="contact.html">Contact Us</a>
+
+            <!-- Menu Icon -->
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 flex lg:hidden cursor-pointer">
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+
             </svg>
-          </div>
-          <div class="cone-doodle-text">
-            <span>Scoops</span>
-            <span>Create</span>
-            <span>Smiles</span>
-            <span class="doodle-heart-sm">♡</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= VALUES / HIGHLIGHTS SECTION ================= -->
-  <section class="values-section">
-    <div class="container">
-      <div class="values-wrapper">
-        <div class="values-grid">
-          
-          <!-- Value 1: Quality Ingredients -->
-          <div class="value-card">
-            <div class="value-icon-circle bg-mint">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2B8A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-              </svg>
-            </div>
-            <h3 class="value-title">Quality Ingredients</h3>
-            <p class="value-desc">We use only the finest, natural ingredients.</p>
-          </div>
-
-          <!-- Value 2: Made with Love -->
-          <div class="value-card">
-            <div class="value-icon-circle bg-pink">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="#E11D48" stroke="#E11D48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-              </svg>
-            </div>
-            <h3 class="value-title">Made with Love</h3>
-            <p class="value-desc">Every scoop is crafted with care and passion.</p>
-          </div>
-
-          <!-- Value 3: Unique Flavors -->
-          <div class="value-card">
-            <div class="value-icon-circle bg-peach">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m7 11 5 11 5-11"/>
-                <path d="M12 3a5 5 0 0 0-5 5c0 1.5.5 2.5 1.5 3h7c1-.5 1.5-1.5 1.5-3a5 5 0 0 0-5-5Z"/>
-              </svg>
-            </div>
-            <h3 class="value-title">Unique Flavors</h3>
-            <p class="value-desc">From classic to creative, there's a flavor for everyone.</p>
-          </div>
-
-          <!-- Value 4: Happy Community -->
-          <div class="value-card">
-            <div class="value-icon-circle bg-rose">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C026D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <h3 class="value-title">Happy Community</h3>
-            <p class="value-desc">Our customers inspire us every day.</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= METRICS & MINT ICE CREAM BAR ================= -->
-  <section class="stats-section">
-    <div class="container stats-container">
-      
-      <!-- Mint scoop on left -->
-      <div class="stats-visual-left">
-        <div class="mint-icecream-card">
-          <img 
-            src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=500&q=80" 
-            alt="Mint chocolate chip gelato scoop with fresh mint leaves and dark chocolate chips" 
-            class="mint-icecream-img"
-            loading="lazy"
-          />
-          <div class="mint-leaf-accent">🍃</div>
-        </div>
-      </div>
-
-      <!-- Center floating stats pill -->
-      <div class="stats-pill-wrapper">
-        <div class="stats-grid">
-          
-          <div class="stat-item">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/>
-                <line x1="15" y1="9" x2="15.01" y2="9"/>
-              </svg>
-            </div>
-            <div class="stat-value">10K+</div>
-            <div class="stat-label">Happy Customers</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m7 11 5 11 5-11"/><path d="M12 3a5 5 0 0 0-5 5c0 1.5.5 2.5 1.5 3h7c1-.5 1.5-1.5 1.5-3a5 5 0 0 0-5-5Z"/>
-              </svg>
-            </div>
-            <div class="stat-value">50+</div>
-            <div class="stat-label">Flavors Created</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#E11D48" stroke="#E11D48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-              </svg>
-            </div>
-            <div class="stat-value">5+</div>
-            <div class="stat-label">Years of Sweetness</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-            </div>
-            <div class="stat-value">3</div>
-            <div class="stat-label">Locations & Growing</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Handwritten note on right -->
-      <div class="stats-doodle-right">
-        <p class="stats-handwritten">
-          Thank you<br>
-          for being<br>
-          part of our<br>
-          story
-          <span class="doodle-heart-sm">♡</span>
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= MEET OUR TEAM SECTION ================= -->
-  <section class="team-section" id="team">
-    <div class="container">
-      <div class="team-header text-center">
-        <span class="section-badge">MEET OUR TEAM</span>
-        <h2 class="section-title">The People Behind Gelatoo</h2>
-        <p class="section-subtitle">A small team with a big passion for ice cream and happier days.</p>
-      </div>
-
-      <div class="team-grid">
-        
-        <!-- Member 1: Arjun -->
-        <div class="team-card">
-          <div class="avatar-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
-              alt="Arjun - Founder & Visionary" 
-              class="team-avatar"
-              loading="lazy"
-            />
-          </div>
-          <h3 class="member-name">Arjun</h3>
-          <span class="member-role">Founder & Visionary</span>
-          <blockquote class="member-quote">
-            "Ice cream is happiness in a cup."
-          </blockquote>
-        </div>
-
-        <!-- Member 2: Meera -->
-        <div class="team-card">
-          <div class="avatar-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
-              alt="Meera - Head of Flavors" 
-              class="team-avatar"
-              loading="lazy"
-            />
-          </div>
-          <h3 class="member-name">Meera</h3>
-          <span class="member-role">Head of Flavors</span>
-          <blockquote class="member-quote">
-            "Creating new flavors is my happy place."
-          </blockquote>
-        </div>
-
-        <!-- Member 3: Karan -->
-        <div class="team-card">
-          <div class="avatar-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" 
-              alt="Karan - Operations Lead" 
-              class="team-avatar"
-              loading="lazy"
-            />
-          </div>
-          <h3 class="member-name">Karan</h3>
-          <span class="member-role">Operations Lead</span>
-          <blockquote class="member-quote">
-            "Great ice cream starts with great teamwork."
-          </blockquote>
-        </div>
-
-        <!-- Member 4: Sneha -->
-        <div class="team-card">
-          <div class="avatar-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" 
-              alt="Sneha - Customer Experience" 
-              class="team-avatar"
-              loading="lazy"
-            />
-          </div>
-          <h3 class="member-name">Sneha</h3>
-          <span class="member-role">Customer Experience</span>
-          <blockquote class="member-quote">
-            "Your smile is our sweetest reward."
-          </blockquote>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CTA BANNER SECTION ================= -->
-  <section class="cta-section">
-    <!-- Melting cream drip on top of pink banner -->
-    <div class="cta-top-drip">
-      <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 L1440,0 L1440,15 C1320,15 1280,35 1200,35 C1120,35 1080,10 980,10 C880,10 820,40 720,40 C620,40 560,15 460,15 C360,15 320,48 240,48 C160,48 100,18 0,25 Z" fill="#FAF6F0"/>
-      </svg>
-    </div>
-
-    <div class="container cta-container">
-      
-      <!-- Left Doodle Text -->
-      <div class="cta-doodle-left">
-        <p class="cta-script-text">
-          Let's<br>
-          Spread<br>
-          More<br>
-          Happiness
-          <span class="doodle-heart-sm">♡</span>
-        </p>
-      </div>
-
-      <!-- Center CTA Content -->
-      <div class="cta-center-box">
-        <h2 class="cta-title">Be Part of Our Story</h2>
-        <p class="cta-description">
-          Visit our stores, try our flavors, and make more sweet memories with Gelatoo.
-        </p>
-        <a href="#flavors" class="btn btn-primary btn-cta">
-          Explore Flavors <span class="btn-arrow">→</span>
-        </a>
-      </div>
-
-      <!-- Right Real Strawberry Scoops & Berries -->
-      <div class="cta-visual-right">
-        <div class="cta-berries-box">
-          <img 
-            src="https://images.unsplash.com/photo-1560008511-11c63416e52d?auto=format&fit=crop&w=650&q=80" 
-            alt="Double scoop strawberry gelato garnished with fresh strawberries" 
-            class="cta-strawberry-img"
-            loading="lazy"
-          />
-          <!-- Sparkle Doodles -->
-          <div class="cta-sparkle sp-1">✦</div>
-          <div class="cta-sparkle sp-2">✨</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Melting Chocolate Drip Transition into footer -->
-    <div class="chocolate-drip-divider">
-      <svg viewBox="0 0 1440 85" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,30 
-                 C70,30 110,65 170,65 
-                 C230,65 260,20 330,20 
-                 C400,20 430,75 510,75 
-                 C590,75 630,25 710,25 
-                 C790,25 820,80 900,80 
-                 C980,80 1010,30 1090,30 
-                 C1170,30 1210,65 1290,65 
-                 C1360,65 1400,25 1440,30 
-                 L1440,85 L0,85 Z" fill="#281712"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ================= CHOCOLATE FUDGE FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container footer-content-wrap">
-      <div class="footer-main-row">
-        
-        <!-- Footer Brand -->
-        <div class="footer-brand">
-          <div class="footer-logo-wrap">
-            <svg class="ice-cream-svg-footer" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 25L20 45L28 25H12Z" fill="#D9822B" stroke="#B86214" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M15 28L25 39M25 28L15 39" stroke="#B86214" stroke-width="1.2" stroke-linecap="round"/>
-              <circle cx="15" cy="18" r="8" fill="#F472B6"/>
-              <circle cx="25" cy="18" r="8" fill="#FDE047"/>
-              <circle cx="20" cy="12" r="9" fill="#E11D48"/>
-              <path d="M10 24C10 25.5 12 26 14 26C16 26 18 24.5 20 24.5C22 24.5 24 26 26 26C28 26 30 25.5 30 24" stroke="#B86214" stroke-width="1.5" stroke-linecap="round"/>
+            <a class=" loginbtn text-white hidden lg:flex bg-pink-600 font -bold px-2 rounded-2xl" href="#">Login</a>
+            <svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="size-6 hidden">
+                <path fill-rule="evenodd"
+                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                    clip-rule="evenodd" />
             </svg>
-            <div class="footer-brand-text">
-              <span class="footer-brand-name">Gelatoo</span>
-              <span class="footer-brand-tagline">GOOD MOOD. GREAT ICE CREAM.</span>
-            </div>
-          </div>
+
+
+
+
         </div>
 
-        <!-- Center Nav Links -->
-        <nav class="footer-nav" aria-label="Footer Navigation">
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#flavors">Flavors</a></li>
-            <li><a href="#customize">Customize</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    </nav>
+    <!--sidenav-->
+    <div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 lg:hidden transform duration-1000  "
+        style="right:-60%">
+        <nav class="flex flex-col gap-10 p-3">
+            <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
+
+            <a class="hover:text-pink-400 hover:underline font-bold  " href="index.html">Home</a>
+            <a class="hover:text-pink-400 hover:underline font-bold " href="flavors.html">Flavours</a>
+            <a class="hover:text-pink-400 hover:underline font-bold x " href="customize.html">Customize</a>
+
+
+            <a class="hover:text-pink-400 hover:underline font-bold " href="#">About Us</a>
+            <a class="hover:text-pink-400 hover:underline font-bold " href="contact.html">Contact Us</a>
+            <a class="text-white bg-pink-600 font -bold px-2 w-15 rounded-2xl loginbtn" href="#">Login</a>
         </nav>
+    </div>
+    <!--hero section-->
 
-        <!-- Right Social Icons -->
-        <div class="footer-social-wrapper">
-          <div class="social-icons">
-            <a href="https://instagram.com" class="social-icon" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a href="https://facebook.com" class="social-icon" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="https://youtube.com" class="social-icon" aria-label="YouTube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
-            </a>
-            <a href="https://twitter.com" class="social-icon" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-            </a>
-            <a href="https://pinterest.com" class="social-icon" aria-label="Pinterest">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/><circle cx="12" cy="12" r="10"/></svg>
-            </a>
-          </div>
+    <section class="relative w-full h-[500px] md:h-[650px] overflow-hidden">
+
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+
+            <source src="./videos/hero.mp4" type="video/mp4">
+
+        </video>
+
+        <!-- Optional video overlay -->
+
+
+
+        <!-- Hero Content -->
+        <div class="relative z-10 px-6 pt-16 md:p-20 hero">
+
+            <!-- Small Heading -->
+            <p class="text-xl md:text-2xl font-bold text-pink-600 tracking-widest">
+                WELCOME TO SCOOP
+            </p>
+
+
+            <!-- Main Heading -->
+            <h1 class="text-[#3B2118] text-5xl md:text-8xl font-bold 
+                   drop-shadow-[2px_3px_2px_rgba(0,0,0,0.2)]">
+
+                Scoop Into
+                <br>
+
+                <span class="text-pink-500 drop-shadow-[2px_2px_2px_rgba(236,64,122,0.3)]">
+                    Happiness.
+                </span>
+
+            </h1>
+
+
+            <!-- Description -->
+            <p class="text-lg md:text-2xl font-bold text-[#766A64] pt-5 max-w-3xl">
+                Delicious moments, creamy treats, and happiness in every scoop.
+            </p>
+
+
+            <!-- Buttons -->
+            <div class="pt-5 flex gap-4">
+
+                <button class="text-lg md:text-xl bg-pink-500 text-white 
+                           px-5 py-2 rounded-2xl">
+                    Explore Now
+                </button>
+
+                <button class="border border-[#3B2118] text-[#3B2118] 
+                           px-5 py-2 rounded-2xl font-bold">
+                    Our Flavours
+                </button>
+
+            </div>
+
+
+            <!-- Benefits -->
+            <div class="grid grid-cols-3 gap-2 md:flex md:gap-8 pt-8">
+
+                <!-- Natural -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        🌿
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            100% Natural
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Quality Ingredients
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Made With Love -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        ❤️
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            Made With Love
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Made Fresh Daily
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Freshly Delivered -->
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+
+                    <span class="text-xl md:text-2xl">
+                        🚚
+                    </span>
+
+                    <div>
+                        <p class="text-sm md:text-lg font-semibold text-[#3B2118]">
+                            Freshly Delivered
+                        </p>
+
+                        <p class="text-xs md:text-sm text-[#766A64]">
+                            Straight To You
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <!-- Far Right Handwritten Signoff -->
-        <div class="footer-doodle-signoff">
-          <p class="footer-script-text">
-            Stay Sweet<br>
-            Stay You
-            <span class="doodle-heart-sm">♡</span>
-          </p>
+    </section>
+    <!-- Explore Categories -->
+    <section class="px-5 py-10 text-center">
+
+        <!-- Heading -->
+        <div class="mb-8">
+            <p class="text-pink-500 font-semibold tracking-widest uppercase">
+                ✨ Find Your Scoop ✨
+            </p>
+
+            <h2 class="mt-2 text-3xl md:text-4xl font-bold text-[#3B2118]">
+                Explore Our Categories
+            </h2>
+
+            <p class="mt-2 text-[#766A64]">
+                Discover something delicious for every mood 🍨
+            </p>
         </div>
 
-      </div>
+        <!-- Explore Button -->
+        <button id="explore" class="group mx-auto flex items-center gap-3 rounded-full
+        bg-[#3B2118] px-7 py-4 font-semibold text-white
+        shadow-lg transition duration-300
+        hover:scale-105 hover:bg-pink-500 hover:shadow-xl">
 
-      <!-- Copyright Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <p class="copyright-text">© 2026 Gelatoo. All Rights Reserved.</p>
-      </div>
+            <span class="text-xl">🍦</span>
+
+            <span id="exploreText">
+                Explore Categories
+            </span>
+
+            <span id="exploreArrow" class="text-xl transition duration-300 group-hover:translate-y-1">
+                ↓
+            </span>
+
+        </button>
+
+
+        <!-- Categories -->
+       <div id="categoryContainer"
+    class="max-h-0 opacity-0 overflow-hidden
+           transition-all duration-700 ease-in-out
+           pointer-events-none">
+
+    <div class="px-2 pt-8 pb-4 flex gap-4 overflow-x-auto scrollbar-hide
+                md:grid md:grid-cols-3 md:overflow-visible
+                lg:flex lg:justify-around lg:gap-5 text-center">
+
+            <!-- Ice Creams -->
+            <div id="icecreams" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home1.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118]">
+                    Ice Creams
+                </p>
+            </div>
+
+
+            <!-- Milkshakes -->
+            <div id="milkshakes" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home2.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118]">
+                    Milkshakes
+                </p>
+            </div>
+
+
+            <!-- Sundaes -->
+            <div id="sundaes" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home3.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118]">
+                    Sundaes
+                </p>
+            </div>
+
+
+            <!-- Popsicles -->
+            <div id="popsicles" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home4.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118]">
+                    Popsicles
+                </p>
+            </div>
+
+
+            <!-- Ice Cream Cakes -->
+            <div id="cakes" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home5.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118] leading-tight">
+                    Ice Cream Cakes
+                </p>
+            </div>
+
+            <!-- Desserts -->
+            <div id="desserts" class="group w-full lg:w-32 min-h-[125px]
+           flex flex-col items-center justify-center
+           rounded-2xl bg-white/70 p-3
+           cursor-pointer
+           transition duration-300
+           hover:-translate-y-2 hover:scale-105 hover:shadow-lg">
+
+                <img class="w-16 h-16 sm:w-20 sm:h-20 lg:w-[90px] lg:h-[90px] object-contain
+               transition duration-300 group-hover:scale-110" src="./images/home6.png">
+
+                <p class="pt-2 text-sm font-semibold text-[#3B2118]">
+                    Desserts
+                </p>
+            </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!--card section-->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-3 md:px-5 lg:px-10 items-stretch
+            auto-rows-[360px] md:auto-rows-[340px]">
+
+        <!-- Limited Time Offer -->
+        <div class="relative w-full h-full rounded-2xl overflow-hidden">
+
+            <img src="./images/homecard1.png" class="w-full h-full object-cover">
+
+            <!-- Offer Content -->
+            <div class="absolute top-5 left-5 md:top-8 md:left-8 text-white">
+
+                <p class="text-xs md:text-sm font-semibold tracking-widest">
+                    LIMITED TIME OFFER
+                </p>
+
+                <p class="mt-2 text-2xl md:text-4xl font-bold">
+                    Classic
+                    <br>
+                    <span class="text-pink-400">
+                        Never Melts.
+                    </span>
+                </p>
+
+                <p class="mt-2 text-xs md:text-base">
+                    Timeless flavour that
+                    <br>
+                    Always make you smile
+                </p>
+
+                <!-- Discount -->
+                <div class="mt-3 inline-block rounded-full bg-white px-3 py-1 md:px-4 md:py-2">
+                    <span class="text-sm md:text-lg font-bold text-pink-500">
+                        UP TO 30% OFF
+                    </span>
+                </div>
+
+                <!-- Timer -->
+                <div class="mt-3 flex gap-1 md:gap-2">
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="days" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            DAYS
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="hours" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            HOURS
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="minutes" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            MIN
+                        </span>
+                    </div>
+
+                    <div class="w-12 md:w-16 rounded-lg bg-black/30 backdrop-blur-sm p-1 md:p-2 text-center">
+                        <p id="seconds" class="text-sm md:text-xl font-bold text-white">
+                            00
+                        </p>
+                        <span class="text-[8px] md:text-xs text-white">
+                            SEC
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <button
+                    class="mt-3 rounded-xl bg-white px-4 py-2 text-xs font-semibold text-[#3B2118] hover:bg-pink-500 hover:text-white transition">
+                    Explore Classics →
+                </button>
+
+            </div>
+
+        </div>
+        <div class="relative w-full h-full rounded-2xl overflow-hidden">
+
+            <img src="./images/homecard2.png" class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="relative z-10 h-full p-5 md:p-7 flex flex-col items-start">
+
+                <!-- Small Badge -->
+                <div
+                    class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[10px] md:text-xs font-bold text-pink-600">
+                    ✨ MAKE IT YOUR WAY
+                </div>
+
+                <!-- Heading -->
+                <p class="mt-3 text-2xl md:text-4xl font-bold text-black leading-tight">
+                    Create your <br>
+                    <span class="text-pink-600">Own scoop!</span>
+                </p>
+
+                <!-- Description -->
+                <p class="mt-3 text-xs md:text-base text-black">
+                    Mix • Match • Make it yours
+                </p>
+
+                <!-- Little Features -->
+                <div class="mt-3 flex gap-2 text-[9px] md:text-xs font-semibold text-[#3B2118]">
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍓 Flavours
+                    </span>
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍫 Toppings
+                    </span>
+
+                    <span class="rounded-full bg-white/70 px-2 py-1">
+                        🍒 Extras
+                    </span>
+
+                </div>
+
+                <!-- Button -->
+                <a href="customize.html"
+                    class="mt-4 inline-block rounded-xl border border-[#3B2118] px-3 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-semibold text-[#3B2118] hover:bg-[#3B2118] hover:text-white transition duration-300">
+                    Start Customizing →
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--why choose scoop-->
+    <div class=" pt-6 text-center">
+        <div>
+            <p class="tracking-widest text-pink-600">WHY CHOOSE SCOOP</p>
+            <p class="text-4xl text-amber-950 font-bold">More Than Just <span
+                    class="text-4xl text-pink-600 font-bold">Ice Cream</span> </p>
+            <p class="font-light">We bring joy to your day with every scoop.</p>
+        </div>
+    </div>
+    <!--promises-->
+    <div class="flex justify-center p-10 gap-2 md:gap-35 flex-wrap">
+        <div class="flex flex-col items-center">
+            <svg class="size-10 text-pink-600 bg-pink-200  rounded-2xl" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="#DB2777" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+            <p class="text-black font-bold">Premium Incredients</p>
+            <P class="font-extralight">Only the best always.</P>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+            <p class="text-black font-bold">Made With Love</p>
+            <P class="font-extralight">Because you deserve it.</P>
+        </div>
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-600 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+            </svg>
+            <p class="text-black font-bold">For Every Mood</p>
+            <p class="font-extralight">Flavors for every moment</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-10 text-pink-700 bg-pink-200  rounded-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            <p class="text-black font-bold">Happiness Together</p>
+            <p class="font-extralight">Good food brings people closer</p>
+        </div>
+    </div>
+
+    <!--memories-->
+
+
+    <section class="mx-5 md:mx-10 my-8">
+
+        <div class="relative bg-[#f0d1d7] rounded-2xl 
+                min-h-[220px] md:h-[250px] 
+                overflow-hidden shadow">
+
+            <!-- Left Text -->
+            <div class="absolute left-5 lg:left-10 top-1/2 
+                    -translate-y-1/2 z-10">
+
+                <p class="text-xl lg:text-2xl font-semibold 
+                      text-[#3B2118] leading-tight hidden md:flex">
+                    Moments<br>
+                    Taste Better<br>
+                    Together
+                </p>
+
+                <p class="text-pink-600 text-3xl mt-2 hidden lg:flex">
+                    ♡
+                </p>
+
+            </div>
+
+
+            <!-- Photos -->
+            <div class="absolute left-[0%] lg:left-[18%] 
+                    top-1/2 -translate-y-1/2 
+                    flex items-center gap-3 md:gap-5">
+
+                <div class="bg-white p-2 shadow-lg 
+                        -rotate-6">
+                    <img src="./images/memories1.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
+
+
+                <div class="bg-white p-2 shadow-lg 
+                        rotate-3">
+                    <img src="./images/memories2.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
+
+
+                <div class="bg-white p-2 shadow-lg 
+                        -rotate-3 hidden lg:flex">
+                    <img src="./images/memories3.png" class="w-24 h-28 md:w-32 md:h-40 object-cover">
+                </div>
+                <div>
+                    <img class="w-20 h-30 hidden lg:block" class=" md:flex" src="./images/homecard3.png">
+                </div>
+
+            </div>
+
+
+            <!-- Right Content -->
+            <div class="absolute right-0 md:right-10
+                    top-1/2 -translate-y-1/2 
+                    text-center z-10">
+
+                <p class="text-xs md:text-2xl font-semibold 
+                      text-[#3B2118]">
+                    Share Your<br>
+                    #ScoopMoment!
+                </p>
+
+                <button class="mt-4 bg-pink-500 text-xs md:text-white 
+                           px-5 py-2 rounded-full 
+                           font-semibold">
+                    ◎ &nbsp; Follow Us
+                </button>
+
+            </div>
+
+        </div>
+        <!--subscribe-->
+
+        <div class="p-5 flex justify-between mt-6 bg-[#f0d1d7] shadow flex-wrap gap-4 rounded-2xl">
+            <div class="flex items-center gap-5">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-10 text-pink-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold">Stay in the Scoop Loop!</p>
+                    <p>Subscribe to get updates on new flavors, special offers & more.</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col gap-2 sm:flex-row sm:items-center">
+
+                <input id="subscribeEmail" type="email" placeholder="Enter your email" class="box-border w-full sm:flex-1 rounded-lg border border-black
+               px-3 py-3 text-sm md:px-4 md:py-3 md:text-base
+               outline-none focus:border-pink-500">
+
+                <button id="subscribebtn" class="w-full sm:w-auto rounded-lg bg-pink-600
+               px-5 py-3 text-sm font-semibold text-white
+               transition duration-300 hover:bg-pink-700">
+                    SUBSCRIBE
+                </button>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="relative mt-16">
+
+            <!-- Chocolate Wave -->
+            <div class="absolute -top-12 left-0 w-full overflow-hidden leading-[0]">
+
+                <svg class="w-full h-16" viewBox="0 0 1200 100" preserveAspectRatio="none">
+
+                    <path d="M0 45
+                   C80 75 120 15 200 45
+                   C280 75 320 15 400 45
+                   C480 75 520 15 600 45
+                   C680 75 720 15 800 45
+                   C880 75 920 15 1000 45
+                   C1080 75 1120 15 1200 45
+                   L1200 100
+                   L0 100 Z" fill="#3B2118">
+                    </path>
+
+                </svg>
+
+            </div>
+
+
+            <!-- Brown Footer -->
+            <div class="bg-[#3B2118] text-white pt-16 pb-8">
+
+                <div class="px-6 md:px-10">
+
+                    <div class="flex flex-col md:flex-row
+                        justify-between items-center
+                        gap-8">
+
+                        <!-- Logo -->
+                        <div class="text-center md:text-left">
+
+                            <h2 class="text-3xl md:text-4xl font-bold">
+                                SCOOP<span class="text-pink-500">.</span>
+                            </h2>
+
+                            <p class="text-sm">
+                                Scoop Your Happiness
+                            </p>
+
+                        </div>
+
+
+                        <!-- Navigation -->
+                        <div class="flex flex-wrap justify-center gap-6">
+
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Home
+                            </a>
+
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Flavours
+                            </a>
+
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Customize
+                            </a>
+
+                            <a href="#" class="hover:text-pink-400 transition">
+                                About
+                            </a>
+
+                            <a href="#" class="hover:text-pink-400 transition">
+                                Contact
+                            </a>
+
+                        </div>
+
+
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-5">
+
+                            <!-- Instagram -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="Instagram">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
+
+                                    <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+
+                                    <circle cx="12" cy="12" r="4" />
+
+                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+
+                                </svg>
+
+                            </a>
+
+
+                            <!-- Facebook -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="Facebook">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
+
+                                    <path
+                                        d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.67.33-1 1-1z" />
+
+                                </svg>
+
+                            </a>
+
+
+                            <!-- X / Twitter -->
+                            <a href="#" class="text-white hover:text-pink-500 transition" aria-label="X">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
+
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26
+                                   8.502 11.24h-6.657l-5.214-6.817
+                                   -5.963 6.817H1.684l7.73-8.835
+                                   L1.254 2.25H8.08l4.713 6.231
+                                   5.45-6.231Zm-1.161 17.52h1.833
+                                   L7.084 4.126H5.117L17.083 19.77Z" />
+
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Copyright -->
+                    <div class="border-t border-white/20 mt-8 pt-5 text-center">
+
+                        <p class="text-sm text-white/80">
+                            © 2026 SCOOP. All Rights Reserved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Login Popup -->
+        <div id="loginModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+
+            <div class="relative w-[95%] max-w-md rounded-3xl bg-[#FFF5F2] p-6 md:p-8 shadow-2xl">
+
+                <!-- Close Button -->
+                <button id="closelogin" class="absolute right-5 top-4 text-2xl font-bold text-[#3B2118]">
+                    ×
+                </button>
+
+                <!-- Logo -->
+                <h2 class="text-center text-4xl font-bold text-[#3B2118]">
+                    SCOOP<span class="text-pink-500">.</span>
+                </h2>
+
+                <p class="mt-2 text-center text-[#766A64]">
+                    Welcome back! 🍦
+                </p>
+
+                <!-- Login Form -->
+                <form class="mt-6">
+
+                    <label class="font-semibold text-[#3B2118]">
+                        Email
+                    </label>
+
+                    <input id="email" type="email" placeholder="Enter your email"
+                        class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+
+                    <label class="mt-4 block font-semibold text-[#3B2118]">
+                        Password
+                    </label>
+
+                    <input id="password" type="password" placeholder="Enter your password"
+                        class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500">
+
+                    <button id="submit" type="submit"
+                        class="mt-6 w-full rounded-xl bg-pink-500 py-3 font-semibold text-white hover:bg-pink-600">
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="mt-5 text-center text-sm text-[#766A64]">
+                    Don't have an account?
+                    <a href="#" class="font-semibold text-pink-600">
+                        Sign Up
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Subscription Success Popup -->
+    <div id="successPopup" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/40 px-5">
+
+        <div class="w-full max-w-sm rounded-3xl bg-[#FFF5F2] p-7 text-center shadow-2xl">
+
+            <!-- Icon -->
+            <div class="text-5xl">
+                ✨🍦✨
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mt-4 text-2xl font-bold text-[#3B2118]">
+                You're in the Scoop Loop!
+            </h2>
+
+            <!-- Message -->
+            <p class="mt-2 text-[#766A64]">
+                Thanks for subscribing ❤️
+            </p>
+
+            <!-- Button -->
+            <button id="successClose" class="mt-5 rounded-full bg-pink-500 px-8 py-2.5 font-semibold text-white
+                   transition duration-300 hover:scale-105 hover:bg-pink-600">
+                Sweet! 🍨
+            </button>
+
+        </div>
 
     </div>
-  </footer>
-
-  <!-- Simple mobile navigation toggler script -->
-  <script>
-    const mobileBtn = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    mobileBtn.addEventListener('click', () => {
-      mobileBtn.classList.toggle('open');
-      navMenu.classList.toggle('active');
-    });
-  </script>
+    <!-- Emoji Celebration -->
+    <div id="emojiContainer" class="fixed inset-0 z-[60] pointer-events-none overflow-hidden">
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
