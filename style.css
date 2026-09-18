@@ -1,12 +1,13 @@
 body {
     background: linear-gradient(
         120deg,
-        #FFF8F5,
-        #FFF1F5,
-        #FFF7EF
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
     );
     background-size: 300% 300%;
-    animation: scoopBg 18s ease infinite;
+    animation: scoopBg 12s ease infinite;
 }
 
 @keyframes scoopBg {
