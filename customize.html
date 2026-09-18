@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Ice Cream | SCOOP</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="customize.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="brand-title">SCOOP</span>
+                <span class="brand-tagline">Scoop your Happiness</span>
+            </div>
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flavors.html">Flavors</a></li>
+                <li><a href="customize.html" class="active">Customize</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="flavors.html">Flavors</a>
+            <a href="customize.html" class="active">Customize</a>
+            <a href="cart.html">Cart</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-title">
+            <h1>Build Your Dream Ice Cream 🧁</h1>
+            <p>Design your ultimate creation with our wide variety of cones, signature flavors, and toppings!</p>
+        </div>
+
+        <div class="builder-grid">
+            
+            <!-- Left Steps Column -->
+            <div class="builder-steps">
+
+                <!-- Step 1: Vessel Selection (6 Items) -->
+                <div class="builder-section">
+                    <div class="section-header">
+                        <div class="step-badge">1</div>
+                        <h2>Choose Your Vessel</h2>
+                    </div>
+                    <div class="options-grid" id="vessel-grid">
+                        <div class="option-card selected" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Waffle Cone" data-price="40" checked style="display:none;">
+                            <span class="emoji">🧇</span>
+                            <strong>Waffle Cone</strong>
+                            <span class="price-tag">+₹40</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Sugar Cone" data-price="30" style="display:none;">
+                            <span class="emoji">🍦</span>
+                            <strong>Sugar Cone</strong>
+                            <span class="price-tag">+₹30</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Waffle Bowl" data-price="50" style="display:none;">
+                            <span class="emoji">🥣</span>
+                            <strong>Waffle Bowl</strong>
+                            <span class="price-tag">+₹50</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Classic Cup" data-price="25" style="display:none;">
+                            <span class="emoji">🥤</span>
+                            <strong>Classic Cup</strong>
+                            <span class="price-tag">+₹25</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Choco Dipped Cone" data-price="60" style="display:none;">
+                            <span class="emoji">🍫</span>
+                            <strong>Choco Dipped Cone</strong>
+                            <span class="price-tag">+₹60</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'vessel')">
+                            <input type="radio" name="vessel" value="Mega Waffle Bowl" data-price="70" style="display:none;">
+                            <span class="emoji">👑</span>
+                            <strong>Mega Waffle Bowl</strong>
+                            <span class="price-tag">+₹70</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Flavors Selection -->
+                <div class="builder-section">
+                    <div class="section-header" style="justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div class="step-badge">2</div>
+                            <h2>Select Signature Flavors</h2>
+                        </div>
+                        <span id="scoop-counter-text" style="font-size: 0.75rem; background: #fffbeb; border: 1px solid #fde68a; padding: 3px 10px; border-radius: 12px; color: #92400e;">0 / 3 Scoops</span>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div id="scoop-progress" class="progress-bar"></div>
+                    </div>
+                    <div class="flavors-grid" style="margin-top: 1rem;">
+                        <!-- Flavor 1 -->
+                        <div class="flavor-item">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#fef3c7;">🤎</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Belgian Chocolate</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹60 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Belgian Chocolate', 60, -1, '🤎')">-</button>
+                                <span id="scoop-belgian-chocolate" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Belgian Chocolate', 60, 1, '🤎')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 2 -->
+                        <div class="flavor-item">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#fce7f3;">🍓</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Strawberry Bliss</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹55 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Strawberry Bliss', 55, -1, '🍓')">-</button>
+                                <span id="scoop-strawberry-bliss" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Strawberry Bliss', 55, 1, '🍓')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 3 -->
+                        <div class="flavor-item">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#fef9c3;">🥭</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Mango Tango</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹55 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Mango Tango', 55, -1, '🥭')">-</button>
+                                <span id="scoop-mango-tango" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Mango Tango', 55, 1, '🥭')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 4 -->
+                        <div class="flavor-item">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#d1fae5;">🌿</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Mint Choc Chip</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹65 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Mint Choc Chip', 65, -1, '🌿')">-</button>
+                                <span id="scoop-mint-choc-chip" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Mint Choc Chip', 65, 1, '🌿')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 5  -->
+                        <div class="flavor-item desktop-only-flavor">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#f3e8ff;">🍦</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Vanilla Bean</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹50 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Vanilla Bean', 50, -1, '🍦')">-</button>
+                                <span id="scoop-vanilla-bean" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Vanilla Bean', 50, 1, '🍦')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 6  -->
+                        <div class="flavor-item desktop-only-flavor">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#ffedd5;">🍯</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Butterscotch Crunch</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹60 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Butterscotch Crunch', 60, -1, '🍯')">-</button>
+                                <span id="scoop-butterscotch-crunch" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Butterscotch Crunch', 60, 1, '🍯')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 7  -->
+                        <div class="flavor-item desktop-only-flavor">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#e0f2fe;">🫐</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Blueberry Blast</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹70 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Blueberry Blast', 70, -1, '🫐')">-</button>
+                                <span id="scoop-blueberry-blast" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Blueberry Blast', 70, 1, '🫐')">+</button>
+                            </div>
+                        </div>
+                        <!-- Flavor 8  -->
+                        <div class="flavor-item desktop-only-flavor">
+                            <div class="flavor-info">
+                                <div class="flavor-icon" style="background:#f1f5f9;">🍪</div>
+                                <div>
+                                    <strong style="font-size:0.85rem;">Cookie & Cream</strong>
+                                    <div style="font-size:0.7rem; color:#666;">₹65 / scoop</div>
+                                </div>
+                            </div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="updateScoop('Cookie & Cream', 65, -1, '🍪')">-</button>
+                                <span id="scoop-cookie-&-cream" style="width:20px; text-align:center; font-weight:600;">0</span>
+                                <button class="counter-btn" onclick="updateScoop('Cookie & Cream', 65, 1, '🍪')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Toppings & Drips -->
+                <div class="builder-section">
+                    <div class="section-header">
+                        <div class="step-badge">3</div>
+                        <h2>Add Toppings & Drips</h2>
+                    </div>
+                    <div class="options-grid" id="toppings-grid">
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Hot Fudge" data-price="20" style="display:none;">
+                            <span class="emoji">🍫</span>
+                            <strong>Hot Fudge</strong>
+                            <span class="price-tag">+₹20</span>
+                        </div>
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Sprinkles" data-price="15" style="display:none;">
+                            <span class="emoji">✨</span>
+                            <strong>Sprinkles</strong>
+                            <span class="price-tag">+₹15</span>
+                        </div>
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Crushed Nuts" data-price="25" style="display:none;">
+                            <span class="emoji">🥜</span>
+                            <strong>Crushed Nuts</strong>
+                            <span class="price-tag">+₹25</span>
+                        </div>
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Cherry on top" data-price="15" style="display:none;">
+                            <span class="emoji">🍒</span>
+                            <strong>Cherry</strong>
+                            <span class="price-tag">+₹15</span>
+                        </div>
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Marshmallows" data-price="20" style="display:none;">
+                            <span class="emoji">🍡</span>
+                            <strong>Marshmallows</strong>
+                            <span class="price-tag">+₹20</span>
+                        </div>
+                        <div class="option-card" onclick="toggleTopping(this)">
+                            <input type="checkbox" value="Caramel Drip" data-price="20" style="display:none;">
+                            <span class="emoji">🍯</span>
+                            <strong>Caramel Drip</strong>
+                            <span class="price-tag">+₹20</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Summary Column -->
+            <div class="summary-card">
+                <div class="summary-header">
+                    <span>Your Creation</span>
+                    <span class="preview-badge">Live Preview</span>
+                </div>
+
+                <!-- Creative Visual Stack Box -->
+                <div class="visual-stack-box">
+                    <span style="font-size: 0.7rem; text-transform: uppercase; color: #888; font-weight: 700; margin-bottom: 4px;">Visual Stack</span>
+                    <div id="visual-stack" class="stacked-ice-cream">🧇</div>
+                </div>
+
+                <div class="summary-block">
+                    <span class="title">Vessel Base</span>
+                    <strong id="summary-vessel">Waffle Cone (₹40)</strong>
+                </div>
+
+                <div class="summary-block">
+                    <span class="title">Scoops Selected</span>
+                    <ul id="summary-scoops" style="list-style:none; padding:0;">
+                        <li style="color:#aaa; font-style:italic;">No scoops selected yet</li>
+                    </ul>
+                </div>
+
+                <div class="summary-block">
+                    <span class="title">Toppings Added</span>
+                    <ul id="summary-toppings" style="list-style:none; padding:0;">
+                        <li style="color:#aaa; font-style:italic;">No toppings added</li>
+                    </ul>
+                </div>
+
+                <div class="total-box">
+                    <span>Total Price:</span>
+                    <span id="total-price">₹40</span>
+                </div>
+
+                <button class="add-to-cart-btn" onclick="addToCart()">🛒 Add to Cart</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Custom Success Modal Popup -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <span style="font-size: 3rem;">🎉</span>
+            <h3 style="font-size: 1.3rem; margin: 10px 0; color: #4a3525;">Added to Cart!</h3>
+            <p style="font-size: 0.9rem; color: #666;">Your custom ice cream masterpiece is safely stored in your cart.</p>
+            <div class="modal-btn-group">
+                <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Keep Building</button>
+                <button class="modal-btn modal-btn-primary" onclick="window.location.href='cart.html'">View Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="customize.js"></script>
+</body>
+</html>

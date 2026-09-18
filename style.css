@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
+}
+
+@keyframes scoopBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero {
+    animation: heroEntry 1.2s ease-out forwards;
+}
+
+@keyframes heroEntry {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.celebrate-emoji {
+    position: absolute;
+    bottom: 20%;
+    font-size: 30px;
+    animation: emojiFly 1.5s ease-out forwards;
+}
+
+@keyframes emojiFly {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-300px) scale(1.2) rotate(30deg);
+        opacity: 0;
+    }
+}
