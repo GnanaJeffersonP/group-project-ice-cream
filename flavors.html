@@ -4,346 +4,762 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flavours</title>
-    <!--My stylesheet for Google font-->
+
+    <title>Flavours | Scoop</title>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <!--My stylesheet-->
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="flavors.css">
-    <!--Font CDN link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 </head>
 
 <body>
-    <!--nav bar-->
-    <div class="navbar">
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <nav class="navbar">
+
         <div class="navbar__title">
-            <h1>Scoop</h1>
+            <h1>SCOOP</h1>
             <p>Scoop your happiness</p>
         </div>
 
         <div class="navbar__content">
-            <a href="./index.html">Home</a>
-            <a href="flavors.html">Flavours</a>
-            <a href="#customize">Customize</a>
-            <a href="#cart">Cart</a>
+
+            
+           <!-- Mobile Menu Icon -->
+<svg id="menuicon"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor">
+
+    <path stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+<a href="./index.html">Home</a>
+<a href="./flavors.html">Flavours</a>
+
+<a href="#customize">Customize</a>
+
+            <a href="#cart">
+                Cart <b id="cartCount">0</b>
+            </a>
+
             <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="./contact.html">Contact</a>
 
         </div>
 
-        <div class="search">
-            <i class="fa-solid fa-magnifying-glass" style="color: rgb(5, 1, 1);"></i>
-            <button>Login</button>
+    </nav>
+
+
+    <!-- ============================= -->
+    <!-- SIDE NAVBAR -->
+    <!-- ============================= -->
+
+    <section id="sidenav" class="sidenav">
+
+        <div class="xmark">
+            <p id="closenav">✕</p>
         </div>
 
-    </div>
+        <a href="./index.html">Home</a>
+        <a href="./flavors.html">Flavours</a>
+        <a href="#customize">Customize</a>
+        <a href="#cart">Cart</a>
+        <a href="#about">About</a>
+        <a href="./contact.html">Contact</a>
 
-    <!--Animation-->
-    <div class="animation">
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- HERO / VIDEO -->
+    <!-- ============================= -->
+
+    <section class="animation">
+
         <div class="animation__s1">
+
             <video autoplay muted loop playsinline>
                 <source src="./videos/animation.mp4" type="video/mp4">
             </video>
+
         </div>
+
 
         <div class="animation__s2">
-            <p>Home < Flavours</p>
-                    <h3>EXPLORE OUR WORLD OF FLAVOURS</h3>
-                    <h1>Flavours for <br>Every Mood</h1>
-                    <p>From Timeless classics to exciting new creations,<br>there's always a sccop waiting for you</p>
-        </div>
-        <div class="animation__s3">
-            <div class="leaf"> ☘️ <p>100% Natural <br> Ingredients</p>
-            </div>
-            <div class="heart"> 🩷 <p> Made with <br>Love</p>
-            </div>
-            <div class="truck">🚚 <p>Freshly<br>Prepared</p>
-            </div>
-        </div>
-    </div>
 
-    <!--Categories-->
-    <div class="categories">
-        <div class="icecone">
+            <p>Home <span>*</span> Flavours</p>
+
+            <h3>EXPLORE OUR WORLD OF FLAVOURS</h3>
+
+            <h1>
+                Flavours for
+                <br>
+                Every Mood
+            </h1>
+
+            <p>
+                From timeless classics to exciting new creations,
+                <br>
+                there's always a scoop waiting for you.
+            </p>
+
+        </div>
+
+
+        <div class="animation__s3">
+
+            <div class="leaf">
+                <span>☘️</span>
+
+                <p>
+                    100% Natural
+                    <br>
+                    Ingredients
+                </p>
+            </div>
+
+
+            <div class="heart">
+                <span>🩷</span>
+
+                <p>
+                    Made with
+                    <br>
+                    Love
+                </p>
+            </div>
+
+
+            <div class="truck">
+                <span>🚚</span>
+
+                <p>
+                    Freshly
+                    <br>
+                    Prepared
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- CATEGORIES -->
+    <!-- ============================= -->
+
+    <section class="categories">
+
+        <div class="category active" data-category="all">
             <span>🍦</span>
             <p>All Flavours</p>
         </div>
 
-        <div class="flower">
+        <div class="category" data-category="classic">
             <span>🌼</span>
             <p>Classic</p>
         </div>
 
-        <div class="chocolate">
+        <div class="category" data-category="chocolate">
             <span>🍫</span>
             <p>Chocolate</p>
         </div>
 
-        <div class="strawberry">
+        <div class="category" data-category="fruity">
             <span>🍓</span>
             <p>Fruity</p>
         </div>
 
-        <div class="nuts">
+        <div class="category" data-category="nutty">
             <span>🥜</span>
             <p>Nutty</p>
         </div>
 
-        <div class="special">
+        <div class="category" data-category="special">
             <span>⭐</span>
             <p>Special</p>
         </div>
 
-    </div>
-
-    <!--Search-->
-    <section class="catalog">
-        <div class="tools">
-            <div class="search">
-                <input id="search" placeholder=" ⌕ Search for your favorite flavor...">
-            </div>
-            <select class="sort">
-                <option value="popular">Sort by: Popular</option>
-                <option value="low">Price: Low to High</option>
-                <option value="high">Price: High to Low</option>
-            </select>
-            <select class="price">
-                <option value="all">Price Range: All Prices</option>
-                <option value="low">Under ₹130</option>
-                <option value="mid">₹130 - ₹149</option>
-            </select><button class="filter">☷ Filter</button>
-        </div>
     </section>
 
-    <div class="heading">
-        <div>
-            <p>OUR ICE CREAMS</p>
-            <h2>Delicious Flavors,Happier Days</h2>
+
+    <!-- ============================= -->
+    <!-- SEARCH / FILTER -->
+    <!-- ============================= -->
+
+    <section class="catalog">
+
+        <div class="tools">
+
+            <div class="search">
+
+                <input
+                    id="search"
+                    type="text"
+                    placeholder="⌕ Search for your favorite flavor...">
+
+            </div>
+
+
+            <select class="sort">
+
+                <option value="popular">
+                    Sort by: Popular
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+
+            <select class="price">
+
+                <option value="all">
+                    Price Range: All Prices
+                </option>
+
+                <option value="low">
+                    Under ₹130
+                </option>
+
+                <option value="mid">
+                    ₹130 - ₹149
+                </option>
+
+            </select>
+
+
+            <button class="filter">
+                ☷ Filter
+            </button>
+
         </div>
-    </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- HEADING -->
+    <!-- ============================= -->
+
+    <section class="heading">
+
+        <p>OUR ICE CREAMS</p>
+
+        <h2>
+            Delicious Flavors, Happier Days
+        </h2>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- ICE CREAM CARDS -->
+    <!-- ============================= -->
 
     <section class="icecream-section">
 
         <div class="icecream-container">
 
-            <!-- 1 -->
-            <div class="icecream-card">
+
+            <!-- 1 STRAWBERRY -->
+
+            <div class="icecream-card"
+                data-price="129"
+                data-rating="4.8"
+                data-category="fruity">
+
                 <div class="image-box">
-                    <img src="images/strawberry.jpg" alt="Strawberry Cheesecake">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/strawberry.jpg"
+                        alt="Strawberry Cheesecake">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Strawberry Cheesecake</h2>
-                <p>Creamy & refreshing</p>
+
+                <p>
+                    Creamy & refreshing
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹129</h3>
                         <span>⭐ 4.8 (120)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 2 -->
-            <div class="icecream-card">
+            <!-- 2 CHOCOLATE -->
+
+            <div class="icecream-card"
+                data-price="149"
+                data-rating="4.9"
+                data-category="chocolate">
+
                 <div class="image-box">
-                    <img src="images/chocolate.jpg" alt="Belgian Chocolate">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/chocolate.jpg"
+                        alt="Belgian Chocolate">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Belgian Chocolate</h2>
-                <p>Rich & indulgent</p>
+
+                <p>
+                    Rich & indulgent
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹149</h3>
                         <span>⭐ 4.9 (98)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 3 -->
-            <div class="icecream-card">
+            <!-- 3 MANGO -->
+
+            <div class="icecream-card"
+                data-price="139"
+                data-rating="4.7"
+                data-category="fruity">
+
                 <div class="image-box">
-                    <img src="images/mango.jpg" alt="Alphonso Mango">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/mango.jpg"
+                        alt="Alphonso Mango">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Alphonso Mango</h2>
-                <p>Naturally sweet</p>
+
+                <p>
+                    Naturally sweet
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹139</h3>
                         <span>⭐ 4.7 (76)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 4 -->
-            <div class="icecream-card">
+            <!-- 4 COOKIES -->
+
+            <div class="icecream-card"
+                data-price="129"
+                data-rating="4.6"
+                data-category="special">
+
                 <div class="image-box">
-                    <img src="images/cookies.jpg" alt="Cookies & Cream">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/cookies.jpg"
+                        alt="Cookies and Cream">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Cookies & Cream</h2>
-                <p>A crunchy delight</p>
+
+                <p>
+                    A crunchy delight
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹129</h3>
                         <span>⭐ 4.6 (84)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 5 -->
-            <div class="icecream-card">
+            <!-- 5 MINT -->
+
+            <div class="icecream-card"
+                data-price="139"
+                data-rating="4.5"
+                data-category="special">
+
                 <div class="image-box">
-                    <img src="images/mint.jpg" alt="Mint Choco Chip">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/mint.jpg"
+                        alt="Mint Choco Chip">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Mint Choco Chip</h2>
-                <p>Cool & refreshing</p>
+
+                <p>
+                    Cool & refreshing
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹139</h3>
                         <span>⭐ 4.5 (62)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 6 -->
-            <div class="icecream-card">
+            <!-- 6 VANILLA -->
+
+            <div class="icecream-card"
+                data-price="119"
+                data-rating="4.7"
+                data-category="classic">
+
                 <div class="image-box">
-                    <img src="images/vanilla.jpg" alt="Classic Vanilla">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/vanilla.jpg"
+                        alt="Classic Vanilla">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Classic Vanilla</h2>
-                <p>Timeless favorite</p>
+
+                <p>
+                    Timeless favorite
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹119</h3>
                         <span>⭐ 4.7 (91)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 7 -->
-            <div class="icecream-card">
+            <!-- 7 BUTTERSCOTCH -->
+
+            <div class="icecream-card"
+                data-price="139"
+                data-rating="4.6"
+                data-category="nutty">
+
                 <div class="image-box">
-                    <img src="images/butterscotch.jpg" alt="Butterscotch Bliss">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/butterscotch.jpg"
+                        alt="Butterscotch Bliss">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Butterscotch Bliss</h2>
-                <p>Sweet & crunchy</p>
+
+                <p>
+                    Sweet & crunchy
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹139</h3>
                         <span>⭐ 4.6 (58)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- 8 -->
-            <div class="icecream-card">
+            <!-- 8 BLUEBERRY -->
+
+            <div class="icecream-card"
+                data-price="149"
+                data-rating="4.8"
+                data-category="special">
+
                 <div class="image-box">
-                    <img src="images/blueberry.jpg" alt="Blueberry Delight">
-                    <button class="favorite">♡</button>
+
+                    <img
+                        src="images/blueberry.jpg"
+                        alt="Blueberry Delight">
+
+                    <button class="favorite">
+                        ♡
+                    </button>
+
                 </div>
 
                 <h2>Blueberry Delight</h2>
-                <p>Burst of real berries</p>
+
+                <p>
+                    Burst of real berries
+                </p>
 
                 <div class="card-bottom">
+
                     <div>
                         <h3>₹149</h3>
                         <span>⭐ 4.8 (67)</span>
                     </div>
-                    <button class="cart">🛒</button>
+
+                    <button class="cart">
+                        🛒
+                    </button>
+
                 </div>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- ============================= -->
+    <!-- SEASONAL -->
+    <!-- ============================= -->
+
     <section class="seasonal">
+
         <div class="season-scoops">
+
             <i class="ball pink"></i>
             <i class="ball brown"></i>
             <i class="ball mango"></i>
+
         </div>
-        <div>
-            <p class="eyebrow">LIMITED TIME</p>
-            <h2>Try Our Seasonal Flavors!</h2>
-            <p>Exciting new flavors, only for this season.</p>
-            <button>EXPLORE FLAVORS →</button>
+
+
+        <div class="seasonal-content">
+
+            <p class="eyebrow">
+                LIMITED TIME
+            </p>
+
+            <h2>
+                Try Our Seasonal Flavors!
+            </h2>
+
+            <p>
+                Exciting new flavors, only for this season.
+            </p>
+
+            <button id="seasonalBtn">
+                EXPLORE FLAVORS →
+            </button>
+
         </div>
+
+
         <div class="badge">
-            Scoop<br>the Season<br>♡
+            Scoop
+            <br>
+            the Season
+            <br>
+            ♡
         </div>
+
     </section>
+
+
+    <!-- ============================= -->
+    <!-- NEWSLETTER -->
+    <!-- ============================= -->
 
     <section class="newsletter">
+
         <div class="mail">
             ✉
+        </div>
+
+
+        <div class="newsletter-content">
+
+            <h3>
+                Stay in the Scoop Loop!
+            </h3>
+
+            <p>
+                Get notified about new flavors,
+                special offers and more.
+            </p>
 
         </div>
-        <div>
-            <h3>Stay in the Scoop Loop!</h3>
-            <p>Get notified about new flavors, special offers and more.</p>
-        </div>
-        <form>
-            <input type="email" placeholder="Enter your email address" required>
-            <button>Subscribe</button>
+
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required>
+
+            <button type="submit">
+                Subscribe
+            </button>
+
         </form>
+
     </section>
 
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
     <footer>
-        <div><strong>SCOOP<span>.</span></strong>
-            <p>Scoop Your Happiness</p>
+
+        <div class="footer-brand">
+
+            <strong>
+                SCOOP<span>.</span>
+            </strong>
+
+            <p>
+                Scoop Your Happiness
+            </p>
+
         </div>
+
+
         <div class="links">
-            <a href="#home">Home</a>
-            <a href="#flavors">Flavors</a>
+
+            <a href="./index.html">Home</a>
+            <a href="./flavors.html">Flavours</a>
             <a href="#customize">Customize</a>
-            <a href="#about">About</a><a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="./contact.html">Contact</a>
+
         </div>
+
+
         <div class="social">
-            ◎　●　▶　♥
+
+            <span>◎</span>
+            <span>●</span>
+            <span>▶</span>
+            <span>♥</span>
+
         </div>
-        <small>© 2026 SCOOP. All Rights Reserved.</small>
+
+
+        <small>
+            © 2026 SCOOP. All Rights Reserved.
+        </small>
+
     </footer>
 
 
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="flavors.js"></script>
 
 </body>
 
