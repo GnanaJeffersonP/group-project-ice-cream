@@ -24,6 +24,7 @@ body {
     }
 }
 
+
 .hero {
     animation: heroEntry 1.2s ease-out forwards;
 }
@@ -75,4 +76,12 @@ body {
     position: sticky !important;
     top: 0 !important;
     z-index: 9999 !important;
+}
+
+.sidenav-hidden {
+    transform: translateX(100%);
+}
+
+.sidenav-show {
+    transform: translateX(0);
 }
