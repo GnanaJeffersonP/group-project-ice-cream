@@ -1,6 +1,5 @@
-/* ==========================================
-   Scoop & Smile - Customize Page CSS (Final Pro Version)
-   ========================================== */
+/* Customize Page CSS */
+   
 
 :root {
     --pastel-pink: #ffd1dc;
@@ -19,7 +18,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, var(--pastel-cream), #ffe4e6, #d8f3dc);
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
     min-height: 100vh;
     color: var(--brand-brown);
     position: relative;
@@ -50,42 +57,10 @@ body {
     }
 }
 
-/* Floating Background Elements Animation */
-.floating-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 1; 
-}
-
-.float-item {
-    position: absolute;
-    font-size: 1.8rem;
-    opacity: 0.3;
-    animation: floatUp 8s linear infinite;
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(105vh) rotate(0deg);
-        opacity: 0;
-    }
-    20% { opacity: 0.35; }
-    80% { opacity: 0.35; }
-    100% {
-        transform: translateY(-10vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* Ensure content sits above background */
-header, main, .modal-overlay {
-    position: relative;
-    z-index: 10;
+@keyframes scoopBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Animations */
@@ -99,7 +74,7 @@ header, main, .modal-overlay {
     animation: pulseTotal 0.3s ease-in-out;
 }
 
-/* Navbar - Sticky & Modern */
+/* Navbar - Sticky & Modern Layout Fix */
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -148,6 +123,8 @@ header {
     gap: 2rem;
     list-style: none;
     font-weight: 500;
+    align-items: center;
+    margin: 0;
 }
 
 .nav-links a {
