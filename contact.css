@@ -7,6 +7,97 @@ body {
     justify-content: center;
     align-items: center;
 }
+body {
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
+}
+
+@keyframes scoopBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 4%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    background-color:#fffbeb;;
+    border-bottom: 1px solid rgb(231, 102, 124);
+
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+
+.navbar__title {
+    flex-shrink: 0;
+}
+
+.navbar__title h1 {
+    color: rgb(100, 4, 4);
+    font-size: 30px;
+}
+
+.navbar__title p {
+    color: grey;
+    font-size: 13px;
+}
+
+.navbar__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    gap: clamp(85px, 2.5vw, 40px);
+}
+
+.navbar__content svg {
+    display: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.navbar__content a {
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 15px;
+    transition: 0.2s;
+
+}
+
+.navbar__content a:hover {
+    color: rgb(222, 42, 72);
+    text-decoration: underline rgb(222, 42, 72);
+}
+
+.navbar__content b {
+    color: rgb(222, 42, 72);
+}
+
 .container {
     display: flex;
     justify-content: space-between;
