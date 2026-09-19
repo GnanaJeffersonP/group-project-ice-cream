@@ -1,3 +1,890 @@
+
+/* ==========================================================================
+   Gelatoo — "Good Mood, Great Ice Cream"
+   Master Stylesheet
+   ========================================================================== */
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+  /* Color Palette */
+  --color-primary: #E62E68;
+  --color-primary-hover: #CC1F56;
+  --color-primary-light: #FFE8F0;
+  --color-dark: #231B18;
+  --color-heading: #241D1A;
+  --color-body: #635853;
+  --color-body-light: #8A7E79;
+  --color-bg-page: #FAF6F0;
+  --color-bg-alt: #F4EDE2;
+  --color-white: #FFFFFF;
+  --color-footer-bg: #281712;
+  --color-footer-text: #F3EDE7;
+  --color-footer-muted: #BDB0A8;
+  
+  /* Feature Badge Colors */
+  --badge-mint-bg: #E4F7ED;
+  --badge-mint-icon: #23854F;
+  --badge-pink-bg: #FFE5EE;
+  --badge-pink-icon: #E62E68;
+  --badge-peach-bg: #FEF0DA;
+  --badge-peach-icon: #D97706;
+  --badge-rose-bg: #FBE6FC;
+  --badge-rose-icon: #B622BD;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Caveat', cursive, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(45, 30, 20, 0.05);
+  --shadow-md: 0 10px 25px rgba(45, 30, 20, 0.08);
+  --shadow-lg: 0 18px 45px rgba(45, 30, 20, 0.12);
+  --shadow-polaroid: 0 14px 35px rgba(35, 20, 15, 0.14);
+
+  /* Transitions */
+  --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-pill: 9999px;
+  --radius-card: 20px;
+}
+
+/* --- Base & Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-page);
+  color: var(--color-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Typography & Badges --- */
+.section-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7A6962;
+  margin-bottom: 12px;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-body);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(230, 46, 104, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 46, 104, 0.35);
+}
+
+.btn-pill {
+  font-size: 0.92rem;
+  padding: 10px 24px;
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateY(2px);
+}
+
+.story-content-col .btn:hover .btn-arrow,
+.cta-center-box .btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 246, 240, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  transition: var(--transition-smooth);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ice-cream-svg-logo {
+  width: 38px;
+  height: 44px;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .ice-cream-svg-logo {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #8C7B74;
+  margin-top: 3px;
+}
+
+/* Navigation Links */
+.nav-menu {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-heading);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-btn {
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: var(--transition-smooth);
+}
+
+.search-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--color-primary);
+}
+
+.btn-login {
+  padding: 8px 24px;
+  font-size: 0.9rem;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  padding: 4px;
+}
+
+.mobile-toggle span {
+  display: block;
+  height: 2.5px;
+  width: 100%;
+  background-color: var(--color-heading);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================= */
+.hero-section {
+  padding: 50px 0 60px;
+  background: radial-gradient(circle at 75% 40%, #FFF3EC 0%, #FAF6F0 70%);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 520px;
+  z-index: 2;
+}
+
+.hero-heading {
+  font-family: var(--font-serif);
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-body);
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+/* Hero Visual: Artisanal Gelato Bowl */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-bowl-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.bowl-composition {
+  position: relative;
+  border-radius: 50% 50% 48% 48% / 40% 40% 60% 60%;
+  box-shadow: 0 25px 60px rgba(70, 35, 20, 0.22);
+  overflow: visible;
+  transition: transform 0.4s ease;
+}
+
+.bowl-composition:hover {
+  transform: scale(1.02);
+}
+
+.hero-bowl-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 46% 46% 48% 48% / 36% 36% 64% 64%;
+  border: 4px solid #FFF8F2;
+}
+
+/* Script brand label stamped on the bowl */
+.bowl-branding-stamp {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  color: #3F2C24;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.bowl-brand-text {
+  font-family: var(--font-script);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 1px;
+}
+
+.doodle-heart {
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  margin-top: -4px;
+}
+
+/* Chocolate chunks beside bowl */
+.chocolate-crumb {
+  position: absolute;
+  background: #3B2418;
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+}
+
+.choco-1 {
+  width: 28px;
+  height: 20px;
+  right: -10px;
+  bottom: 20px;
+  transform: rotate(25deg);
+}
+
+.choco-2 {
+  width: 20px;
+  height: 16px;
+  right: 25px;
+  bottom: 5px;
+  transform: rotate(-15deg);
+}
+
+/* Playful Doodle Note on Hero */
+.hero-doodle-note {
+  position: absolute;
+  right: -30px;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+
+.doodle-text {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4A3B32;
+  line-height: 1.05;
+}
+
+.doodle-heart-lg {
+  font-family: var(--font-script);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+.curved-doodle-arrow {
+  width: 42px;
+  height: 35px;
+  margin-top: -6px;
+  transform: rotate(-10deg);
+}
+
+/* ==========================================================================
+   OUR STORY SECTION
+   ========================================================================== */
+.story-section {
+  padding: 90px 0 70px;
+  position: relative;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Polaroid Photo Stacking */
+.story-polaroids-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 480px;
+}
+
+.polaroids-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Backing Board Sheet behind Storefront Polaroid */
+.backing-board {
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  width: 375px;
+  height: 315px;
+  background: #FDFCF7;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(45, 30, 20, 0.08);
+  border: 1px solid rgba(225, 215, 205, 0.6);
+  transform: rotate(-3.5deg);
+  z-index: 0;
+}
+
+.tape-corner-left {
+  width: 55px;
+  height: 20px;
+  top: -8px;
+  left: 12px;
+  transform: rotate(-30deg);
+}
+
+.tape-corner-right {
+  width: 55px;
+  height: 20px;
+  top: -8px;
+  right: 18px;
+  transform: rotate(25deg);
+}
+
+.backing-note {
+  position: absolute;
+  right: 18px;
+  top: 40px;
+  width: 120px;
+  text-align: center;
+  z-index: 3;
+}
+
+.backing-note .caption-handwritten {
+  font-family: var(--font-script);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #382A24;
+  line-height: 1.1;
+}
+
+.polaroid-card {
+  background: var(--color-white);
+  padding: 12px 12px 20px 12px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-polaroid);
+  position: absolute;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.polaroid-card:hover {
+  transform: scale(1.03) rotate(0deg) !important;
+  z-index: 10 !important;
+  box-shadow: 0 20px 45px rgba(35, 20, 15, 0.22);
+}
+
+/* Top Polaroid: Shopfront */
+.card-storefront {
+  top: 10px;
+  left: 15px;
+  width: 275px;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.polaroid-img-box {
+  position: relative;
+  overflow: hidden;
+  background: #EAE3D9;
+}
+
+.card-storefront .polaroid-img-box {
+  height: 240px;
+}
+
+.polaroid-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-sign-overlay {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 20, 15, 0.78);
+  backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid rgba(255, 230, 190, 0.3);
+}
+
+.store-neon-title {
+  font-family: var(--font-serif);
+  color: #FFF2DF;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.store-neon-sub {
+  font-size: 0.45rem;
+  letter-spacing: 1.2px;
+  color: #F8B471;
+  text-transform: uppercase;
+}
+
+.caption-handwritten {
+  font-family: var(--font-script);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #382A24;
+  line-height: 1.15;
+}
+
+/* Bottom Polaroid: Hand holding cone */
+.card-cone {
+  top: 150px;
+  right: 15px;
+  width: 240px;
+  transform: rotate(5deg);
+  z-index: 2;
+  padding-bottom: 36px;
+}
+
+.card-cone .polaroid-img-box {
+  height: 220px;
+}
+
+.polaroid-caption-area {
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Washi Tape Effect */
+.washi-tape {
+  position: absolute;
+  background: rgba(228, 219, 207, 0.85);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.tape-top {
+  width: 70px;
+  height: 22px;
+  top: -10px;
+  left: 45%;
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.tape-bottom-left {
+  width: 60px;
+  height: 20px;
+  bottom: 8px;
+  left: -12px;
+  transform: rotate(-25deg);
+}
+
+/* Story Content Right Column */
+.story-content-col {
+  position: relative;
+  max-width: 530px;
+}
+
+.story-body-text p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--color-body);
+  margin-bottom: 20px;
+}
+
+.story-content-col .btn {
+  margin-top: 10px;
+}
+
+/* Floating Hand-drawn Cone Doodle */
+.story-doodle-badge {
+  position: absolute;
+  right: -50px;
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.cone-doodle-container {
+  position: relative;
+}
+
+.cone-sparkle-top {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+}
+
+.hand-drawn-cone {
+  width: 55px;
+  height: 85px;
+  transform: rotate(8deg);
+}
+
+.cone-doodle-text {
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #3D2F28;
+  line-height: 1;
+  text-align: center;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doodle-heart-sm {
+  font-family: var(--font-script);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   VALUES / HIGHLIGHTS SECTION (4 PILL CARDS)
+   ========================================================================== */
+.values-section {
+  padding: 40px 0 60px;
+}
+
+.values-wrapper {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(230, 220, 210, 0.6);
+  border-radius: 40px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.25s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+}
+
+.value-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon-circle {
+  transform: scale(1.1);
+}
+
+.bg-mint {
+  background-color: var(--badge-mint-bg);
+}
+
+.bg-pink {
+  background-color: var(--badge-pink-bg);
+}
+
+.bg-peach {
+  background-color: var(--badge-peach-bg);
+}
+
+.bg-rose {
+  background-color: var(--badge-rose-bg);
+}
+
+.value-title {
+  font-family: var(--font-sans);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.value-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-body);
+}
+
+/* ==========================================================================
+   STATS COUNTER & MINT ICE CREAM BAR
+   ========================================================================== */
+.stats-section {
+  padding: 30px 0 70px;
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Mint Scoop Left */
+.stats-visual-left {
+  flex-shrink: 0;
+}
+
+.mint-icecream-card {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.mint-icecream-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-white);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+.mint-icecream-card:hover .mint-icecream-img {
+  transform: rotate(6deg) scale(1.05);
 body {
     background: linear-gradient(
         120deg,
@@ -25,48 +912,616 @@ body {
 }
 
 .hero {
-    animation: heroEntry 1.2s ease-out forwards;
+    animation: heroEntry 1.2s ease-out forwards
 }
 
-@keyframes heroEntry {
+.mint-leaf-accent {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 1.6rem;
+}
 
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
+/* Center Floating Stats Pill */
+.stats-pill-wrapper {
+  flex-grow: 1;
+  background: var(--color-white);
+  border-radius: 100px;
+  padding: 24px 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(230, 220, 210, 0.4);
+}
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(220, 210, 200, 0.5);
+}
+
+.stat-icon {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.stat-value {
+  font-family: var(--font-sans);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-body);
+  margin-top: 4px;
+}
+
+/* Right Doodle Note */
+.stats-doodle-right {
+  flex-shrink: 0;
+  transform: rotate(5deg);
+}
+
+.stats-handwritten {
+  font-family: var(--font-script);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #382A24;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* ==========================================================================
+   MEET OUR TEAM SECTION
+   ========================================================================== */
+.team-section {
+  padding: 60px 0 90px;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 36px 20px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(230, 220, 210, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
 
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.avatar-wrapper {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid #FFF0E6;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.08);
+}
+
+.member-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 4px;
+}
+
+.member-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-body-light);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.member-quote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-body);
+  line-height: 1.45;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   CALL TO ACTION (CTA) SECTION
+   ========================================================================== */
+.cta-section {
+  background-color: #F8CED8;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.cta-top-drip {
+  width: 100%;
+  line-height: 0;
+}
+
+.cta-top-drip svg {
+  width: 100%;
+  height: 45px;
+  display: block;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+/* Left CTA Doodle */
+.cta-doodle-left {
+  flex-shrink: 0;
+  transform: rotate(-8deg);
+}
+
+.cta-script-text {
+  font-family: var(--font-script);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #382A24;
+  line-height: 1.15;
+}
+
+/* Center CTA Content */
+.cta-center-box {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 12px;
+}
+
+.cta-description {
+  font-size: 0.98rem;
+  color: #4A3A34;
+  margin-bottom: 26px;
+  line-height: 1.55;
+}
+
+.btn-cta {
+  background-color: var(--color-primary);
+  padding: 12px 32px;
+  font-size: 0.95rem;
+}
+
+/* Right CTA Visual */
+.cta-visual-right {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cta-berries-box {
+  position: relative;
+  width: 200px;
+  height: 140px;
+}
+
+.cta-strawberry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 0 10px 30px rgba(180, 50, 70, 0.25);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.cta-sparkle {
+  position: absolute;
+  color: #E62E68;
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+
+.sp-1 {
+  top: -10px;
+  left: 10px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.sp-2 {
+  bottom: 0px;
+  right: -10px;
+  animation: pulse 2.5s infinite ease-in-out reverse;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.25); opacity: 1; }
+}
+
+/* ==========================================================================
+   CHOCOLATE FUDGE FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Organic Chocolate Drip Divider */
+.chocolate-drip-divider {
+  width: 100%;
+  line-height: 0;
+  margin-bottom: -1px;
+}
+
+.chocolate-drip-divider svg {
+  width: 100%;
+  height: 65px;
+  display: block;
+}
+
+.footer-content-wrap {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.footer-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Footer Brand */
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ice-cream-svg-footer {
+  width: 36px;
+  height: 42px;
+}
+
+.footer-brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1;
+  display: block;
+}
+
+.footer-brand-tagline {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #D3C4BC;
+  margin-top: 3px;
+  display: block;
+}
+
+/* Footer Nav */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-footer-muted);
+}
+
+.footer-links a:hover {
+  color: var(--color-white);
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-footer-muted);
+  transition: var(--transition-smooth);
+}
+
+.social-icon:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Far Right Handwritten Signoff */
+.footer-doodle-signoff {
+  transform: rotate(6deg);
+}
+
+.footer-script-text {
+  font-family: var(--font-script);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F8DFD4;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Copyright Bottom Bar */
+.footer-bottom-bar {
+  padding-top: 24px;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 0.82rem;
+  color: rgba(243, 237, 231, 0.55);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablets & Small Desktops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+  
+  .story-grid {
+    gap: 40px;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stats-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stats-pill-wrapper {
+    order: 2;
+    width: 100%;
+  }
+
+  .stats-visual-left {
+    order: 1;
+  }
+
+  .stats-doodle-right {
+    order: 3;
+  }
+}
+
+/* Tablets & Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+=======
 .scrollbar-hide {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 .celebrate-emoji {
+
     position: absolute;
-    bottom: 20%;
-    font-size: 30px;
-    animation: emojiFly 1.5s ease-out forwards;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FAF6F0;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  /* Hero Section */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .hero-doodle-note {
+    right: 10px;
+    top: 5%;
+  }
+
+  /* Story Section */
+  .story-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .story-polaroids-col {
+    min-height: 420px;
+  }
+
+  .story-content-col {
+    margin: 0 auto;
+  }
+
+  .story-doodle-badge {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 30px;
+  }
+
+  /* Stats Section */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  /* CTA Section */
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .cta-doodle-left {
+    transform: none;
+  }
+
+  /* Footer */
+  .footer-main-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-@keyframes emojiFly {
-    0% {
-        transform: translateY(0) scale(0.5) rotate(0deg);
-        opacity: 1;
-    }
+/* Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 2.2rem;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 
-    100% {
-        transform: translateY(-300px) scale(1.2) rotate(30deg);
-        opacity: 0;
-    }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item::after {
+    display: none !important;
+  }
+
+  .stats-pill-wrapper {
+    border-radius: 30px;
+    padding: 24px 20px;
+  }
+
+  .polaroids-wrapper {
+    max-width: 320px;
+  }
+
+  .card-storefront {
+    width: 220px;
+  }
+
+  .card-cone {
+    width: 190px;
+    top: 130px;
+  }
 }
