@@ -16,7 +16,7 @@
 
 <body class="font-['Poppins']">
     <!--navbar-->
-    <nav class="sticky top-0 z-[9999] w-full p-5 flex justify-between bg-amber-50 shadow-2xl">
+    <nav id="mainnav" class="sticky top-0 z-[9999] w-full p-5 flex justify-between bg-amber-50 shadow-2xl">
 
         <div>
             <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
@@ -59,8 +59,9 @@
         </div>
     </nav>
     <!--sidenav-->
-    <div id="sidenav" class="fixed   top-[0px] w-72 h-full bg-[#FFF5F2] z-[9999] lg:hidden transform duration-1000  "
-        style="right:-100%">
+   <div id="sidenav"
+    class="fixed top-0 right-0 w-72 h-full bg-[#FFF5F2] z-[9999] lg:hidden
+           transform translate-x-full transition-transform duration-500">
         <nav class="flex flex-col gap-10 p-3">
             <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
 
