@@ -1,3 +1,18 @@
+var sidenav = document.getElementById("sidenav");
+var close = document.getElementById("close");
+var menu = document.getElementById("menu");
+
+menu.addEventListener("click", function () {
+    sidenav.classList.remove("sidenav-hidden");
+    sidenav.classList.add("sidenav-show");
+});
+
+close.addEventListener("click", function () {
+    sidenav.classList.remove("sidenav-show");
+    sidenav.classList.add("sidenav-hidden");
+});
+
+
 var isValid = true;
 
 var nameinput1 = document.getElementById("nameinput1");
