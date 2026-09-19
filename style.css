@@ -70,3 +70,9 @@ body {
         opacity: 0;
     }
 }
+
+nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
