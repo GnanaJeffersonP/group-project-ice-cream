@@ -16,12 +16,38 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, var(--pastel-cream), #ffe4e6, #d8f3dc);
     min-height: 100vh;
     color: var(--brand-brown);
     position: relative;
+}
+body {
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
+}
+
+@keyframes scoopBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Floating Background Elements Animation */
