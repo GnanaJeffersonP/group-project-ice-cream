@@ -6,7 +6,7 @@ menu.addEventListener("click",function(){
     sidenav.style.right="0"
 })
 close.addEventListener("click",function(){
-    sidenav.style.right="-60%"
+    sidenav.style.right="-100%"
 })
 
 // login
