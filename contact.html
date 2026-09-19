@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
+
     <div class="heading">
         <h1>Contact Us</h1>
     </div>
@@ -95,24 +98,37 @@
         <div></div>
     </div>
     <div class="form-container">
-        <form class="form">
+        <form id="form" class="form">
             <div class="name">
-                <input type="text" placeholder="First Name*" required>
-                <span></span>
-                <input type="text" placeholder="Last Name*" required>
-                <span></span>
+                <div class="flex">
+                    <input id="nameinput1" type="text" placeholder="First Name*" required><br>
+                    <span id="nameerror1" class="errormsg"></span>
+                </div>
+                <div class="flex">
+                    <input id="nameinput2" type="text" placeholder="Last Name*" required><br>
+                    <span id="nameerror2" class="errormsg"></span>
+                </div>
+
             </div>
             <div class="id">
-                <input type="number" placeholder="Your Phone Number*" required>
-                <span></span>
-                <input type="email" placeholder="Your Email*" required>
-                <span></span>
+                <div class="flex">
+                    <input id="phoneinput" type="number" placeholder="Your Phone Number*" required><br>
+                    <span id="numbererror" class="errormsg"></span>
+                </div>
+                <div class="flex">
+                    <input id="emailinput" type="email" placeholder="Your Email*" required><br>
+                    <span id="emailerror" class="errormsg"></span>
+                </div>
             </div>
             <div class="city">
-                <input type="text" placeholder="Subject*" required>
-                <span></span>
-                <input type="text" placeholder="City*" required>
-                <span></span>
+                <div class="flex">
+                    <input id="subjectinput" type="text" placeholder="Subject*" required><br>
+                    <span id="subjecterror" class="errormsg"></span>
+                </div>
+                <div class="flex">
+                    <input id="cityinput" type="text" placeholder="City*" required><br>
+                    <span id="cityerror" class="errormsg"></span>
+                </div>
             </div>
             <div class="select">
                 <select name="" id="">
@@ -125,34 +141,36 @@
                 </select>
             </div>
             <div class="area">
-                <textarea name="" id="" placeholder="Your Message"></textarea>
-                <span></span>
+                <textarea id="messageinput" name="" id="" placeholder="Your Message"></textarea><br>
+                <span id="messageerror" class="errormsg"></span><br>
+                <span id="charcounter" class="count">0/500</span>
             </div>
-                <button>Submit</button>
+            <button>Submit</button>
         </form>
-        <p>Your information will be securely sent to and stored in Google Sheets for the purpose of processing your form submission</p>
+        <p>Your information will be securely sent to and stored in Google Sheets for the purpose of processing your form
+            submission</p>
     </div>
     <div class="footer">
         <div class="footerbox">
-             <div class="box">
-            <h1>Icecream</h1>
-            
-        </div>
-        <div class="box">
-            <h4>Marketing Office</h4>
-            3rd Floor,<br>
-            American College,<br>
-            Gorippalayam,<br>Madurai - 651 643.
-        </div>
-        <div class="box">
-            <h4>Call Us</h4>
-            +91 810 530 9944
-        </div>
-        <div class="box">
-            <h4>Hours of Operation</h4>
-            <p>Monday - Saturday</p>
-            09.00am - 05.00pm
-        </div>
+            <div class="box">
+                <h1>Icecream</h1>
+
+            </div>
+            <div class="box">
+                <h4>Marketing Office</h4>
+                3rd Floor,<br>
+                American College,<br>
+                Gorippalayam,<br>Madurai - 651 643.
+            </div>
+            <div class="box">
+                <h4>Call Us</h4>
+                +91 810 530 9944
+            </div>
+            <div class="box">
+                <h4>Hours of Operation</h4>
+                <p>Monday - Saturday</p>
+                09.00am - 05.00pm
+            </div>
         </div>
         <div class="footerbox1">
             <i class="fa-brands fa-square-facebook" style="color: rgb(255, 255, 255);"></i>
@@ -160,10 +178,12 @@
         </div>
         <div class="footerbox2">
             <p>
-                Copyright &copy; 2018 Icecream Private Limited.All rights reserved.Powered by: www.server6site.com | Concept,Designed & Developed by: www.treztex.com
+                Copyright &copy; 2018 Icecream Private Limited.All rights reserved.Powered by: www.server6site.com |
+                Concept,Designed & Developed by: www.treztex.com
             </p>
-        </div>   
+        </div>
     </div>
+    <script src="contact.js"></script>
 </body>
 
 </html>

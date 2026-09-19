@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    Gelatoo — "Good Mood, Great Ice Cream"
    Master Stylesheet
@@ -884,6 +885,34 @@ button {
 
 .mint-icecream-card:hover .mint-icecream-img {
   transform: rotate(6deg) scale(1.05);
+body {
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
+}
+
+@keyframes scoopBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero {
+    animation: heroEntry 1.2s ease-out forwards
 }
 
 .mint-leaf-accent {
@@ -996,6 +1025,10 @@ button {
   flex-direction: column;
   align-items: center;
 }
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
 
 .team-card:hover {
   transform: translateY(-6px);
@@ -1350,6 +1383,13 @@ button {
   }
 
   .nav-menu {
+=======
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.celebrate-emoji {
+
     position: absolute;
     top: 100%;
     left: 0;
