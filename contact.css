@@ -1,4 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+
     margin: 0;
     padding: 20px;
     display: flex;
@@ -7,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -29,7 +35,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.pic img{
+
+.pic img {
     max-width: 380px;
 }
 
@@ -43,7 +50,8 @@ body {
     width: 40%;
     height: 150px;
     text-align: center;
-    background-color: lightcoral;
+    background-color: #3B2118;
+    color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -56,7 +64,7 @@ body {
     border-style: none;
     padding: 8px;
     cursor: pointer;
-    background-color: lightcoral;
+    background-color: #3B2118;
     border: 1px solid white;
 }
 
@@ -71,12 +79,16 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+.map{
+    width: 60%;
+}
 
 .address {
-    width: 30%;
+    width: 40%;
     height: 52%;
     padding: 10px;
-    background-color: lightcoral;
+    background-color: #3B2118;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,6 +96,7 @@ body {
 }
 
 .map iframe {
+    width: 100% !important;
     height: 100%;
 }
 
@@ -92,11 +105,11 @@ body {
 }
 
 .container1 h3 {
-    color: lightcoral;
+    color: #3B2118;
 }
 
 .container1 div {
-    border-top: solid lightcoral 2px;
+    border-top: solid #3B2118 2px;
 }
 
 .form-container {
@@ -115,11 +128,16 @@ body {
     justify-content: center;
     align-items: center;
 }
-.flex{
+
+.flex {
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
-.name,.id,.city {
+
+.name,
+.id,
+.city {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -130,202 +148,293 @@ body {
 
 .form input {
     margin-top: 30px;
+    border: #3B2118 solid 1px;
     width: 90%;
     height: 20px;
-    padding: 10px;
+    padding: 25px;
 }
-.select,.area{
+
+.select,
+.area {
     width: 100%;
 }
-.form select{
+
+.form select {
+     border: #3B2118 solid 1px;
     margin-top: 30px;
-    width: 98%;
+    width: 95.5%;
     height: 50px;
     padding: 12px 15px;
     cursor: pointer;
 }
-.form textarea{
+
+.form textarea {
+     border: #3B2118 solid 1px;
     margin-top: 30px;
     width: 95.5%;
     height: 50px;
     padding: 12px 15px;
     height: 100px;
 }
-.form button{
-    background-color: lightcoral;
+
+.form button {
+    background-color:  #3B2118;
+    color: white;
     width: 100px;
     padding: 10px;
     margin-top: 30px;
-    cursor: pointer; 
+    cursor: pointer;
     border-style: none;
-    
+
 }
-.form button:hover{
+
+.form button:hover {
     background-color: white;
     border: solid black 1px;
 }
-.footer{
-    width: 100%;
-    background-color: lightcoral;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.footerbox{
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10px;
-}
-.box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.footerbox1{
-    padding: 20px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.footerbox1 i{
-    font-size: 40px;
-}
-.footerbox2{
-    border-top: white solid 1px;
-    margin-top: 20px;
-}
-.errormsg{
+
+
+.errormsg {
     color: red;
 }
-.count{
+
+.count {
     display: block;
     text-align: right;
 }
 
+.pop1,.pop2 {
+    background-color: white;
+    opacity: 1;
+    color: black;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: stretch;
+    border: solid black 1px;
+    padding: 20px;
+    margin-left: 400px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 9;
+
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.overlay2,.overlay1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+.popaddress {
+    background-color:  #3B2118;
+    padding: 10px;
+    opacity: 1;
+    color: black;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.popmap {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
 
 @media screen and (max-width: 800px) {
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .note{
+
+    .note {
         width: 100%;
     }
-    .pic img{
+
+    .pic img {
         width: 300px;
     }
-    .locate{
+
+    .locate {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
     }
-    .location{
+
+    .location {
         width: 500px;
     }
-    .officelist{
+
+    .officelist {
         width: 100%;
         padding: 20px;
     }
-    .address{
+
+    .address {
         padding: 20px;
-        width: 500px;
+        width: 250px;
         font-size: 12px;
     }
-    .map iframe{
-        width: 450px;
+
+    .map iframe {
+        width: 500px;
     }
-    .form{
+
+    .form {
         width: 70%;
     }
-    .name,.id,.city{
+
+    .name,
+    .id,
+    .city {
         flex-direction: column;
         gap: 0;
     }
-    .form input{
+
+    .flex {
+        width: 100%;
+    }
+
+    .form input {
         width: 93%;
     }
-     .form textarea{
+
+    .form textarea {
         width: 92.5%;
     }
-    .footer{
-    
+    .form select{
+        width: 92.5%;
     }
-    .footerbox{
-        width: 90%;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .footerbox2{
 
-    }
-}
-@media screen and (max-width: 600px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .note{
-        width: 80%;
-    }
-    .pic img{
+   
+
+    .pop1,.pop2 {
         width: 250px;
+        margin-left: 200px;
+        margin-top: 40px;
     }
-    .locate{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+
+    .popmap iframe {
+        width: 210px;
     }
-    .location{
-        width: 350px;
-    }
-    .officelist{
-        width: 90%;
-        flex-direction: column;
-    }
-    .address{
-        padding: 20px;
-        width: 350px;
-        height: 180px;
-        font-size: 12px;
-    }
-    .map iframe{
-        width: 390px;
+    .popaddress {
+        width: 200px;
         height: 250px;
     }
-    .form{
-        width: 50%;
-    }
-    .name,.id,.city{
-        flex-direction: column;
-        gap: 0;
-    }
-    .form input{
-        width: 93%;
-    }
-    .form select{
-        width: 230px;
-    }
-     .form textarea{
-        width: 91%;
-    }
-    .footerbox{
-        width: 90%;
 
+
+}
+
+@media screen and (max-width: 600px) {
+    .pop1,.pop2 {
+        width: 200px;
+        margin-left: 150px;
+        margin-top: 40px;
+    }
+
+    .popmap iframe {
+        width: 150px;
+    }
+    .popaddress {
+        width: 150px;
+        height: 200px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .note {
+        width: 80%;
+    }
+
+    .pic img {
+        width: 250px;
+    }
+
+    .locate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
-    .footerbox2{
 
+    .location {
+        width: 350px;
+    }
+
+    .officelist {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .address {
+        padding: 20px;
+        width: 100%;
+        height: 220px;
+        font-size: 12px;
+    }
+    .map{
+        width: 100%;
+    }
+
+    .map iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .name,
+    .id,
+    .city {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .flex {
+        width: 100%;
+    }
+
+    .form input {
+        width: 100%;
+    }
+
+    .form select {
+        width: 100%;
+    }
+
+    .form textarea {
+        width: 100%;
     }
 }

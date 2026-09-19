@@ -1,3 +1,30 @@
+var btn1 = document.getElementById("btn1")
+    var pop1 = document.querySelector(".pop1")
+    var close1 = document.getElementById("close1")
+    var overlay1 = document.querySelector(".overlay1")
+    btn1.addEventListener("click",function(){
+        pop1.classList.remove("hidden")
+        overlay1.classList.remove("hidden")
+    })
+    close1.addEventListener("click",function(){
+        pop1.classList.add("hidden")
+        overlay1.classList.add("hidden")
+    })
+
+    var btn2 = document.getElementById("btn2")
+    var pop2 = document.querySelector(".pop2")
+    var close2 = document.getElementById("close2")
+    var overlay2 = document.querySelector(".overlay2")
+    btn2.addEventListener("click",function(){
+        pop2.classList.remove("hidden")
+        overlay2.classList.remove("hidden")
+    })
+    close2.addEventListener("click",function(){
+        pop2.classList.add("hidden")
+        overlay2.classList.add("hidden")
+    })
+
+
 var isValid = true;
 
 var nameinput1 = document.getElementById("nameinput1");
@@ -27,11 +54,12 @@ nameinput2.addEventListener("blur", function () {
         isValid = true;
     }
 });
-
 var phoneinput = document.getElementById("phoneinput");
 var numbererror = document.getElementById("numbererror");
+var phoneregex = /^\d{10}$/
+
 phoneinput.addEventListener("blur", function () {
-    if (this.value.trim() === "") {
+    if (phoneregex.test(this.value).trim() === "") {
         numbererror.textContent = 'Phone Number is Required';
         this.focus();
         isValid = false;
@@ -99,6 +127,7 @@ messageinput.addEventListener("blur", function () {
         this.focus();
         isValid = false;
     }
+
     else {
         messageerror.textContent = "";
         isValid = true;
