@@ -16,57 +16,56 @@
 
 <body class="font-['Poppins']">
     <!--navbar-->
-    <nav class="p-5 flex justify-between bg-amber-50">
+<nav class="sticky top-0 z-50 p-5 flex justify-between bg-amber-50 shadow-2xl">
 
+    <div>
+        <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
+        <p>Scoop your Happiness</p>
+    </div>
 
+    <div class="flex gap-25 items-center">
 
+        <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="index.html">Home</a>
+        <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="flavors.html">Flavours</a>
+        <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="customize.html">Customize</a>
 
-        <div>
-            <p class="text-amber-900 font-bold text-5xl">SCOOP</p>
-            <p>Scoop your Happiness</p>
-        </div>
+        <!-- Cart Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6 hidden lg:flex">
 
-        <div class="flex gap-25 items-center ">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
+        </svg>
 
-            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="index.html">Home</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="flavors.html">Flavours</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex " href="customize.html">Customize</a>
+        <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex"
+            href="about.html">About Us</a>
 
-            <!-- Cart Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6 hidden lg:flex">
+        <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex"
+            href="contact.html">Contact Us</a>
 
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
+        <!-- Menu Icon -->
+        <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6 flex lg:hidden cursor-pointer">
 
-            </svg>
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
 
-            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="about.html">About Us</a>
-            <a class="hover:text-pink-400 hover:underline font-bold hidden lg:flex" href="contact.html">Contact Us</a>
+        <a class="loginbtn text-white hidden lg:flex bg-pink-600 font-bold px-2 rounded-2xl"
+            href="#">Login</a>
 
-            <!-- Menu Icon -->
-            <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6 flex lg:hidden cursor-pointer">
+        <svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            fill="currentColor" class="size-6 hidden">
+            <path fill-rule="evenodd"
+                d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                clip-rule="evenodd" />
+        </svg>
 
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-
-            </svg>
-            <a class=" loginbtn text-white hidden lg:flex bg-pink-600 font -bold px-2 rounded-2xl" href="#">Login</a>
-            <svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="size-6 hidden">
-                <path fill-rule="evenodd"
-                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                    clip-rule="evenodd" />
-            </svg>
-
-
-
-
-        </div>
-
-    </nav>
+    </div>
+</nav>
     <!--sidenav-->
-    <div id="sidenav" class="fixed top-[0px] w-72 h-full bg-[#FFF5F2] z-50 lg:hidden transform duration-1000  "
+    <div id="sidenav" class="fixed  top-[0px] w-72 h-full bg-[#FFF5F2] z-50 lg:hidden transform duration-1000  "
         style="right:-60%">
         <nav class="flex flex-col gap-10 p-3">
             <p id="close" class="font-bold text-xl text-right cursor-pointer">X</p>
