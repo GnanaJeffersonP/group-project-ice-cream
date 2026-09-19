@@ -14,6 +14,18 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    background: linear-gradient(
+        120deg,
+        #FFF0F5,
+        #FFD6E5,
+        #FFE4C4,
+        #FFEAF2
+    );
+    background-size: 300% 300%;
+    animation: scoopBg 12s ease infinite;
+}
+
 button,
 input,
 select {
@@ -36,10 +48,11 @@ select {
 
     gap: 25px;
 
-    background-color: pink;
+    background-color:#fffbeb;;
     border-bottom: 1px solid rgb(231, 102, 124);
 
-    position: relative;
+    position: sticky;
+    top: 0%;
     z-index: 10;
 }
 
