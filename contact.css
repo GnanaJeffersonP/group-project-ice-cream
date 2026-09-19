@@ -115,7 +115,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.flex{
+    display: flex;
+    flex-direction: column;
+}
 .name,.id,.city {
     width: 100%;
     display: flex;
@@ -127,7 +130,7 @@ body {
 
 .form input {
     margin-top: 30px;
-    width: 45%;
+    width: 90%;
     height: 20px;
     padding: 10px;
 }
@@ -195,6 +198,14 @@ body {
     border-top: white solid 1px;
     margin-top: 20px;
 }
+.errormsg{
+    color: red;
+}
+.count{
+    display: block;
+    text-align: right;
+}
+
 
 @media screen and (max-width: 800px) {
     .container{
