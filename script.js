@@ -3,12 +3,14 @@ var close=document.getElementById("close")
 var menu=document.getElementById("menu")
  
 menu.addEventListener("click", function(){
-    sidenav.classList.remove("translate-x-full");
-})
+    sidenav.classList.remove("sidenav-hidden");
+    sidenav.classList.add("sidenav-show");
+});
 
 close.addEventListener("click", function(){
-    sidenav.classList.add("translate-x-full");
-})
+    sidenav.classList.remove("sidenav-show");
+    sidenav.classList.add("sidenav-hidden");
+});
 
 // login
 
