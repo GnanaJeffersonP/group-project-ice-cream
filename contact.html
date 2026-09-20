@@ -11,131 +11,99 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="src/output.css">
+    <!-- Contact CSS -->
+    <link rel="stylesheet" href="contact.css">
 </head>
 
-<body class="bg-gradient-to-br from-pink-50 via-orange-50 to-amber-50 text-gray-800">
+<body>
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav id="mainnav"
-        class="sticky top-0 z-[9999] w-full px-5 py-4 flex justify-between items-center bg-amber-50 shadow-xl">
+    <nav class="navbar">
 
         <!-- Logo -->
-        <div>
-            <a href="./index.html">
-                <p class="text-4xl md:text-5xl font-extrabold text-amber-900">
-                    SCOOP
-                </p>
 
-                <p class="text-sm text-gray-600">
-                    Scoop your Happiness
-                </p>
+        <div class="navbar__title">
+
+            <a href="./index.html">
+                <h1>SCOOP</h1>
+                <p>Scoop your Happiness</p>
             </a>
+
         </div>
 
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center gap-8">
 
-            <a href="./index.html"
-                class="font-bold hover:text-pink-500 hover:underline transition">
-                Home
-            </a>
+        <div class="navbar__content">
 
-            <a href="./flavors.html"
-                class="font-bold hover:text-pink-500 hover:underline transition">
-                Flavours
-            </a>
+            <a href="./index.html">Home</a>
 
-            <a href="./customize.html"
-                class="font-bold hover:text-pink-500 hover:underline transition">
-                Customize
-            </a>
+            <a href="./flavors.html">Flavours</a>
 
-            <!-- Cart -->
-            <a href="#cart"
-                class="font-bold hover:text-pink-500 transition">
+            <a href="./customize.html">Customize</a>
+
+            <a href="#cart">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
 
-            <a href="./about.html"
-                class="font-bold hover:text-pink-500 hover:underline transition">
-                About Us
-            </a>
+            <a href="./about.html">About Us</a>
 
-            <a href="./contact.html"
-                class="font-bold text-pink-600 underline">
+            <a href="./contact.html" class="active">
                 Contact Us
             </a>
 
-            <a href="#"
-                class="bg-pink-600 text-white font-bold px-5 py-2 rounded-full
-                       hover:bg-pink-700 transition">
+            <a href="#" class="login-button">
                 Login
             </a>
 
+            <!-- Mobile Menu -->
+
+            <i id="menu"
+                class="fa-solid fa-bars menu-icon">
+            </i>
+
         </div>
-
-
-        <!-- Mobile Menu Button -->
-        <button id="menu"
-            class="lg:hidden text-2xl text-amber-900 cursor-pointer">
-            <i class="fa-solid fa-bars"></i>
-        </button>
 
     </nav>
 
 
     <!-- ================= MOBILE SIDENAV ================= -->
 
-    <div id="sidenav"
-        class="fixed top-0 right-0 z-[10000] w-72 h-full
-               bg-[#FFF5F2] shadow-2xl
-               translate-x-full transition-transform duration-500
-               lg:hidden">
+    <div id="sidenav">
 
-        <div class="flex justify-end p-5">
+        <div class="side-header">
 
-            <button id="close"
-                class="text-2xl font-bold text-amber-900">
+            <button id="close">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
         </div>
 
 
-        <div class="flex flex-col gap-7 px-8 py-5">
+        <div class="side-links">
 
-            <a href="./index.html"
-                class="font-bold text-lg hover:text-pink-500">
+            <a href="./index.html">
                 Home
             </a>
 
-            <a href="./flavors.html"
-                class="font-bold text-lg hover:text-pink-500">
+            <a href="./flavors.html">
                 Flavours
             </a>
 
-            <a href="./customize.html"
-                class="font-bold text-lg hover:text-pink-500">
+            <a href="./customize.html">
                 Customize
             </a>
 
-            <a href="./about.html"
-                class="font-bold text-lg hover:text-pink-500">
+            <a href="./about.html">
                 About Us
             </a>
 
-            <a href="./contact.html"
-                class="font-bold text-lg text-pink-600">
+            <a href="./contact.html" class="active">
                 Contact Us
             </a>
 
-            <a href="#"
-                class="bg-pink-600 text-white text-center font-bold
-                       px-5 py-3 rounded-full">
+            <a href="#" class="login-button">
                 Login
             </a>
 
@@ -146,89 +114,60 @@
 
     <!-- ================= HERO ================= -->
 
-    <section class="px-5 py-16 md:py-20 text-center">
+    <section class="hero">
 
-        <p class="text-pink-500 font-semibold tracking-widest uppercase">
-            Get in Touch
-        </p>
+        <p>GET IN TOUCH</p>
 
-        <h1 class="mt-3 text-5xl md:text-6xl font-extrabold text-amber-900">
-            Contact Us
-        </h1>
+        <h1>Contact Us</h1>
 
-        <p class="mt-5 max-w-2xl mx-auto text-gray-600 text-lg">
-            We would love to hear from you!
-            Have a question, suggestion, or simply want to talk about ice cream?
-            Send us a message.
-        </p>
+        <span>
+            We'd love to hear from you!
+        </span>
+
+        <div class="hero-line"></div>
 
     </section>
 
 
     <!-- ================= QUICK CONTACT ================= -->
 
-    <section class="px-5 pb-16">
+    <section class="quick-contact">
 
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="contact-card">
 
-            <!-- Phone -->
-            <div class="bg-white rounded-2xl shadow-lg p-7 text-center
-                        hover:-translate-y-2 transition duration-300">
-
-                <div class="w-14 h-14 mx-auto flex items-center justify-center
-                            rounded-full bg-pink-100 text-pink-600 text-2xl">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-
-                <h3 class="mt-4 text-xl font-bold text-amber-900">
-                    Call Us
-                </h3>
-
-                <p class="mt-2 text-gray-600">
-                    +91 810 530 9944
-                </p>
-
+            <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
             </div>
 
+            <h3>Call Us</h3>
 
-            <!-- Email -->
-            <div class="bg-white rounded-2xl shadow-lg p-7 text-center
-                        hover:-translate-y-2 transition duration-300">
+            <p>+91 810 530 9944</p>
 
-                <div class="w-14 h-14 mx-auto flex items-center justify-center
-                            rounded-full bg-pink-100 text-pink-600 text-2xl">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
+        </div>
 
-                <h3 class="mt-4 text-xl font-bold text-amber-900">
-                    Email Us
-                </h3>
 
-                <p class="mt-2 text-gray-600 break-all">
-                    scoopicecream@gmail.com
-                </p>
+        <div class="contact-card">
 
+            <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
             </div>
 
+            <h3>Email Us</h3>
 
-            <!-- Location -->
-            <div class="bg-white rounded-2xl shadow-lg p-7 text-center
-                        hover:-translate-y-2 transition duration-300">
+            <p>scoopicecream@gmail.com</p>
 
-                <div class="w-14 h-14 mx-auto flex items-center justify-center
-                            rounded-full bg-pink-100 text-pink-600 text-2xl">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
+        </div>
 
-                <h3 class="mt-4 text-xl font-bold text-amber-900">
-                    Visit Us
-                </h3>
 
-                <p class="mt-2 text-gray-600">
-                    Madurai, Tamil Nadu
-                </p>
+        <div class="contact-card">
 
+            <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
             </div>
+
+            <h3>Visit Us</h3>
+
+            <p>Madurai, Tamil Nadu</p>
 
         </div>
 
@@ -237,161 +176,156 @@
 
     <!-- ================= LOCATIONS ================= -->
 
-    <section class="px-5 py-16 bg-white/50">
+    <section class="locations">
 
-        <div class="max-w-6xl mx-auto">
+        <div class="section-heading">
 
-            <div class="text-center mb-12">
+            <p>FIND US</p>
 
-                <p class="text-pink-500 font-semibold">
-                    FIND US
-                </p>
+            <h2>Our Locations</h2>
 
-                <h2 class="text-4xl font-extrabold text-amber-900 mt-2">
-                    Our Locations
+            <span>
+                Visit one of our locations and enjoy your favourite SCOOP.
+            </span>
+
+        </div>
+
+
+        <!-- Location 1 -->
+
+        <div class="location-card">
+
+            <div class="location-info">
+
+                <span class="location-tag">
+                    MARKETING OFFICE
+                </span>
+
+                <h2>
+                    Marketing Office
                 </h2>
 
-                <p class="text-gray-600 mt-3">
-                    Visit one of our locations and enjoy your favourite SCOOP.
+                <p>
+                    3rd Floor,<br>
+                    American College,<br>
+                    Gorippalayam,<br>
+                    Madurai - 651 643.
                 </p>
 
-            </div>
+                <div class="phone">
 
+                    <i class="fa-solid fa-phone"></i>
 
-            <!-- Location 1 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden
-                        grid grid-cols-1 lg:grid-cols-2 mb-10">
-
-                <div class="p-8 md:p-10">
-
-                    <span class="inline-block bg-pink-100 text-pink-600
-                                 px-4 py-2 rounded-full text-sm font-bold">
-                        Marketing Office
+                    <span>
+                        +91 810 530 9944
                     </span>
-
-                    <h3 class="text-3xl font-bold text-amber-900 mt-5">
-                        Marketing Office
-                    </h3>
-
-                    <p class="mt-5 text-gray-600 leading-7">
-                        3rd Floor,<br>
-                        American College,<br>
-                        Gorippalayam,<br>
-                        Madurai - 651 643.
-                    </p>
-
-                    <div class="mt-5 flex items-center gap-3">
-                        <i class="fa-solid fa-phone text-pink-500"></i>
-                        <span class="font-semibold">
-                            +91 810 530 9944
-                        </span>
-                    </div>
-
-                </div>
-
-                <div class="min-h-[300px]">
-
-                    <iframe
-                        class="w-full h-full min-h-[300px]"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
 
                 </div>
 
             </div>
 
 
-            <!-- Location 2 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden
-                        grid grid-cols-1 lg:grid-cols-2 mb-10">
+            <div class="map">
 
-                <div class="p-8 md:p-10">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
 
-                    <span class="inline-block bg-pink-100 text-pink-600
-                                 px-4 py-2 rounded-full text-sm font-bold">
-                        Unit 01
+            </div>
+
+        </div>
+
+
+        <!-- Location 2 -->
+
+        <div class="location-card">
+
+            <div class="location-info">
+
+                <span class="location-tag">
+                    UNIT 01
+                </span>
+
+                <h2>
+                    Race Course
+                </h2>
+
+                <p>
+                    Karpagam Complex,<br>
+                    Zudio Near,<br>
+                    Ayyar Bangalow,<br>
+                    Madurai - 651 643.
+                </p>
+
+                <div class="phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 810 530 9945
                     </span>
-
-                    <h3 class="text-3xl font-bold text-amber-900 mt-5">
-                        Race Course
-                    </h3>
-
-                    <p class="mt-5 text-gray-600 leading-7">
-                        Karpagam Complex,<br>
-                        Zudio Near,<br>
-                        Ayyar Bangalow,<br>
-                        Madurai - 651 643.
-                    </p>
-
-                    <div class="mt-5 flex items-center gap-3">
-                        <i class="fa-solid fa-phone text-pink-500"></i>
-                        <span class="font-semibold">
-                            +91 810 530 9945
-                        </span>
-                    </div>
-
-                </div>
-
-                <div class="min-h-[300px]">
-
-                    <iframe
-                        class="w-full h-full min-h-[300px]"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
 
                 </div>
 
             </div>
 
 
-            <!-- Location 3 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden
-                        grid grid-cols-1 lg:grid-cols-2">
+            <div class="map">
 
-                <div class="p-8 md:p-10">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
 
-                    <span class="inline-block bg-pink-100 text-pink-600
-                                 px-4 py-2 rounded-full text-sm font-bold">
-                        Unit 02
+            </div>
+
+        </div>
+
+
+        <!-- Location 3 -->
+
+        <div class="location-card">
+
+            <div class="location-info">
+
+                <span class="location-tag">
+                    UNIT 02
+                </span>
+
+                <h2>
+                    Kalavasal
+                </h2>
+
+                <p>
+                    Poovika Oppo,<br>
+                    Guru Theatre,<br>
+                    Aarapalayam,<br>
+                    Madurai - 651 643.
+                </p>
+
+                <div class="phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 810 530 9946
                     </span>
 
-                    <h3 class="text-3xl font-bold text-amber-900 mt-5">
-                        Kalavasal
-                    </h3>
-
-                    <p class="mt-5 text-gray-600 leading-7">
-                        Poovika Oppo,<br>
-                        Guru Theatre,<br>
-                        Aarapalayam,<br>
-                        Madurai - 651 643.
-                    </p>
-
-                    <div class="mt-5 flex items-center gap-3">
-                        <i class="fa-solid fa-phone text-pink-500"></i>
-                        <span class="font-semibold">
-                            +91 810 530 9946
-                        </span>
-                    </div>
-
                 </div>
 
-                <div class="min-h-[300px]">
+            </div>
 
-                    <iframe
-                        class="w-full h-full min-h-[300px]"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
 
-                </div>
+            <div class="map">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62881.70626626273!2d78.02257422167965!3d9.925076000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sice%20cream%20parlour%20near%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1789546308701!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
 
             </div>
 
@@ -402,316 +336,267 @@
 
     <!-- ================= CONTACT FORM ================= -->
 
-    <section class="px-5 py-20">
+    <section class="contact-section">
 
-        <div class="max-w-5xl mx-auto">
+        <div class="section-heading">
 
-            <div class="text-center mb-12">
+            <p>WE'D LOVE TO HEAR FROM YOU</p>
 
-                <p class="text-pink-500 font-semibold">
-                    WE'D LOVE TO HEAR FROM YOU
-                </p>
+            <h2>Send Us A Message</h2>
 
-                <h2 class="text-4xl md:text-5xl font-extrabold
-                           text-amber-900 mt-2">
-                    Send Us A Message
-                </h2>
+            <span>
+                If you have questions or comments please email,
+                call or write to us.
+            </span>
 
-                <p class="text-gray-600 mt-4">
-                    If you have questions or comments, please email,
-                    call or write to us.
-                </p>
+        </div>
+
+
+        <form id="form" class="contact-form">
+
+
+            <!-- Name -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        First Name*
+                    </label>
+
+                    <input
+                        id="nameinput1"
+                        type="text"
+                        placeholder="Enter your first name"
+                        required>
+
+                    <span id="nameerror1"
+                        class="errormsg">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Last Name*
+                    </label>
+
+                    <input
+                        id="nameinput2"
+                        type="text"
+                        placeholder="Enter your last name"
+                        required>
+
+                    <span id="nameerror2"
+                        class="errormsg">
+                    </span>
+
+                </div>
 
             </div>
 
 
-            <form id="form"
-                class="bg-white rounded-3xl shadow-2xl p-6 md:p-10">
+            <!-- Phone Email -->
 
+            <div class="form-row">
 
-                <!-- First & Last Name -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="form-group">
 
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            First Name*
-                        </label>
-
-                        <input
-                            id="nameinput1"
-                            type="text"
-                            placeholder="Enter your first name"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="nameerror1"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            Last Name*
-                        </label>
-
-                        <input
-                            id="nameinput2"
-                            type="text"
-                            placeholder="Enter your last name"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="nameerror2"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Phone & Email -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            Phone Number*
-                        </label>
-
-                        <input
-                            id="phoneinput"
-                            type="tel"
-                            placeholder="Enter your phone number"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="numbererror"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            Email*
-                        </label>
-
-                        <input
-                            id="emailinput"
-                            type="email"
-                            placeholder="Enter your email"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="emailerror"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Subject & City -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            Subject*
-                        </label>
-
-                        <input
-                            id="subjectinput"
-                            type="text"
-                            placeholder="Enter subject"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="subjecterror"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <label class="font-semibold text-amber-900">
-                            City*
-                        </label>
-
-                        <input
-                            id="cityinput"
-                            type="text"
-                            placeholder="Enter your city"
-                            required
-                            class="w-full mt-2 px-4 py-3 rounded-xl border
-                                   border-gray-300 outline-none
-                                   focus:border-pink-500 focus:ring-2
-                                   focus:ring-pink-100">
-
-                        <span id="cityerror"
-                            class="text-red-500 text-sm">
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Topic -->
-                <div class="mt-6">
-
-                    <label class="font-semibold text-amber-900">
-                        Topic
+                    <label>
+                        Phone Number*
                     </label>
 
-                    <select
-                        id="topic"
-                        class="w-full mt-2 px-4 py-3 rounded-xl border
-                               border-gray-300 bg-white outline-none
-                               focus:border-pink-500 focus:ring-2
-                               focus:ring-pink-100">
+                    <input
+                        id="phoneinput"
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        required>
 
-                        <option value="">
-                            Please Select a Topic
-                        </option>
-
-                        <option value="not-satisfied">
-                            I was not satisfied.
-                        </option>
-
-                        <option value="sell">
-                            I want to sell Ice Creams in my establishment.
-                        </option>
-
-                        <option value="love">
-                            Love Ice Cream. Just Wanted to tell You.
-                        </option>
-
-                        <option value="suggestion">
-                            I have a flavour suggestion or idea.
-                        </option>
-
-                        <option value="others">
-                            Others
-                        </option>
-
-                    </select>
+                    <span id="numbererror"
+                        class="errormsg">
+                    </span>
 
                 </div>
 
 
-                <!-- Message -->
-                <div class="mt-6">
+                <div class="form-group">
 
-                    <label class="font-semibold text-amber-900">
-                        Your Message
+                    <label>
+                        Email*
                     </label>
 
-                    <textarea
-                        id="messageinput"
-                        maxlength="500"
-                        placeholder="Write your message..."
-                        class="w-full mt-2 px-4 py-3 rounded-xl border
-                               border-gray-300 outline-none resize-none
-                               h-40
-                               focus:border-pink-500 focus:ring-2
-                               focus:ring-pink-100"></textarea>
+                    <input
+                        id="emailinput"
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
 
-                    <div class="flex justify-between">
+                    <span id="emailerror"
+                        class="errormsg">
+                    </span>
 
-                        <span id="messageerror"
-                            class="text-red-500 text-sm">
-                        </span>
+                </div>
 
-                        <span id="charcounter"
-                            class="text-gray-500 text-sm">
-                            0/500
-                        </span>
+            </div>
 
-                    </div>
+
+            <!-- Subject City -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Subject*
+                    </label>
+
+                    <input
+                        id="subjectinput"
+                        type="text"
+                        placeholder="Enter subject"
+                        required>
+
+                    <span id="subjecterror"
+                        class="errormsg">
+                    </span>
 
                 </div>
 
 
-                <!-- Submit -->
-                <button
-                    type="submit"
-                    class="mt-8 bg-[#3B2118] text-white
-                           px-8 py-3 rounded-full font-bold
-                           hover:bg-pink-600 transition duration-300
-                           shadow-lg">
+                <div class="form-group">
 
-                    Send Message
-                    <i class="fa-solid fa-paper-plane ml-2"></i>
+                    <label>
+                        City*
+                    </label>
 
-                </button>
+                    <input
+                        id="cityinput"
+                        type="text"
+                        placeholder="Enter your city"
+                        required>
 
-            </form>
+                    <span id="cityerror"
+                        class="errormsg">
+                    </span>
 
-        </div>
+                </div>
+
+            </div>
+
+
+            <!-- Topic -->
+
+            <div class="form-group full">
+
+                <label>
+                    Topic
+                </label>
+
+                <select id="topic">
+
+                    <option value="">
+                        Please Select a Topic
+                    </option>
+
+                    <option>
+                        I was not satisfied.
+                    </option>
+
+                    <option>
+                        I want to sell Ice Creams in my establishment.
+                    </option>
+
+                    <option>
+                        Love Ice Cream. Just Wanted to tell You.
+                    </option>
+
+                    <option>
+                        I have a flavour suggestion or idea.
+                    </option>
+
+                    <option>
+                        Others
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="form-group full">
+
+                <label>
+                    Your Message
+                </label>
+
+                <textarea
+                    id="messageinput"
+                    maxlength="500"
+                    placeholder="Write your message...">
+                </textarea>
+
+                <div class="message-bottom">
+
+                    <span id="messageerror"
+                        class="errormsg">
+                    </span>
+
+                    <span id="charcounter">
+                        0/500
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button type="submit">
+                Send Message
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </form>
 
     </section>
 
 
     <!-- ================= FOOTER ================= -->
 
-    <footer class="bg-[#3B2118] text-white px-6 py-12">
+    <footer>
 
-        <div class="max-w-6xl mx-auto
-                    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="footer-content">
 
-            <!-- Brand -->
-            <div>
 
-                <h2 class="text-4xl font-extrabold">
-                    SCOOP
-                </h2>
+            <div class="footer-box">
 
-                <p class="mt-3 text-amber-100">
+                <h2>SCOOP</h2>
+
+                <p>
                     Scoop your Happiness
                 </p>
 
-                <p class="mt-5 text-sm text-gray-300">
-                    Delicious ice creams made to bring a little
-                    more happiness to your day.
-                </p>
+                <span>
+                    Delicious ice creams made to bring
+                    a little more happiness to your day.
+                </span>
 
             </div>
 
 
-            <!-- Office -->
-            <div>
+            <div class="footer-box">
 
-                <h3 class="text-xl font-bold mb-4">
+                <h3>
                     Marketing Office
                 </h3>
 
-                <p class="text-gray-300 leading-7">
+                <p>
                     3rd Floor,<br>
                     American College,<br>
                     Gorippalayam,<br>
@@ -721,55 +606,50 @@
             </div>
 
 
-            <!-- Contact -->
-            <div>
+            <div class="footer-box">
 
-                <h3 class="text-xl font-bold mb-4">
+                <h3>
                     Contact
                 </h3>
 
-                <p class="text-gray-300">
-                    <i class="fa-solid fa-phone mr-2"></i>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
                     +91 810 530 9944
                 </p>
 
-                <p class="text-gray-300 mt-3">
-                    <i class="fa-solid fa-envelope mr-2"></i>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
                     scoopicecream@gmail.com
                 </p>
 
             </div>
 
 
-            <!-- Hours -->
-            <div>
+            <div class="footer-box">
 
-                <h3 class="text-xl font-bold mb-4">
+                <h3>
                     Hours
                 </h3>
 
-                <p class="text-gray-300">
+                <p>
                     Monday - Saturday
                 </p>
 
-                <p class="text-gray-300 mt-2">
+                <p>
                     09:00 AM - 05:00 PM
                 </p>
 
-                <div class="flex gap-4 mt-5 text-2xl">
+                <div class="social-icons">
 
-                    <a href="#"
-                        class="hover:text-pink-400 transition">
+                    <a href="#">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
 
-                    <a href="#"
-                        class="hover:text-pink-400 transition">
+                    <a href="#">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a href="#"
-                        class="hover:text-pink-400 transition">
+                    <a href="#">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
@@ -780,8 +660,7 @@
         </div>
 
 
-        <div class="border-t border-white/20 mt-10 pt-6 text-center
-                    text-sm text-gray-300">
+        <div class="copyright">
 
             © 2026 SCOOP Ice Cream. All rights reserved.
 
@@ -790,7 +669,6 @@
     </footer>
 
 
-    <!-- JavaScript -->
     <script src="contact.js"></script>
 
 </body>
