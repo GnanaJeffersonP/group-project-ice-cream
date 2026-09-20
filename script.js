@@ -21,11 +21,13 @@ var submit = document.getElementById("submit");
 var user = document.getElementById("user");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
+var sidenav=document.getElementById("sidenav")
 loginbtn.forEach(function(btn) {
 
     btn.addEventListener("click", function() {
 
         loginModal.style.display = "flex";
+        sidenav.style.display="none"
 
     });
 
