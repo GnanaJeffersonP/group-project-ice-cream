@@ -1,15 +1,25 @@
 var sidenav = document.getElementById("sidenav");
+
 var close = document.getElementById("close");
+
 var menu = document.getElementById("menu");
 
+
 menu.addEventListener("click", function () {
-    sidenav.classList.remove("sidenav-hidden");
-    sidenav.classList.add("sidenav-show");
+
+    sidenav.classList.remove("translate-x-full");
+
+    sidenav.classList.add("translate-x-0");
+
 });
 
+
 close.addEventListener("click", function () {
-    sidenav.classList.remove("sidenav-show");
-    sidenav.classList.add("sidenav-hidden");
+
+    sidenav.classList.remove("translate-x-0");
+
+    sidenav.classList.add("translate-x-full");
+
 });
 
 
